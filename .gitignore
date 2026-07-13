@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 pilot-transcripts/
 .DS_Store
+sessions/
