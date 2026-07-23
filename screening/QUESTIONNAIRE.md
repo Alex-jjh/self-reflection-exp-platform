@@ -1,86 +1,147 @@
-# 筛选问卷（v0 草案）— 供问卷星搭建
+# 筛选问卷（v1 草案）— Qualtrics 双语搭建规格
 
-> 用途：session 前数天发放。筛资格 + 个体差异变量。约 5–8 分钟。
-> 数据管理：问卷平台只存量表分与联系方式（低敏），与对话转录（高敏）分离，
+> 用途：session 前数天发放。筛资格 + 个体差异变量。约 10–12 分钟。
+> 平台：**Qualtrics 单份问卷，内置 zh/en 语言切换**（Survey Options →
+> Translations；被试自选语言，`Q_Language` 字段自动记录，作为 session
+> 语言分配的参考——见 SESSION_PROTOCOL 阶段 0）。
+> 数据管理：平台只存量表分与联系方式（低敏），与对话转录（高敏）分离，
 > 用参与者编号关联。
 >
-> 量表来源状态（P21 裁定，见 ROUND4_FINDINGS §6.6）：
-> - NCS 认知需求：**用验证中文版**（邝怡等 2005 修订版，18 项）——正式使用前需取得原条目并核对
-> - GIH 智识谦逊（Leary 6 项）、Dweck 成长型思维（3 项）：**无验证中文版**，
->   以下为我们的翻译初稿，需翻译回译核对 + 试测；追踪郭俊俏/赵必华知性谦逊论文
-> - CSW 学业分量表：待验货王磊/郑雪 2006 是否含学业维度；以下暂用 Crocker 原量表
->   学业条目的翻译初稿
-> - ⚠ 中庸作答提醒（P21 陷阱3）：pilot 规模下量表只做定性对照，不过度解读中间分
+> **量表包（2026-07-23 裁决，P27 后替换 NCS-18 方案）：**
+> GIH-6 + Dweck-3 + NFCS-15 + CIUSC-12 + RRS-brooding-5 + CSW-academic-5。
+> 全部量表同时存在中英文验证版/原版——EN 轨道零额外翻译负担。
+>
+> 条目来源状态：
+> - **NFCS-15**（Roets & Van Hiel 2011）：EN 原版条目下列（发布前与原文核对
+>   措辞）；**zh 验证版 2024**（见 ROUND4_FINDINGS §6.10，心理科学 jps.ecnu
+>   论文）——取得验证条目后替换下方翻译初稿
+> - **CIUSC-12**（IUS-12 中文版，N=5,672 验证）：同上，zh 验证条目待取得；
+>   EN 用 Carleton et al. 2007 原版
+> - **RRS-brooding**（Treynor et al. 2003）：EN 原版下列；zh 版存在
+>   （韩秀/杨宏飞等修订线），取得后替换初稿
+> - GIH-6（Leary 2017）、Dweck-3：无 zh 验证版，翻译初稿待回译核对（不变）
+> - CSW-academic（Crocker 2003）：待比对王磊/郑雪 2006；暂用翻译初稿
+> - ⚠ 中庸作答提醒（P21 陷阱3）：pilot 规模下量表只做定性对照
+> - ⚠ zh 翻译初稿仅为占位：凡存在验证中文版的量表，**上线前必须换成验证条目**
 
 ---
 
-## 第一部分：基本信息与资格
+## Qualtrics 搭建清单（Block 结构）
 
-1. 你的年龄：____
-2. 性别：男 / 女 / 其他 / 不愿透露
-3. 你目前的身份：本科生 / 硕士生 / 博士生 / 已工作 / 其他____
-4. 你使用 AI 聊天工具（如 ChatGPT、Claude、豆包、Kimi、DeepSeek 等）多久了？
-   - 不到1个月 / 1–3个月 / **3个月–1年 / 1年以上**（加粗=合格）
-5. 你多久使用一次 AI 聊天工具？
-   - 几乎每天 / 每周几次 / 每周一次左右 / 更少
-6. 你最常用的 AI 聊天工具是（可多选）：ChatGPT / Claude / 豆包 / Kimi / DeepSeek / 文心一言 / 通义千问 / 其他____
-7. 你有没有跟 AI 聊过工作/学习决定、人际关系、情绪或其他个人话题？
-   - 经常 / 偶尔 / 很少 / 从来没有
-   （"从来没有"不合格；此题同时为 RQ1 提供基线）
-8. 联系方式（微信号或手机号，仅用于约时间）：____
+| Block | 内容 | 逻辑 |
+|---|---|---|
+| B1 资格 | Q1–Q8 | Q4 <3个月 或 Q7=从来没有 → End of Survey（礼貌结束语，不进 B2） |
+| B2 量表 | Q9–Q54（6 个量表，每量表一页） | 全部 7 点 Likert（RRS 为 4 点，见该节）；量表内条目随机化可开 |
+| B3 基线 | Q55–Q57 | 无逻辑 |
+| 收尾 | 联系方式确认 + 感谢 | Embedded data: `Q_Language`, 总分自动计算可后置 |
 
-## 第二部分：想法与态度（1=完全不同意 … 7=完全同意）
+---
 
-### 智识谦逊 GIH-6（翻译初稿，待回译核对）
-原文：Leary et al. 2017, General Intellectual Humility Scale
+## 第一部分：基本信息与资格（B1）
 
-9. 我承认我的想法和态度可能是错的。
-   (I question my own opinions, positions, and viewpoints because they could be wrong.)
-10. 我会重新考虑自己的观点，因为它们可能有错。
-    (I reconsider my opinions when presented with new evidence.)
-11. 我尊重跟我看法不同的人的观点。
-    (I recognize the value in opinions that are different from my own.)
-12. 面对新证据时，我愿意改变自己的看法。
-    (I accept that my beliefs and attitudes may be wrong.)
-13. 在争论中，我愿意认真对待与我相反的证据。
-    (In the face of conflicting evidence, I am open to changing my opinions.)
-14. 我喜欢从与我观点不同的人那里了解他们的想法。
-    (I like finding out new information that differs from what I already think is true.)
+1. 你的年龄 / Your age: ____
+2. 性别 / Gender: 男 Male / 女 Female / 其他 Other / 不愿透露 Prefer not to say
+3. 你目前的身份 / Current status: 本科生 Undergraduate / 硕士生 Master's / 博士生 PhD / 已工作 Working / 其他 Other ____
+4. 你使用 AI 聊天工具多久了？ / How long have you been using AI chat tools?
+   （zh 例：ChatGPT、Claude、豆包、Kimi、DeepSeek；en 例：ChatGPT, Claude, Gemini, Copilot）
+   - 不到1个月 <1 month / 1–3个月 1–3 months / **3个月–1年 3 months–1 year / 1年以上 >1 year**（加粗=合格）
+5. 你多久使用一次？ / How often do you use them?
+   - 几乎每天 Almost daily / 每周几次 Several times a week / 每周一次左右 About weekly / 更少 Less often
+6. 你最常用的 AI 聊天工具（可多选） / Which do you use most? (multi-select):
+   ChatGPT / Claude / Gemini / 豆包 / Kimi / DeepSeek / 文心一言 / 通义千问 / Copilot / 其他 Other ____
+7. 你有没有跟 AI 聊过工作/学习决定、人际关系、情绪或其他个人话题？ /
+   Have you talked with an AI about work/study decisions, relationships, emotions, or other personal topics?
+   - 经常 Often / 偶尔 Sometimes / 很少 Rarely / 从来没有 Never
+   （"从来没有 Never"不合格；此题同时为 RQ1 提供基线）
+8. 联系方式（微信/手机/邮箱，仅用于约时间） / Contact (WeChat/phone/email, scheduling only): ____
 
-### 成长型思维 Dweck-3（翻译初稿，待回译核对）
-原文：Dweck implicit theories of intelligence, 3-item short form（反向计分）
+## 第二部分：想法与态度（B2，1=完全不同意 … 7=完全同意 / 1=strongly disagree … 7=strongly agree）
 
-15. 一个人的聪明程度是天生固定的，无法真正改变。（R）
-16. 人可以学习新东西，但改变不了自己的基本智力水平。（R）
-17. 不管是谁，都无法显著改变自己的能力水平。（R）
+### 智识谦逊 GIH-6（zh 翻译初稿待回译核对；en 用 Leary et al. 2017 原版）
 
-### 认知需求 NCS（占位——使用邝怡等2005中文修订版18项，取得原条目后替换本节）
+9. 我承认我的想法和态度可能是错的。/ I question my own opinions, positions, and viewpoints because they could be wrong.
+10. 我会根据新证据重新考虑自己的观点。/ I reconsider my opinions when presented with new evidence.
+11. 我尊重跟我看法不同的人的观点。/ I recognize the value in opinions that are different from my own.
+12. 我接受我的信念和态度可能有错。/ I accept that my beliefs and attitudes may be wrong.
+13. 面对相反的证据，我愿意改变自己的看法。/ In the face of conflicting evidence, I am open to changing my opinions.
+14. 我喜欢了解与我已有认知不同的新信息。/ I like finding out new information that differs from what I already think is true.
 
-18–35. [NCS-18 中文版条目，from 邝怡, 施俊琦, 蔡雅琦, 王垒 (2005). 大学生认知
-        需求量表的修订. 中国心理卫生杂志, 19(1), 57-60.]
+### 成长型思维 Dweck-3（反向计分；zh 初稿待回译核对）
 
-### 学业权变自我价值 CSW-academic（翻译初稿，5项，待与王磊/郑雪2006比对）
-原文：Crocker et al. 2003, Contingent Self-Worth Scale, academic competence subscale
+15. 一个人的聪明程度是天生固定的，无法真正改变。（R）/ You have a certain amount of intelligence, and you can't really do much to change it. (R)
+16. 人可以学习新东西，但改变不了自己的基本智力水平。（R）/ You can learn new things, but you can't really change your basic intelligence. (R)
+17. 不管是谁，都无法显著改变自己的能力水平。（R）/ No matter who you are, you can't significantly change your ability level. (R)
 
-36. 学习/工作上表现好的时候，我感觉自己更有价值。
-37. 每当考试或考核表现差，我的自尊心就受打击。
-38. 我对自己的评价，很大程度上取决于我在学业/工作上的表现。
-39. 知道自己在学业/工作上比别人强，会让我自我感觉良好。
-40. 学业/工作上的挫折会让我怀疑自己的价值。
+### 认知闭合需求 NFCS-15（Roets & Van Hiel 2011；en 原版条目，发布前核对；zh 为翻译初稿，**取得 2024 验证版后整节替换**）
 
-## 第三部分（RQ1 基线，非筛选项）
+18. 我不喜欢不确定的情境。/ I don't like situations that are uncertain.
+19. 我不喜欢那种可以有很多种回答的问题。/ I dislike questions which could be answered in many different ways.
+20. 规律有序的生活很适合我的性格。/ I find that a well-ordered life with regular hours suits my temperament.
+21. 如果不明白生活中某件事为什么发生，我会觉得不舒服。/ I feel uncomfortable when I don't understand the reason why an event occurred in my life.
+22. 当一个人和群体里其他所有人意见都不一致时，我会觉得烦躁。/ I feel irritated when one person disagrees with what everyone else in a group believes.
+23. 我不喜欢在不知道会发生什么的情况下进入一个情境。/ I don't like to go into a situation without knowing what I can expect from it.
+24. 做出决定之后，我会感到如释重负。/ When I have made a decision, I feel relieved.
+25. 面对一个问题时，我非常渴望尽快找到答案。/ When I am confronted with a problem, I'm dying to reach a solution very quickly.
+26. 如果不能立刻找到解决办法，我会很快变得不耐烦和恼火。/ I would quickly become impatient and irritated if I would not find a solution to a problem immediately.
+27. 我不喜欢和行事难以预料的人待在一起。/ I don't like to be with people who are capable of unexpected actions.
+28. 我不喜欢一句话可以有很多种理解的情况。/ I dislike it when a person's statement could mean many different things.
+29. 建立稳定的日常规律能让我更享受生活。/ I find that establishing a consistent routine enables me to enjoy life more.
+30. 我喜欢清晰而有条理的生活方式。/ I enjoy having a clear and structured mode of life.
+31. 在形成自己的观点之前，我通常不会去征询很多不同的意见。/ I do not usually consult many different opinions before forming my own view.
+32. 我不喜欢不可预测的情境。/ I dislike unpredictable situations.
 
-41. 遇到烦心事时，你更可能先跟谁说？
-    - 家人或朋友 / AI 聊天工具 / 都会，看情况 / 都不说，自己消化
-42. （若上题含 AI）有一件事你只跟 AI 说过、没跟任何人说过吗？
-    - 有 / 没有 / 不确定
-43. 用一两句话说说：你一般在什么情况下会想跟 AI 聊个人话题？____
+### 未决不耐受 IUS-12（Carleton et al. 2007；en 原版，发布前核对；zh 为翻译初稿，**取得 CIUSC-12 验证版后整节替换**）
+
+33. 预料之外的事会让我非常心烦。/ Unforeseen events upset me greatly.
+34. 缺少我需要的信息会让我很受挫。/ It frustrates me not having all the information I need.
+35. 不确定感让我无法充分地生活。/ Uncertainty keeps me from living a full life.
+36. 人应该凡事往前看，避免意外发生。/ One should always look ahead so as to avoid surprises.
+37. 即使计划做得再好，一件小小的意外也可能毁掉一切。/ A small unforeseen event can spoil everything, even with the best of planning.
+38. 到了该行动的时候，不确定感会让我动弹不得。/ When it's time to act, uncertainty paralyses me.
+39. 不确定的时候，我没办法好好做事。/ When I am uncertain I can't function very well.
+40. 我总是想知道未来会发生什么。/ I always want to know what the future has in store for me.
+41. 我受不了被事情打个措手不及。/ I can't stand being taken by surprise.
+42. 一点点疑虑就能让我停下行动。/ The smallest doubt can stop me from acting.
+43. 我应该能把一切都提前安排好。/ I should be able to organize everything in advance.
+44. 我必须远离所有不确定的情境。/ I must get away from all uncertain situations.
+
+### 反刍-brooding RRS 5 项（Treynor et al. 2003；**4 点频率量表**：1=几乎从不 … 4=几乎总是 / 1=almost never … 4=almost always；引导语："当你感到低落、难过或沮丧时，你多常……" / "When you feel down, sad, or depressed, how often do you..."）
+
+45. 想"我做了什么，要承受这些？" / Think "What am I doing to deserve this?"
+46. 想"我为什么总是这样反应？" / Think "Why do I always react this way?"
+47. 回想最近的某个情境，希望它当时能更好。/ Think about a recent situation, wishing it had gone better.
+48. 想"为什么别人没有的问题，我有？" / Think "Why do I have problems other people don't have?"
+49. 想"为什么我就不能把事情处理得更好？" / Think "Why can't I handle things better?"
+
+### 学业权变自我价值 CSW-academic（5 项，zh 初稿待与王磊/郑雪 2006 比对；回到 7 点同意度）
+
+50. 学习/工作上表现好的时候，我感觉自己更有价值。/ I feel better about myself when I do well academically/professionally.
+51. 每当考试或考核表现差，我的自尊心就受打击。/ My self-esteem suffers whenever I do poorly on an exam or evaluation.
+52. 我对自己的评价，很大程度上取决于我在学业/工作上的表现。/ How I feel about myself depends largely on my academic/work performance.
+53. 知道自己在学业/工作上比别人强，会让我自我感觉良好。/ Knowing I do better than others academically/professionally makes me feel good about myself.
+54. 学业/工作上的挫折会让我怀疑自己的价值。/ Academic/professional setbacks make me doubt my worth.
+
+## 第三部分：RQ1 基线（B3，非筛选项）
+
+55. 遇到烦心事时，你更可能先跟谁说？ / When something is bothering you, who are you most likely to talk to first?
+    - 家人或朋友 Family or friends / AI 聊天工具 An AI chat tool / 都会，看情况 Either, depends / 都不说，自己消化 Neither, I keep it to myself
+56. （若上题含 AI / if AI included）有一件事你只跟 AI 说过、没跟任何人说过吗？ / Is there something you've told only an AI and no person?
+    - 有 Yes / 没有 No / 不确定 Not sure
+57. 用一两句话说说：你一般在什么情况下会想跟 AI 聊个人话题？ / In a sentence or two: when do you tend to bring personal topics to an AI? ____
 
 ---
 
 ## 计分与使用备注（研究者用，不进问卷）
 - GIH-6：均分，高=更谦逊。Dweck-3：反向计分后均分，高=成长型。
+- **NFCS-15**：均分，高=闭合需求强（seizing/freezing 倾向）。
+- **IUS-12**：总分（12–84）；两因子 Prospective（33–39）/ Inhibitory（40–44 附近，
+  以验证版因子结构为准）。**与访谈 Q11 追问（表述萎缩自我报告）交叉验证**——
+  P27 signature 3。
+- **RRS-brooding**：总分（5–20），高=brooding 强。**Moderator 用途**（P27）：
+  高 brooding 者截断孵化可能是治疗性的，低 brooding 者才是 foreclosure 风险
+  人群——pilot 只做定性分组参考，不检验。
 - CSW-academic：均分，高=学业权变性强（优绩主义倾向 proxy）。
-- Pilot 用途 = 定性对照分组（高/低 GIH 等），不做统计检验（N 太小）。
-- 第41题就是"默认求助路径"访谈探针的问卷版——session 访谈里还会追问。
-- 合格线：Q4 ≥ 3个月 且 Q7 ≠ 从来没有。
+- 合格线：Q4 ≥ 3个月 且 Q7 ≠ 从来没有（Qualtrics B1 逻辑自动执行）。
+- 第55题=「默认求助路径」访谈探针的问卷版；session 访谈里还会追问。
+- `Q_Language` 字段 → session 语言分配参考（最终以"平时和 AI 聊个人话题
+  用什么语言"访谈确认为准，SESSION_PROTOCOL 阶段 0）。
