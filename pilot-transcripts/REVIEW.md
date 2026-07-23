@@ -50,11 +50,27 @@ challenging v1.
   means challenging may surface data the coder needs; nice property.
 
 ## Actions before freeze → v1-frozen
-- [ ] Consider one-notch softening of challenging's meta-commentary
-      (S3 U8 names the user's pattern very directly) — decide after
-      discussing reactance tolerance; alternative: keep, treat strong
-      reactions as data.
-- [ ] Re-run S1 × supportive once more post-v2 to confirm probe timing.
-- [ ] Human read-through of all 9 transcripts (Alex) — the tables above
-      sample diagnostic turns only.
+- [x] Softening decision (Alex, 2026-07-23): **soften one notch — ban motive
+      attribution, keep behavior-naming.** Challenging v2: may point at
+      observable conversational facts ("那个问题我们两次都没有回到"), may NOT
+      characterize motives in either assertion or question form ("你是想听
+      分析还是想要确认？" is now out of bounds); choice handed back to user.
+      Rationale: behavior-naming is the condition's active ingredient
+      (substantive challenge); motive attribution is the reactance risk and
+      also the part that pre-empts our own coding question (SUB/PERF is for
+      the coder to determine, not the AI to ask).
+- [x] Re-run S3 × challenging post-v2 (2026-07-22 run): U7/U8 now name the
+      unanswered questions and the skip pattern, zero motive attribution;
+      substance retained (still refuses to summarize highlights before the
+      open questions). ✅ PASS.
+- [x] Re-run S1 × supportive post-v2: probe fires cleanly at turn 4 with
+      spec wording, opt-out offered. ✅ PASS.
+- [ ] Human read-through of all 9 round-1 transcripts + 2 re-runs (Alex) —
+      the tables above sample diagnostic turns only.
 - [ ] Then tag prompts v1-frozen in git; INSTRUMENT_SPEC gate satisfied.
+
+Note: challenging U8 in the v2 re-run ends on a question ("对你真的有帮助
+吗？") that is pointed but targets the request, not the person — judged
+within bounds. If early live participants show disengagement after
+challenging episodes, the fallback is cutting that final rhetorical question,
+not further softening the behavior-naming.
