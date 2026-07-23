@@ -141,12 +141,23 @@ with st.sidebar:
     st.write(f"当前：episode {ss.episode_index + 1}/3 · "
              f"条件 {CONDITION_LABELS[ss.current_condition]} · "
              f"turn {ss.turn_count}/{TURNS_PER_CONDITION}")
+    # Topic bookkeeping is facilitator-side: a participant-facing picker
+    # would reimpose the multiple-choice frame the open first turn avoids.
+    topic = st.radio(
+        "本段话题（主持人记录）",
+        ["1 反复想的决定", "2 说不清为什么在意", "3 没听的建议", "自带话题", "未定"],
+        index=4, key=f"topic_ep{ss.episode_index}",
+    )
+    same_as_prev = False
+    if ss.episode_index > 0:
+        same_as_prev = st.checkbox("与上一段同话题", key=f"same_ep{ss.episode_index}")
     if ss.turn_count >= TURNS_PER_CONDITION and not ss.episode_done:
         st.warning("已到 8 turns —— 可以收尾切换")
     if st.button("结束当前 episode（主持人）"):
         ss.episode_done = True
         ss.ratings_pending = True
-        log_event("episode_end_by_facilitator")
+        log_event("episode_end_by_facilitator",
+                  topic=topic, same_topic_as_previous=same_as_prev)
         st.rerun()
 
 if ss.session_done:
@@ -169,10 +180,10 @@ if ss.ratings_pending:
 # --- task menu at episode start (R5) ---
 if ss.turn_count == 0 and not ss.display:
     st.subheader(f"对话 {ss.episode_index + 1} / 3")
-    st.write("从下面选一个话题开始（也可以继续聊上一段的话题）：")
+    st.write("可以从下面的提示里选一个，也可以聊别的真实在想的事：")
     for i, task in enumerate(TASK_MENU):
         st.markdown(f"{i+1}. {task}")
-    st.caption("想好后直接在下面输入第一句话。")
+    st.caption("想好后直接在下面输入第一句话，就像平时跟 AI 聊天那样开始。")
 
 # --- chat history ---
 for role, text in ss.display:
