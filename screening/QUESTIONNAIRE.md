@@ -11,14 +11,19 @@
 > GIH-6 + Dweck-3 + NFCS-15 + CIUSC-12 + RRS-brooding-5 + CSW-academic-5。
 > 全部量表同时存在中英文验证版/原版——EN 轨道零额外翻译负担。
 >
-> 条目来源状态：
-> - **NFCS-15**（Roets & Van Hiel 2011）：EN 原版条目下列（发布前与原文核对
->   措辞）；**zh 验证版 2024**（见 ROUND4_FINDINGS §6.10，心理科学 jps.ecnu
->   论文）——取得验证条目后替换下方翻译初稿
-> - **CIUSC-12**（IUS-12 中文版，N=5,672 验证）：同上，zh 验证条目待取得；
->   EN 用 Carleton et al. 2007 原版
-> - **RRS-brooding**（Treynor et al. 2003）：EN 原版下列；zh 版存在
->   （韩秀/杨宏飞等修订线），取得后替换初稿
+> 条目来源状态（2026-07-23 文献核实后更新）：
+> - **闭合需求 15 项**：EN 用 Roets & Van Hiel 2011 原版条目（下列，发布前核对）。
+>   ⚠ P27 声称的"NFCS-15 zh 2024 验证"经核实为错引（详见 ITEM_RETRIEVAL_GUIDE ①）；
+>   zh 改用**刘雪峰、梁钧平 2007 修订版（42 项）中对应 R&VH 15 项的条目**——
+>   取得 42 条全文后由 AI 对号替换下方翻译初稿
+> - **IUS-12**：zh 验证已确认——**张亚娟等 2017，N=1,018 大学生，α=.878**
+>   （papers/scales/zhang2017-IUS12-zh-college.pdf）；两因子=预期性焦虑
+>   （1,2,3,4,5,8,10）/抑制性焦虑（6,7,9,11,12）；**Likert 5 点**（该节计分
+>   从 7 点改 5 点）。12 条全文待从引用该文的学位论文附录补齐；
+>   EN 用 Carleton et al. 2007 原版（同为 5 点）
+> - **RRS-brooding**（Treynor et al. 2003）：EN 原版下列；zh 版确认为
+>   **韩秀、杨宏飞 2009**（中国临床心理学杂志 17(5):550-551，22 条，
+>   "强迫思考"维度=brooding），取得 22 条全文后挑 5 条替换初稿
 > - GIH-6（Leary 2017）、Dweck-3：无 zh 验证版，翻译初稿待回译核对（不变）
 > - CSW-academic（Crocker 2003）：待比对王磊/郑雪 2006；暂用翻译初稿
 > - ⚠ 中庸作答提醒（P21 陷阱3）：pilot 规模下量表只做定性对照
@@ -90,7 +95,7 @@
 31. 在形成自己的观点之前，我通常不会去征询很多不同的意见。/ I do not usually consult many different opinions before forming my own view.
 32. 我不喜欢不可预测的情境。/ I dislike unpredictable situations.
 
-### 未决不耐受 IUS-12（Carleton et al. 2007；en 原版，发布前核对；zh 为翻译初稿，**取得 CIUSC-12 验证版后整节替换**）
+### 未决不耐受 IUS-12（**本节 Likert 5 点**：1=完全不符合 … 5=完全符合 / 1=not at all characteristic of me … 5=entirely characteristic of me。en 用 Carleton 2007 原版，发布前核对；zh 为翻译初稿，**取得张亚娟 2017 验证条目后整节替换**）
 
 33. 预料之外的事会让我非常心烦。/ Unforeseen events upset me greatly.
 34. 缺少我需要的信息会让我很受挫。/ It frustrates me not having all the information I need.
@@ -133,10 +138,10 @@
 
 ## 计分与使用备注（研究者用，不进问卷）
 - GIH-6：均分，高=更谦逊。Dweck-3：反向计分后均分，高=成长型。
-- **NFCS-15**：均分，高=闭合需求强（seizing/freezing 倾向）。
-- **IUS-12**：总分（12–84）；两因子 Prospective（33–39）/ Inhibitory（40–44 附近，
-  以验证版因子结构为准）。**与访谈 Q11 追问（表述萎缩自我报告）交叉验证**——
-  P27 signature 3。
+- **闭合需求 15 项**：均分，高=闭合需求强（seizing/freezing 倾向）。
+- **IUS-12**：**5 点计分**，总分 12–60；两因子按张亚娟 2017——预期性焦虑
+  （条目 1,2,3,4,5,8,10）/抑制性焦虑（条目 6,7,9,11,12）。**与访谈 Q11 追问
+  （表述萎缩自我报告）交叉验证**——P27 signature 3。
 - **RRS-brooding**：总分（5–20），高=brooding 强。**Moderator 用途**（P27）：
   高 brooding 者截断孵化可能是治疗性的，低 brooding 者才是 foreclosure 风险
   人群——pilot 只做定性分组参考，不检验。
