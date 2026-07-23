@@ -36,9 +36,7 @@ regenerate events are first-class.
 
 ## Status
 
-- Conditions: v2, pending human read-through → v1-freeze (see
-  `pilot-transcripts/REVIEW.md` open items)
-- Shell: serves; end-to-end session flow implemented; needs a live
-  dry-run with a colleague before first participant
-- Not built (deliberately): tail-probe module (multi-agent episode) —
-  optional, after main flow is stable
+Lives in the surf-docs repo's `KANBAN.md` (single board for both repos) —
+see Slice 1 (path to first participant) and the platform-side backlog there.
+One deliberate non-feature worth restating: the tail-probe module
+(multi-agent episode) is intentionally unbuilt until the main flow is stable.
