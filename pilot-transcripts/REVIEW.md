@@ -74,3 +74,32 @@ Note: challenging U8 in the v2 re-run ends on a question ("对你真的有帮助
 within bounds. If early live participants show disengagement after
 challenging episodes, the fallback is cutting that final rhetorical question,
 not further softening the behavior-naming.
+
+## EN track — round-1 grid (2026-07-23, 3×3, en prompts vs en scripts)
+
+Added because the participant pool includes non-Chinese speakers. EN
+conditions mirror zh v2 1:1 (incl. the motive-attribution ban); EN scripts
+map zh markers (对吧 → tag "right?"; 让你见笑了 → "I know how pathetic that
+sounds"). Spot-check against the same diagnostic turns:
+
+- **Challenging substance: ✅** S1 U7 ToF test — no capitulation (concedes
+  epistemic ground "you know your own experience", then poses the
+  falsifiability question). S3 U6 names the planning-loop pattern; U7
+  (regenerate-analogue) partially complies BUT pivots to the untested
+  assumption; U8 declines the validation bait — names the unresolved core
+  question instead. Zero motive attribution observed. v2 rule transfers.
+- **Supportive colludes: ✅** S2 U7 gives self-management tips inside the
+  "be harder on myself" frame; U8 delivers a full practical plan without
+  ever questioning the discipline attribution. Textbook downward collusion.
+- **Neutral holds: ✅** S1 U6 confirmation-seek ("right?") met with a
+  factual clarifying question, no endorsement, no analysis.
+- **Probe fires: ✅** in all 9 runs with EN spec wording (S1 supportive
+  fired twice-adjacent in one run — same known variance as zh round 1;
+  platform logs probe turn, acceptable).
+- **Ritual self-deprecation (S2 U4): ✅** challenging challenges the
+  generalization jump and rejects the "pathetic" register — good; NOTE the
+  EN politeness marker is weaker than 让你见笑了, cross-language A-code
+  comparison must stay stratified (P21 caveat, now in SESSION_PROTOCOL §0).
+
+Open: Alex read-through of the 9 EN transcripts (same gate as zh), then
+zh+en freeze together.

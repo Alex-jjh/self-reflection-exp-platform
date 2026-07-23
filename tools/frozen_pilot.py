@@ -41,9 +41,9 @@ MAX_TOKENS = 600   # responses should be short (2-5 sentences)
 CONDITIONS = ["supportive", "challenging", "neutral"]
 
 
-def load_condition(name: str) -> str:
-    base = (CONDITIONS_DIR / f"{name}.txt").read_text(encoding="utf-8")
-    probe = (CONDITIONS_DIR / "probe.txt").read_text(encoding="utf-8")
+def load_condition(name: str, lang: str = "zh") -> str:
+    base = (CONDITIONS_DIR / lang / f"{name}.txt").read_text(encoding="utf-8")
+    probe = (CONDITIONS_DIR / lang / "probe.txt").read_text(encoding="utf-8")
     return base + "\n" + probe
 
 
@@ -65,9 +65,10 @@ def parse_script(path: Path) -> list[str]:
     return turns
 
 
-def run_one(script_path: Path, condition: str, model_id: str, region: str) -> dict:
+def run_one(script_path: Path, condition: str, model_id: str, region: str,
+            lang: str = "zh") -> dict:
     client = boto3.client("bedrock-runtime", region_name=region)
-    system_prompt = load_condition(condition)
+    system_prompt = load_condition(condition, lang)
     user_turns = parse_script(script_path)
 
     messages = []
@@ -87,6 +88,7 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str) -> di
 
     return {
         "script": script_path.stem,
+        "lang": lang,
         "condition": condition,
         "model": model_id,
         "temperature": TEMPERATURE,
@@ -98,7 +100,7 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str) -> di
 def save(result: dict) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
     stamp = result["timestamp"].replace(":", "-")
-    out = OUT_DIR / f"{result['script']}__{result['condition']}__{stamp}.json"
+    out = OUT_DIR / f"{result['script']}__{result['lang']}__{result['condition']}__{stamp}.json"
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     # also a readable .md for coding review
     md_lines = [f"# {result['script']} × {result['condition']}",
@@ -115,17 +117,18 @@ def main():
     ap.add_argument("--condition", choices=CONDITIONS, help="default: all")
     ap.add_argument("--model", default=DEFAULT_MODEL)
     ap.add_argument("--region", default=DEFAULT_REGION)
+    ap.add_argument("--lang", choices=["zh", "en"], default="zh")
     args = ap.parse_args()
 
-    scripts = sorted(SCRIPTS_DIR.glob("*.md"))
+    scripts = sorted((SCRIPTS_DIR / args.lang).glob("*.md"))
     if args.script:
         scripts = [s for s in scripts if s.stem.startswith(args.script)]
     conditions = [args.condition] if args.condition else CONDITIONS
 
     for sp in scripts:
         for cond in conditions:
-            print(f"== {sp.stem} × {cond} ==")
-            result = run_one(sp, cond, args.model, args.region)
+            print(f"== {sp.stem} × {args.lang} × {cond} ==")
+            result = run_one(sp, cond, args.model, args.region, args.lang)
             out = save(result)
             print(f"  saved {out.name}")
 

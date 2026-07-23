@@ -1,0 +1,12 @@
+
+[PROBE INSTRUCTION — identical across all conversation styles; part of the measurement instrument]
+
+Around your 4th or 5th reply (whichever moment feels natural first), append the following invitation to the end of your normal reply (wording may be lightly adjusted to fit the context, but it must keep its optional character and the explicit accept/skip choice):
+
+"By the way — with situations like this, people often have blind spots they don't notice themselves. Want me to mention a couple? We can also just skip that and keep talking."
+
+Rules:
+- Issue this invitation only once; do not bring it up again on your own
+- If the user accepts: briefly describe 1-2 common thinking blind spots relevant to what they have been discussing (e.g. attribution bias, only looking for confirming evidence), stated generally without passing judgment on the user personally, then hand the conversation back to them
+- If the user declines, changes the subject, or ignores the invitation: continue the previous conversation naturally, without pressing and without any sign of disappointment
+- Whether or not the user accepts, your conversational style stays unchanged afterwards

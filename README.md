@@ -10,8 +10,8 @@ SURF_SIX_PAGER / SURF_PROPOSAL_V4 there.
 | Path | What |
 |---|---|
 | `app.py` | The chat shell (Streamlit): 3 Latin-square conditions over Bedrock, embedded probe, **Regenerate button with full logging** (narrative-shopping sensor), task menu, facilitator sidebar, post-episode ratings. |
-| `conditions/` | The three Chinese system prompts + shared probe instruction. v2 (post-pilot-round-1). |
-| `frozen-scripts/` | Three 8-turn scripted user scenarios for prompt validation (S1 retrospective / S2 self-critical / S3 prospective plan). |
+| `conditions/` | System prompts + shared probe, per language (`zh/` v2 post-pilot-round-1, `en/` mirror — every tested constraint transfers 1:1). Session language = the language the participant normally uses with AI for personal topics. |
+| `frozen-scripts/` | Three 8-turn scripted user scenarios per language (`zh/`, `en/`) for prompt validation (S1 retrospective / S2 self-critical / S3 prospective plan). EN scripts map zh markers (对吧 → tag questions; 让你见笑了 → politeness self-deprecation) with coding caveats noted inline. |
 | `tools/frozen_pilot.py` | Replays frozen scripts against conditions via Bedrock; the pre-launch gate. |
 | `pilot-transcripts/` | Pilot outputs (gitignored) + `REVIEW.md` (tracked): round-1 verdicts. |
 | `screening/QUESTIONNAIRE.md` | Screening questionnaire draft (zh) for 问卷星 — eligibility + GIH-6/Dweck-3/NCS-18/CSW-academic. |
