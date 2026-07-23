@@ -4,3 +4,4 @@ __pycache__/
 pilot-transcripts/
 .DS_Store
 sessions/
+screening/items/
