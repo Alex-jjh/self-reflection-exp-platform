@@ -1,15 +1,16 @@
 # 筛选问卷（v1 草案）— Qualtrics 双语搭建规格
 
-> 用途：session 前数天发放。筛资格 + 个体差异变量。约 10–12 分钟。
+> 用途：session 前数天发放。筛资格 + 个体差异变量。约 12–14 分钟。
 > 平台：**Qualtrics 单份问卷，内置 zh/en 语言切换**（Survey Options →
 > Translations；被试自选语言，`Q_Language` 字段自动记录，作为 session
 > 语言分配的参考——见 SESSION_PROTOCOL 阶段 0）。
 > 数据管理：平台只存量表分与联系方式（低敏），与对话转录（高敏）分离，
 > 用参与者编号关联。
 >
-> **量表包（2026-07-23 裁决，P27 后替换 NCS-18 方案）：**
-> GIH-6 + Dweck-3 + NFCS-15 + CIUSC-12 + RRS-brooding-5 + CSW-academic-5。
-> 全部量表同时存在中英文验证版/原版——EN 轨道零额外翻译负担。
+> **量表包（2026-07-23 裁决 + 2026-07-25 增补 ECR-RS）：**
+> GIH-6 + Dweck-3 + NFCS-15 + CIUSC-12 + RRS-brooding-5 + ECR-RS-9 +
+> CSW-academic-5。全部量表同时存在中英文验证版/原版——EN 轨道零额外
+> 翻译负担。
 >
 > 条目来源状态（2026-07-23 文献核实后更新）：
 > - **闭合需求 15 项**：EN 用 Roets & Van Hiel 2011 原版条目（下列，发布前核对）。
@@ -36,7 +37,7 @@
 | Block | 内容 | 逻辑 |
 |---|---|---|
 | B1 资格 | Q1–Q8 | Q4 <3个月 或 Q7=从来没有 → End of Survey（礼貌结束语，不进 B2） |
-| B2 量表 | Q9–Q54（6 个量表，每量表一页） | 全部 7 点 Likert（RRS 为 4 点，见该节）；量表内条目随机化可开 |
+| B2 量表 | Q9–Q54 + 44a–i（7 个量表，每量表一页） | 7 点 Likert 为主（IUS 5 点、RRS 4 点，见各节）；量表内条目随机化可开 |
 | B3 基线 | Q55–Q57 | 无逻辑 |
 | 收尾 | 联系方式确认 + 感谢 | Embedded data: `Q_Language`, 总分自动计算可后置 |
 
@@ -118,6 +119,22 @@
 48. 想"为什么别人没有的问题，我有？" / Think "Why do I have problems other people don't have?"
 49. 想"为什么我就不能把事情处理得更好？" / Think "Why can't I handle things better?"
 
+### 依恋 ECR-RS 9 项（Fraley et al. 2011，Relationship Structures 通用版；**7 点同意度**；zh 验证版存在——取得验证条目后替换本节初稿。引导语："以下问题请针对你生活中普遍的亲近关系作答" / "Answer regarding your close relationships in general"）
+
+> 【2026-07-25 裁决（P30 后）：加入 ECR-RS 给依恋焦虑×reassurance回路、
+> 回避×仅向AI外化两个预测提供 trait 锚点。选 ECR-RS 而非 ECR-12 因为
+> 前者有中文验证版。回避 6 题 + 焦虑 3 题。】
+
+44a. 我通常会和他们讨论我的问题和顾虑。（R，回避）/ I usually discuss my problems and concerns with them. (R, avoidance)
+44b. 我会和他们商量事情。（R，回避）/ I talk things over with them. (R, avoidance)
+44c. 我觉得依靠他们是容易的。（R，回避）/ I find it easy to depend on them. (R, avoidance)
+44d. 我不太愿意向他们敞开心扉。（回避）/ I don't feel comfortable opening up to them. (avoidance)
+44e. 我不喜欢向他们展示内心深处的感受。（回避）/ I prefer not to show them how I feel deep down. (avoidance)
+44f. 需要的时候向他们求助对我有帮助。（R，回避）/ It helps to turn to them in times of need. (R, avoidance)
+44g. 我常担心他们并不真正在乎我。（焦虑）/ I often worry that they don't really care for me. (anxiety)
+44h. 我害怕他们会离开我。（焦虑）/ I'm afraid they may abandon me. (anxiety)
+44i. 我担心他们对我的感情不如我对他们的深。（焦虑）/ I worry that they won't care about me as much as I care about them. (anxiety)
+
 ### 学业权变自我价值 CSW-academic（5 项，zh 初稿待与王磊/郑雪 2006 比对；回到 7 点同意度）
 
 50. 学习/工作上表现好的时候，我感觉自己更有价值。/ I feel better about myself when I do well academically/professionally.
@@ -146,6 +163,10 @@
   高 brooding 者截断孵化可能是治疗性的，低 brooding 者才是 foreclosure 风险
   人群——pilot 只做定性分组参考，不检验。
 - CSW-academic：均分，高=学业权变性强（优绩主义倾向 proxy）。
+- **ECR-RS**：回避分（6 题，R 题反向）+ 焦虑分（3 题）分开计。用途（P30/ch26）：
+  焦虑高 = reassurance 回路高危（与访谈"AI 鼓励了我"听觉指引交叉）；
+  回避高 = "仅向 AI 外化"预期人群（与 Q6 人际模板探针交叉；预期
+  bypass——回避者照样向 AI 暴露）。pilot 规模只做定性分组。
 - 合格线：Q4 ≥ 3个月 且 Q7 ≠ 从来没有（Qualtrics B1 逻辑自动执行）。
 - 第55题=「默认求助路径」访谈探针的问卷版；session 访谈里还会追问。
 - `Q_Language` 字段 → session 语言分配参考（最终以"平时和 AI 聊个人话题
