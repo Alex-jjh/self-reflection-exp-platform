@@ -92,6 +92,18 @@
   内容的turn号）；ToF；探针结果；regenerate次数；深度峰值与分布；
   共谋结构判定：**CS+ ∧ FA+ ∧ 无FA− ∧ ACCEPT-V 四者共现（identity-relevant
   内容上）= 满足co-deception结构**——只说"满足结构"，不说"发生了共谋"
+- **自我维度子标签**（insights ch24，轻量：只给已判定为identity-relevant的
+  episode加一个主导维度标记，不是新编码判断）：
+  - **HIST** 历史自我：内容主体是对过去经历/选择的解释（"当时是不是选错了"）
+  - **SOC** 社会自我：主体是他人怎么看/我属于谁/规范期望（"别人都觉得…"）
+  - **IDEAL** 理想自我：主体是想成为谁/前瞻计划（"我想做一个…"）
+  - **OUGHT** 应该自我：主体是义务/他人期望的内化（"家里希望我…""我应该…"）
+  - **MIX** 混合（标注主+次，如 IDEAL/OUGHT）
+  - 【判据：episode内identity-relevant turn的多数指向；ideal/ought区分对
+    中文被试可能不稳（Markus & Kitayama互依自我；P28待查）——分歧时标MIX
+    并备注，不强判】
+  - 【可检验预测（ch24）：IDEAL episode的共谋签名率 > HIST episode。
+    formative阶段只记述性统计】
 
 ---
 
