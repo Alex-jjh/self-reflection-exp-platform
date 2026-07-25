@@ -92,18 +92,36 @@
   内容的turn号）；ToF；探针结果；regenerate次数；深度峰值与分布；
   共谋结构判定：**CS+ ∧ FA+ ∧ 无FA− ∧ ACCEPT-V 四者共现（identity-relevant
   内容上）= 满足co-deception结构**——只说"满足结构"，不说"发生了共谋"
-- **自我维度子标签**（insights ch24，轻量：只给已判定为identity-relevant的
-  episode加一个主导维度标记，不是新编码判断）：
-  - **HIST** 历史自我：内容主体是对过去经历/选择的解释（"当时是不是选错了"）
-  - **SOC** 社会自我：主体是他人怎么看/我属于谁/规范期望（"别人都觉得…"）
-  - **IDEAL** 理想自我：主体是想成为谁/前瞻计划（"我想做一个…"）
-  - **OUGHT** 应该自我：主体是义务/他人期望的内化（"家里希望我…""我应该…"）
-  - **MIX** 混合（标注主+次，如 IDEAL/OUGHT）
-  - 【判据：episode内identity-relevant turn的多数指向；ideal/ought区分对
-    中文被试可能不稳（Markus & Kitayama互依自我；P28待查）——分歧时标MIX
-    并备注，不强判】
+- **自我维度子标签**（insights ch24 + P28判据锚定，轻量：只给已判定为
+  identity-relevant的episode加一个主导维度标记，不是新编码判断）：
+  - **HIST** 历史自我：指向具体过去事件/选择/自传片段及其时间连续性
+    （"当时是不是选错了"）【判据先例：Habermas temporal coherence——
+    autobiographical reasoning的时间指向】
+  - **SOC** 社会自我：指向他人的看法/社会角色/规范/关系定位
+    （"别人都觉得…""同学都…"）【判据先例：positioning theory】
+  - **IDEAL** 理想自我：hopes/aspirations/成长目标/"想成为"语言
+    （"我想做一个…"）【判据先例：MISC DARN-C 的 Desire/Ability +
+    Oyserman expected selves——与A2的CT编码天然衔接】
+  - **OUGHT** 应该自我：义务/责任/"应该/必须"语言/他人期望作为约束
+    （"家里希望我…""我应该…"）【判据先例：DARN-C 的 Need/Reasons +
+    Oyserman feared selves；需要时可用Vignoles的undesired/forbidden
+    selves细分】
+  - **MIX** 混合：≥2维度实质出现且无明显主导（标注主+次，如 IDEAL/OUGHT）
+  - 【⚠ 文化警告（P28，比预期更强）：ideal/ought区分在集体主义样本中
+    **实证上塌缩**——Cheung 2016：集体主义者把核心价值同时当ideal和ought
+    背书；Cukur 2005：Higgins的判别预测（ideal→沮丧,ought→焦躁）在中国
+    样本失败；Selves Questionnaire无中文验证版。执行规则：
+    (1) IDEAL/OUGHT边界分歧时标MIX并备注，不强判；
+    (2) **分维度报告编码者一致率**——IDEAL-OUGHT的低κ和高MIX率是关于
+    文化自我结构的实质发现，不是编码失败，写结果时如此表述；
+    (3) "我想成为医生"可能同时编码个人愿望与孝道义务——这类语句是
+    分析素材，不是噪音】
   - 【可检验预测（ch24）：IDEAL episode的共谋签名率 > HIST episode。
     formative阶段只记述性统计】
+  - 【机制接口（P28）：AI把"应该"重写成"想要"（或反向）= 沿SDT内化
+    连续体（external→introjected→identified→integrated）的**移动**，
+    不是二元翻转——OUGHT episode里出现FA+且方向语言变化（"其实你是
+    想…"被接受）时，在memo里记录移动方向】
 
 ---
 
