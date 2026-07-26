@@ -119,21 +119,24 @@
 48. 想"为什么别人没有的问题，我有？" / Think "Why do I have problems other people don't have?"
 49. 想"为什么我就不能把事情处理得更好？" / Think "Why can't I handle things better?"
 
-### 依恋 ECR-RS 9 项（Fraley et al. 2011，Relationship Structures 通用版；**7 点同意度**；zh 验证版存在——取得验证条目后替换本节初稿。引导语："以下问题请针对你生活中普遍的亲近关系作答" / "Answer regarding your close relationships in general"）
+### 依恋 ECR-RS 9 项（Fraley et al. 2011，Relationship Structures 通用版；**7 点同意度**；引导语："以下句子描述人们在亲近关系中的感受。请针对你生活中普遍的亲近关系（如亲密朋友、家人）作答" / "The following concern how you feel in close relationships in general"）
 
-> 【2026-07-25 裁决（P30 后）：加入 ECR-RS 给依恋焦虑×reassurance回路、
-> 回避×仅向AI外化两个预测提供 trait 锚点。选 ECR-RS 而非 ECR-12 因为
-> 前者有中文验证版。回避 6 题 + 焦虑 3 题。】
+> 【条目来源（2026-07-25 对号完成）：zh 条目取自**李同归、加藤和生 2006
+> ECR 中文版**（心理学报 38(3):399-406，α=.82/.77，重测 .71/.72，
+> `papers/scales/litonggui2006-ECR-zh.pdf`）中对应 ECR-RS 的条目，
+> 指称从"恋人"改为"他们"（通用关系）——**此指称适配需在方法节注明**。
+> 44g 无 ECR 原版对应条目（ECR-RS 该题源自 ECR-R），保留我们的翻译并标注。
+> 若 CNKI 检得 ECR-RS 专门中文验证（取件指南③b），则整节替换为该版。】
 
-44a. 我通常会和他们讨论我的问题和顾虑。（R，回避）/ I usually discuss my problems and concerns with them. (R, avoidance)
-44b. 我会和他们商量事情。（R，回避）/ I talk things over with them. (R, avoidance)
-44c. 我觉得依靠他们是容易的。（R，回避）/ I find it easy to depend on them. (R, avoidance)
-44d. 我不太愿意向他们敞开心扉。（回避）/ I don't feel comfortable opening up to them. (avoidance)
-44e. 我不喜欢向他们展示内心深处的感受。（回避）/ I prefer not to show them how I feel deep down. (avoidance)
-44f. 需要的时候向他们求助对我有帮助。（R，回避）/ It helps to turn to them in times of need. (R, avoidance)
-44g. 我常担心他们并不真正在乎我。（焦虑）/ I often worry that they don't really care for me. (anxiety)
-44h. 我害怕他们会离开我。（焦虑）/ I'm afraid they may abandon me. (anxiety)
-44i. 我担心他们对我的感情不如我对他们的深。（焦虑）/ I worry that they won't care about me as much as I care about them. (anxiety)
+44a. 我经常与他们讨论我所遇到的问题以及我关心的事情。（R，回避；ECR-27）/ I usually discuss my problems and concerns with them. (R)
+44b. 我跟他们什么事情都讲。（R，回避；ECR-25）/ I talk things over with them. (R)
+44c. 我觉得依赖他们是很自在的事情。（R，回避；ECR-29）/ I find it easy to depend on them. (R)
+44d. 我觉得对他们开诚布公不是一件很舒服的事情。（回避；ECR-9）/ I don't feel comfortable opening up to them.
+44e. 总的来说，我不喜欢让他们知道自己内心深处的感觉。（回避；ECR-1）/ I prefer not to show them how I feel deep down.
+44f. 在需要的时候，我向他们求助是很有用的。（R，回避；ECR-33）/ It helps to turn to them in times of need. (R)
+44g. 我常担心他们并不真正在乎我。（焦虑；⚠ 翻译稿，无 ECR 对应）/ I often worry that they don't really care for me.
+44h. 我担心我会被抛弃。（焦虑；ECR-2）/ I'm afraid that they may abandon me.
+44i. 我担心他们不会像我关心他们那样地关心我。（焦虑；ECR-6）/ I worry that they won't care about me as much as I care about them.
 
 ### 学业权变自我价值 CSW-academic（5 项，zh 初稿待与王磊/郑雪 2006 比对；回到 7 点同意度）
 
