@@ -122,6 +122,19 @@
     连续体（external→introjected→identified→integrated）的**移动**，
     不是二元翻转——OUGHT episode里出现FA+且方向语言变化（"其实你是
     想…"被接受）时，在memo里记录移动方向】
+- **出口距离 EXIT（episode级三级码；ch25三判据的仪器化，advisor
+  memo B2）**——episode收尾时叙事离outcome-reality检验有多远：
+  - **EXIT-0** 闭合于自我描述：episode终点是身份/状态结论（"我就是
+    这样的人""想清楚了"），无任何行动指向
+  - **EXIT-1** 行动指向但未锚定：有"要去做X"的方向，无对象、无时间、
+    无可失败性（"以后多主动一点"）
+  - **EXIT-2** 可失败承诺：具体、有对象/时间、结果可观察（"这周把
+    邮件发给她"）——失败是可能的，因此结果有裁决力
+  - 【判据：只看episode最后1/4的turn；AI提议的行动用户未接受不计；
+    与探针接受/拒绝独立编码。预测（ch25）：supportive条件EXIT-0
+    占比最高；分析产出=D签名×EXIT等级交叉表】
+  - 【服务三处：C6 insight落点分类、Phase B侧栏触发条件（EXIT-0
+    persistant时提示）、"共谋签名×出口"交叉表】
 
 ---
 
