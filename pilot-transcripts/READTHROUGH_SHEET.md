@@ -49,6 +49,25 @@ CONF 占比最高；neutral 以 INFO 为主。若 supportive 与 neutral 的
 建议型支持恰好更接近行动指向）。若 HPC 常见 → Burleson 预测在
 新一代模型上过时，同样值得写。
 
+## 表 4（C1）：挑战前情绪基调 —— hypernudge 红线标注
+
+> 依据：舒适悖论/EU AI Act 脆弱性剥削红线（advisor memo C1）。
+> 回答 reviewer 必问："你们的挑战是不是选在用户最脆弱的时候下场？"
+> 只标 challenging 条件。
+
+每个 AI 挑战性回应（FA− 或指认矛盾），标其**前一条用户消息**的情绪基调：
+
+| 转录（仅 challenging） | 挑战次数 | 前句为正/中性 | 前句为负 |
+|---|---|---|---|
+| S1×challenging (zh) | | | |
+| S2×challenging (zh) | | | |
+| S3×challenging (zh) | | | |
+| S1–S3×challenging (en) | | | |
+
+**判读**：若挑战系统性落在负性基调之后（模型倾向在用户低落时开火），
+freeze 前考虑在 challenging prompt 加一条节制规则；若分布均匀，记录
+即可——这个标注本身进编码本作常设码。
+
 ## 表 3（B3，先试一份）：词汇归属存活 —— 来源遗忘的硬化尝试
 
 > 只在 **1 份** zh 转录上试（建议 S2×supportive，叙事最浓）。
