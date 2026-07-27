@@ -17,11 +17,11 @@
 >   ⚠ P27 声称的"NFCS-15 zh 2024 验证"经核实为错引（详见 ITEM_RETRIEVAL_GUIDE ①）；
 >   zh 改用**刘雪峰、梁钧平 2007 修订版（42 项）中对应 R&VH 15 项的条目**——
 >   取得 42 条全文后由 AI 对号替换下方翻译初稿
-> - **IUS-12**：zh 验证已确认——**张亚娟等 2017，N=1,018 大学生，α=.878**
->   （papers/scales/zhang2017-IUS12-zh-college.pdf）；两因子=预期性焦虑
->   （1,2,3,4,5,8,10）/抑制性焦虑（6,7,9,11,12）；**Likert 5 点**（该节计分
->   从 7 点改 5 点）。12 条全文待从引用该文的学位论文附录补齐；
->   EN 用 Carleton et al. 2007 原版（同为 5 点）
+> - **IUS-12**：✅ **条目已到位（2026-07-27）**——zh 用**吴莉娟等 2016**
+>   附录全文 12 条（与 Carleton 原版同序；papers/scales/
+>   wu-IUS12-zh-middleschool.pdf），大学生适用性锚定**张亚娟等 2017**
+>   （N=1,018，α=.878）；**Likert 5 点**；两因子按 Carleton 原版编号
+>   （见计分备注）。EN 用 Carleton et al. 2007 原版（同为 5 点）
 > - **RRS-brooding**（Treynor et al. 2003）：EN 原版下列；zh 版确认为
 >   **韩秀、杨宏飞 2009**（中国临床心理学杂志 17(5):550-551，22 条，
 >   "强迫思考"维度=brooding），取得 22 条全文后挑 5 条替换初稿
@@ -96,20 +96,32 @@
 31. 在形成自己的观点之前，我通常不会去征询很多不同的意见。/ I do not usually consult many different opinions before forming my own view.
 32. 我不喜欢不可预测的情境。/ I dislike unpredictable situations.
 
-### 未决不耐受 IUS-12（**本节 Likert 5 点**：1=完全不符合 … 5=完全符合 / 1=not at all characteristic of me … 5=entirely characteristic of me。en 用 Carleton 2007 原版，发布前核对；zh 为翻译初稿，**取得张亚娟 2017 验证条目后整节替换**）
+### 未决不耐受 IUS-12（**本节 Likert 5 点**：1=完全不符合 2=有点符合 3=基本符合 4=非常符合 5=完全符合 / 1=not at all characteristic of me … 5=entirely characteristic of me。en 用 Carleton 2007 原版，发布前核对）
 
-33. 预料之外的事会让我非常心烦。/ Unforeseen events upset me greatly.
-34. 缺少我需要的信息会让我很受挫。/ It frustrates me not having all the information I need.
-35. 不确定感让我无法充分地生活。/ Uncertainty keeps me from living a full life.
-36. 人应该凡事往前看，避免意外发生。/ One should always look ahead so as to avoid surprises.
-37. 即使计划做得再好，一件小小的意外也可能毁掉一切。/ A small unforeseen event can spoil everything, even with the best of planning.
-38. 到了该行动的时候，不确定感会让我动弹不得。/ When it's time to act, uncertainty paralyses me.
-39. 不确定的时候，我没办法好好做事。/ When I am uncertain I can't function very well.
-40. 我总是想知道未来会发生什么。/ I always want to know what the future has in store for me.
-41. 我受不了被事情打个措手不及。/ I can't stand being taken by surprise.
-42. 一点点疑虑就能让我停下行动。/ The smallest doubt can stop me from acting.
-43. 我应该能把一切都提前安排好。/ I should be able to organize everything in advance.
-44. 我必须远离所有不确定的情境。/ I must get away from all uncertain situations.
+> 【zh 条目来源（2026-07-27 替换完成，✅ 不再阻塞）：**吴莉娟、王佳宁、齐晓栋
+> 2016**《简版无法忍受不确定性量表在中学生中应用的效度和信度》，中国心理
+> 卫生杂志 30(9)，**文末附录印有全部 12 条**（`papers/scales/
+> wu-IUS12-zh-middleschool.pdf`），条目顺序=Carleton 2007 原版顺序，逐条
+> 照录。**大学生适用性锚定张亚娟等 2017**（N=1,018，α=.878，
+> `papers/scales/zhang2017-IUS12-zh-college.pdf`）——注意张版为独立翻译、
+> 条目顺序与 Carleton 不同（其正文透露的"第8条"实为 Carleton 第3条内容），
+> 故**不与吴版拼接措辞、不用张版因子编号**；方法节表述："zh 条目采用
+> 吴莉娟等(2016)公开发表的 IUS-12 中文版，该量表在大学生群体的适用性
+> 见张亚娟等(2017)"。可选升级：取得张版 12 条全文后（取件指南②b）
+> 整节换为大学生样本验证条目。】
+
+33. 无法预料的事情会让我心烦意乱。/ Unforeseen events upset me greatly.
+34. 如果不能拥有我所需要的全部信息，我会很沮丧。/ It frustrates me not having all the information I need.
+35. 不确定性使我很难拥有一个完美的生活。/ Uncertainty keeps me from living a full life.
+36. 我做事总会未雨绸缪，以避免措手不及。/ One should always look ahead so as to avoid surprises.
+37. 即使有最好的计划，一个小意外也能搞砸我的全盘计划。/ A small unforeseen event can spoil everything, even with the best of planning.
+38. 当到了采取行动的时候，不确定性会让我停滞不前。/ When it's time to act, uncertainty paralyses me.
+39. 当我感到不确定时，我就不能很好的表现自己。/ When I am uncertain I can't function very well.
+40. 我总是想知道我的未来是什么样子的。/ I always want to know what the future has in store for me.
+41. 我无法忍受突发状况。/ I can't stand being taken by surprise.
+42. 一点点的疑虑都会阻止我行动。/ The smallest doubt can stop me from acting.
+43. 在做事之前，我应该能够规划好一切。/ I should be able to organize everything in advance.
+44. 我必须摆脱所有不确定的情形。/ I must get away from all uncertain situations.
 
 ### 反刍-brooding RRS 5 项（Treynor et al. 2003；**4 点频率量表**：1=几乎从不 … 4=几乎总是 / 1=almost never … 4=almost always；引导语："当你感到低落、难过或沮丧时，你多常……" / "When you feel down, sad, or depressed, how often do you..."）
 
@@ -159,9 +171,13 @@
 ## 计分与使用备注（研究者用，不进问卷）
 - GIH-6：均分，高=更谦逊。Dweck-3：反向计分后均分，高=成长型。
 - **闭合需求 15 项**：均分，高=闭合需求强（seizing/freezing 倾向）。
-- **IUS-12**：**5 点计分**，总分 12–60；两因子按张亚娟 2017——预期性焦虑
-  （条目 1,2,3,4,5,8,10）/抑制性焦虑（条目 6,7,9,11,12）。**与访谈 Q11 追问
-  （表述萎缩自我报告）交叉验证**——P27 signature 3。
+- **IUS-12**：**5 点计分**，总分 12–60；两因子按 **Carleton 2007 原版编号**
+  （zh 条目=吴版，与原版同序）——Prospective Anxiety（条目 1,2,4,5,8,9,11
+  = Q33,34,36,37,40,41,43）/ Inhibitory Anxiety（条目 3,6,7,10,12 =
+  Q35,38,39,42,44）。⚠ 勿用张亚娟 2017 的因子编号（其条目为独立翻译、
+  顺序与原版不同）；吴 2016 在中学生中报告三因子，pilot 规模下以总分+
+  Carleton 两因子做定性参考即可。**与访谈 Q11 追问（表述萎缩自我报告）
+  交叉验证**——P27 signature 3。
 - **RRS-brooding**：总分（5–20），高=brooding 强。**Moderator 用途**（P27）：
   高 brooding 者截断孵化可能是治疗性的，低 brooding 者才是 foreclosure 风险
   人群——pilot 只做定性分组参考，不检验。
