@@ -14,9 +14,10 @@
 >
 > 条目来源状态（2026-07-23 文献核实后更新）：
 > - **闭合需求 15 项**：EN 用 Roets & Van Hiel 2011 原版条目（下列，发布前核对）。
->   ⚠ P27 声称的"NFCS-15 zh 2024 验证"经核实为错引（详见 ITEM_RETRIEVAL_GUIDE ①）；
->   zh 改用**刘雪峰、梁钧平 2007 修订版（42 项）中对应 R&VH 15 项的条目**——
->   取得 42 条全文后由 AI 对号替换下方翻译初稿
+>   **刘 2007 已取件（07-27）但只印验证保留的 21 条**（42 条 EFA 删减后，
+>   未印全文）→ zh 为混合来源：6 条刘版验证措辞已替换（✅ 标注），9 条
+>   保留翻译初稿走回译（⚠ 标注）；该节 **6 点计分**。岔路 A/B 待裁决
+>   （详见 ITEM_RETRIEVAL_GUIDE ①）
 > - **IUS-12**：✅ **条目已到位（2026-07-27）**——zh 用**吴莉娟等 2016**
 >   附录全文 12 条（与 Carleton 原版同序；papers/scales/
 >   wu-IUS12-zh-middleschool.pdf），大学生适用性锚定**张亚娟等 2017**
@@ -79,23 +80,36 @@
 16. 人可以学习新东西，但改变不了自己的基本智力水平。（R）/ You can learn new things, but you can't really change your basic intelligence. (R)
 17. 不管是谁，都无法显著改变自己的能力水平。（R）/ No matter who you are, you can't significantly change your ability level. (R)
 
-### 认知闭合需求 NFCS-15（Roets & Van Hiel 2011；en 原版条目，发布前核对；zh 为翻译初稿，**取得 2024 验证版后整节替换**）
+### 认知闭合需求 NFCS-15（Roets & Van Hiel 2011；en 原版条目，发布前核对；**6 点计分**：1=强烈不同意 … 6=强烈同意——刘 2007 与 W&K 原版均为 6 点，与本问卷默认 7 点不同，Qualtrics 搭建时该节单独设置）
 
-18. 我不喜欢不确定的情境。/ I don't like situations that are uncertain.
-19. 我不喜欢那种可以有很多种回答的问题。/ I dislike questions which could be answered in many different ways.
-20. 规律有序的生活很适合我的性格。/ I find that a well-ordered life with regular hours suits my temperament.
-21. 如果不明白生活中某件事为什么发生，我会觉得不舒服。/ I feel uncomfortable when I don't understand the reason why an event occurred in my life.
-22. 当一个人和群体里其他所有人意见都不一致时，我会觉得烦躁。/ I feel irritated when one person disagrees with what everyone else in a group believes.
-23. 我不喜欢在不知道会发生什么的情况下进入一个情境。/ I don't like to go into a situation without knowing what I can expect from it.
-24. 做出决定之后，我会感到如释重负。/ When I have made a decision, I feel relieved.
-25. 面对一个问题时，我非常渴望尽快找到答案。/ When I am confronted with a problem, I'm dying to reach a solution very quickly.
-26. 如果不能立刻找到解决办法，我会很快变得不耐烦和恼火。/ I would quickly become impatient and irritated if I would not find a solution to a problem immediately.
-27. 我不喜欢和行事难以预料的人待在一起。/ I don't like to be with people who are capable of unexpected actions.
-28. 我不喜欢一句话可以有很多种理解的情况。/ I dislike it when a person's statement could mean many different things.
-29. 建立稳定的日常规律能让我更享受生活。/ I find that establishing a consistent routine enables me to enjoy life more.
-30. 我喜欢清晰而有条理的生活方式。/ I enjoy having a clear and structured mode of life.
-31. 在形成自己的观点之前，我通常不会去征询很多不同的意见。/ I do not usually consult many different opinions before forming my own view.
-32. 我不喜欢不可预测的情境。/ I dislike unpredictable situations.
+> 【zh 条目状态（2026-07-27 取件后更新）：刘雪峰/梁钧平 2007 原文到手
+> （`papers/scales/liu2007-NFCC-zh.pdf`），但**其表 1 只印验证后保留的
+> 21 条**（42 条经 EFA 两轮删除，未印全文）——原"42 选 15"方案不可行。
+> 逐条比对结果（存证 `items/nfcc21-liu2007-zh.md`）：R&VH-15 中 **6 条
+> 有刘版验证措辞（已替换：Q18,19,20,27,29,30，下标 ✅）**；其余 9 条的
+> 原条目被刘的 EFA 删除、无验证中文措辞（保留翻译初稿，走回译流程，
+> 下标 ⚠）。Q28 与刘版 #36 语义相近但非同一原条目，保守处理为 ⚠。
+> **方法学岔路待裁决（ITEM_RETRIEVAL_GUIDE ①）**：A=现状（混合来源，
+> zh/en 结构镜像保持）；B=zh 整节改用刘版 21 条（全验证但 zh/en 结构
+> 分叉 + 加长）。方法节如实写："zh 条目 6/15 采用刘雪峰梁钧平(2007)
+> 验证措辞，其余 9 条为回译核对的研究者翻译（对应原条目在该中文验证
+> 中未保留）"。】
+
+18. 我不喜欢不确定的情境。✅刘#3 / I don't like situations that are uncertain.
+19. 我不喜欢那些可以有许多不同答案的问题。✅刘#4 / I dislike questions which could be answered in many different ways.
+20. 我发现我的性格适合井井有条、循规蹈矩的生活方式。✅刘#6 / I find that a well-ordered life with regular hours suits my temperament.
+21. 如果不明白生活中某件事为什么发生，我会觉得不舒服。⚠ / I feel uncomfortable when I don't understand the reason why an event occurred in my life.
+22. 当一个人和群体里其他所有人意见都不一致时，我会觉得烦躁。⚠ / I feel irritated when one person disagrees with what everyone else in a group believes.
+23. 我不喜欢在不知道会发生什么的情况下进入一个情境。⚠ / I don't like to go into a situation without knowing what I can expect from it.
+24. 做出决定之后，我会感到如释重负。⚠ / When I have made a decision, I feel relieved.
+25. 面对一个问题时，我非常渴望尽快找到答案。⚠ / When I am confronted with a problem, I'm dying to reach a solution very quickly.
+26. 如果不能立刻找到解决办法，我会很快变得不耐烦和恼火。⚠ / I would quickly become impatient and irritated if I would not find a solution to a problem immediately.
+27. 我不愿意与可能作出意想不到的行为的人在一起。✅刘#25 / I don't like to be with people who are capable of unexpected actions.
+28. 我不喜欢一句话可以有很多种理解的情况。⚠（近邻：刘#36"当我不清楚某人的意思和意图时，会感到不舒服"，非同一原条目，未采用）/ I dislike it when a person's statement could mean many different things.
+29. 我发现建立始终如一的规律能使我更好地享受生活。✅刘#32 / I find that establishing a consistent routine enables me to enjoy life more.
+30. 我喜欢有条不紊的生活方式。✅刘#33 / I enjoy having a clear and structured mode of life.
+31. 在形成自己的观点之前，我通常不会去征询很多不同的意见。⚠ / I do not usually consult many different opinions before forming my own view.
+32. 我不喜欢不可预测的情境。⚠ / I dislike unpredictable situations.
 
 ### 未决不耐受 IUS-12（**本节 Likert 5 点**：1=完全不符合 2=有点符合 3=基本符合 4=非常符合 5=完全符合 / 1=not at all characteristic of me … 5=entirely characteristic of me。en 用 Carleton 2007 原版，发布前核对）
 
