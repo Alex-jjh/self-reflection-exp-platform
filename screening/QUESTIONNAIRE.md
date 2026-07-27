@@ -22,9 +22,10 @@
 >   wu-IUS12-zh-middleschool.pdf），大学生适用性锚定**张亚娟等 2017**
 >   （N=1,018，α=.878）；**Likert 5 点**；两因子按 Carleton 原版编号
 >   （见计分备注）。EN 用 Carleton et al. 2007 原版（同为 5 点）
-> - **RRS-brooding**（Treynor et al. 2003）：EN 原版下列；zh 版确认为
->   **韩秀、杨宏飞 2009**（中国临床心理学杂志 17(5):550-551，22 条，
->   "强迫思考"维度=brooding），取得 22 条全文后挑 5 条替换初稿
+> - **RRS-brooding**：✅ **条目已到位（2026-07-27，网络转载+库内 PDF
+>   交叉核验）**——韩秀/杨宏飞 2009 版 brooding 5 条（原量表 5,10,13,15,16）
+>   已替换 Q45–49（存证 items/rrs22-zh.md）；CNKI 学位论文附录逐字核对
+>   降级为核对项。EN 用 Treynor et al. 2003 原版
 > - GIH-6（Leary 2017）、Dweck-3：无 zh 验证版，翻译初稿待回译核对（不变）
 > - CSW-academic（Crocker 2003）：待比对王磊/郑雪 2006；暂用翻译初稿
 > - ⚠ 中庸作答提醒（P21 陷阱3）：pilot 规模下量表只做定性对照
@@ -123,13 +124,26 @@
 43. 在做事之前，我应该能够规划好一切。/ I should be able to organize everything in advance.
 44. 我必须摆脱所有不确定的情形。/ I must get away from all uncertain situations.
 
-### 反刍-brooding RRS 5 项（Treynor et al. 2003；**4 点频率量表**：1=几乎从不 … 4=几乎总是 / 1=almost never … 4=almost always；引导语："当你感到低落、难过或沮丧时，你多常……" / "When you feel down, sad, or depressed, how often do you..."）
+### 反刍-brooding RRS 5 项（Treynor et al. 2003 brooding 因子；**4 点频率量表**：1=从不 2=有时 3=经常 4=总是 / 1=almost never … 4=almost always）
 
-45. 想"我做了什么，要承受这些？" / Think "What am I doing to deserve this?"
-46. 想"我为什么总是这样反应？" / Think "Why do I always react this way?"
-47. 回想最近的某个情境，希望它当时能更好。/ Think about a recent situation, wishing it had gone better.
-48. 想"为什么别人没有的问题，我有？" / Think "Why do I have problems other people don't have?"
-49. 想"为什么我就不能把事情处理得更好？" / Think "Why can't I handle things better?"
+> 【zh 条目来源（2026-07-27 替换）：**韩秀、杨宏飞 2009** RRS 中文版
+> （中国临床心理学杂志 17(5)，α=.90，`papers/scales/han2009-RRS-zh.pdf`）
+> 强迫思考（brooding）因子 = 原量表条目 5,10,13,15,16，与 Treynor 编号
+> 一致。条目文本取自网络转载（xinlixue.cn），已用韩 2009 原文的样本
+> 细节+因子表+计分交叉核验（存证 `screening/items/rrs22-zh.md`）；
+> **CNKI 学位论文附录逐字核对仍要做（降级为核对项，非缺件）**。
+> 措辞注意：韩版条目自带"我常常想"（频率内嵌），故 zh 引导语不再用
+> "你多常……"句式，避免叠加；en 保留 Treynor 原版引导语
+> "When you feel down, sad, or depressed, how often do you..."，
+> en 条目不带 often（原版如此），zh/en 结构差异在方法节注明。
+> zh 引导语："请回想你感到郁闷、情绪低落的时候，以下情况符合你的
+> 程度："】
+
+45. 我常常想我究竟做了什么会导致这样。/ Think "What am I doing to deserve this?"
+46. 我常常想我为什么总是这样。/ Think "Why do I always react this way?"
+47. 我常常思考现状，希望它有所好转。/ Think about a recent situation, wishing it had gone better.
+48. 我常常想为什么我有这些问题，而别人却没有。/ Think "Why do I have problems other people don't have?"
+49. 我常常想我为什么不能把事情处理得更好。/ Think "Why can't I handle things better?"
 
 ### 依恋 ECR-RS 9 项（Fraley et al. 2011，Relationship Structures 通用版；**7 点同意度**；引导语："以下句子描述人们在亲近关系中的感受。请针对你生活中普遍的亲近关系（如亲密朋友、家人）作答" / "The following concern how you feel in close relationships in general"）
 
