@@ -1,0 +1,2312 @@
+{
+  "SurveyEntry": {
+    "SurveyID": "SV_9RbE4tDTyNXUczI",
+    "SurveyName": "AI对话工具使用与心理特征调查",
+    "SurveyBrandID": "qualtricsxm8jbkk9g3k",
+    "SurveyLanguage": "ZH-S",
+    "SurveyActiveResponseSet": "RS_default",
+    "SurveyStatus": "Inactive",
+    "SurveyStartDate": "0000-00-00 00:00:00",
+    "SurveyExpirationDate": "0000-00-00 00:00:00",
+    "SurveyCreationDate": "2026-07-31 02:00:00",
+    "LastModified": "2026-07-31 02:00:00",
+    "LastAccessed": "2026-07-31 02:00:00",
+    "LastActivated": "0000-00-00 00:00:00"
+  },
+  "SurveyElements": [
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "PROJ",
+      "PrimaryAttribute": "PROJDONE",
+      "SecondaryAttribute": null,
+      "TertiaryAttribute": "ExternalProject",
+      "Payload": {
+        "ProjectCategory": "CORE",
+        "SchemaVersion": 0
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "STAT",
+      "PrimaryAttribute": "Survey Statistics",
+      "SecondaryAttribute": null,
+      "Payload": {
+        "MobileCompatible": true,
+        "ID": "Survey Statistics"
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SO",
+      "PrimaryAttribute": "Survey Options",
+      "SecondaryAttribute": null,
+      "Payload": {
+        "BackButton": "true",
+        "SaveAndContinue": "true",
+        "SurveyProtection": "PublicSurvey",
+        "BallotBoxStuffingPrevention": "true",
+        "NoIndex": "Yes",
+        "SecureResponseFiles": "true",
+        "SurveyExpiration": "None",
+        "SurveyTermination": "DefaultMessage",
+        "Header": "",
+        "Footer": "",
+        "ProgressBarDisplay": "Text",
+        "PartialData": "+1 week",
+        "ValidationMessage": null,
+        "PreviousButton": " ← ",
+        "NextButton": " → ",
+        "SurveyTitle": "AI对话工具使用与心理特征调查",
+        "SkinLibrary": "qualtricsxm8jbkk9g3k",
+        "SkinType": "templated",
+        "Skin": {
+          "brandingId": null,
+          "templateId": "*base",
+          "primaryColor": "#0074D9",
+          "secondaryColor": "#1a1a1a"
+        },
+        "NewScoring": 1,
+        "SurveyMetaDescription": "AI对话工具使用与心理特征调查",
+        "QuestionsPerPage": null,
+        "PageTransition": "fade",
+        "EOSMessage": "",
+        "ShowExportTags": "false",
+        "CollectGeoLocation": "false",
+        "SurveyLanguage": "ZH-S",
+        "AvailableLanguages": {
+          "ZH-S": [],
+          "EN": []
+        },
+        "SurveyStartLanguage": "ZH-S",
+        "AnonymizeResponse": "No"
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SCO",
+      "PrimaryAttribute": "Scoring",
+      "SecondaryAttribute": null,
+      "Payload": {
+        "ScoringCategories": [],
+        "ScoringCategoryGroups": [],
+        "ScoringSummaryCategory": null,
+        "ScoringSummaryAfterQuestions": 0,
+        "ScoringSummaryAfterSurvey": 0,
+        "DefaultScoringCategory": null,
+        "AutoScoringCategory": null
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "BL",
+      "PrimaryAttribute": "Survey Blocks",
+      "SecondaryAttribute": null,
+      "Payload": {
+        "BL_EMU3ioiAY8vckD7": {
+          "Type": "Default",
+          "Description": "B1 资格筛选",
+          "ID": "BL_EMU3ioiAY8vckD7",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID1"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID2"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID3"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID4"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID5"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID6"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID7"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID8"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_wh30EmOLCHGDAo3": {
+          "Type": "Standard",
+          "Description": "智识谦逊 GIH-6",
+          "ID": "BL_wh30EmOLCHGDAo3",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID9"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_qOU5j5h1RaH1rye": {
+          "Type": "Standard",
+          "Description": "成长型思维 Dweck-3",
+          "ID": "BL_qOU5j5h1RaH1rye",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID10"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_EBv9t2IhkmXSZsI": {
+          "Type": "Standard",
+          "Description": "认知闭合需求 NFCS-15",
+          "ID": "BL_EBv9t2IhkmXSZsI",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID11"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_AvEOXWe0wDB4YfA": {
+          "Type": "Standard",
+          "Description": "未决不耐受 IUS-12",
+          "ID": "BL_AvEOXWe0wDB4YfA",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID12"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_vhE2JZh6NfvHJOK": {
+          "Type": "Standard",
+          "Description": "反刍-brooding RRS-5",
+          "ID": "BL_vhE2JZh6NfvHJOK",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID13"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_25KKnWYS25Vbh4T": {
+          "Type": "Standard",
+          "Description": "依恋 ECR-RS-9",
+          "ID": "BL_25KKnWYS25Vbh4T",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID14"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_xEfzfq1udjh58pv": {
+          "Type": "Standard",
+          "Description": "学业权变自我价值 CSW-5",
+          "ID": "BL_xEfzfq1udjh58pv",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID15"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        },
+        "BL_d870avayx8eqON8": {
+          "Type": "Standard",
+          "Description": "B3 基线",
+          "ID": "BL_d870avayx8eqON8",
+          "BlockElements": [
+            {
+              "Type": "Question",
+              "QuestionID": "QID16"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID17"
+            },
+            {
+              "Type": "Question",
+              "QuestionID": "QID18"
+            }
+          ],
+          "Options": {
+            "BlockLocking": "false",
+            "RandomizeQuestions": "false",
+            "BlockVisibility": "Expanded",
+            "Looping": false
+          }
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "FL",
+      "PrimaryAttribute": "Survey Flow",
+      "SecondaryAttribute": null,
+      "Payload": {
+        "Type": "Root",
+        "FlowID": "FL_1",
+        "Flow": [
+          {
+            "Type": "EmbeddedData",
+            "FlowID": "FL_2",
+            "EmbeddedData": [
+              {
+                "Description": "Q_Language",
+                "Type": "Recipient",
+                "Field": "Q_Language",
+                "VariableType": "String",
+                "DataVisibility": [],
+                "AnalyzeText": false,
+                "Value": ""
+              }
+            ]
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_EMU3ioiAY8vckD7",
+            "FlowID": "FL_3",
+            "Autofill": []
+          },
+          {
+            "Type": "Branch",
+            "FlowID": "FL_4",
+            "BranchLogic": {
+              "0": {
+                "0": {
+                  "LogicType": "Question",
+                  "QuestionID": "QID4",
+                  "QuestionIsInLoop": "no",
+                  "ChoiceLocator": "q://QID4/SelectableChoice/1",
+                  "Operator": "Selected",
+                  "QuestionIDFromLocator": "QID4",
+                  "LeftOperand": "q://QID4/SelectableChoice/1",
+                  "Type": "Expression",
+                  "Description": "<span class=\"ConjDesc\">If</span>  <span class=\"QuestionDesc\">Q4</span> <span class=\"LeftOpDesc\">不到1个月</span> <span class=\"OpDesc\">Is Selected</span> "
+                },
+                "Type": "If"
+              },
+              "1": {
+                "0": {
+                  "LogicType": "Question",
+                  "QuestionID": "QID4",
+                  "QuestionIsInLoop": "no",
+                  "ChoiceLocator": "q://QID4/SelectableChoice/2",
+                  "Operator": "Selected",
+                  "QuestionIDFromLocator": "QID4",
+                  "LeftOperand": "q://QID4/SelectableChoice/2",
+                  "Type": "Expression",
+                  "Description": "<span class=\"ConjDesc\">Or</span>  <span class=\"QuestionDesc\">Q4</span> <span class=\"LeftOpDesc\">1–3个月</span> <span class=\"OpDesc\">Is Selected</span> "
+                },
+                "Type": "Or"
+              },
+              "2": {
+                "0": {
+                  "LogicType": "Question",
+                  "QuestionID": "QID7",
+                  "QuestionIsInLoop": "no",
+                  "ChoiceLocator": "q://QID7/SelectableChoice/4",
+                  "Operator": "Selected",
+                  "QuestionIDFromLocator": "QID7",
+                  "LeftOperand": "q://QID7/SelectableChoice/4",
+                  "Type": "Expression",
+                  "Description": "<span class=\"ConjDesc\">Or</span>  <span class=\"QuestionDesc\">Q7</span> <span class=\"LeftOpDesc\">从来没有</span> <span class=\"OpDesc\">Is Selected</span> "
+                },
+                "Type": "Or"
+              },
+              "Type": "BooleanExpression"
+            },
+            "Flow": [
+              {
+                "Type": "EndSurvey",
+                "FlowID": "FL_5"
+              }
+            ]
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_wh30EmOLCHGDAo3",
+            "FlowID": "FL_6",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_qOU5j5h1RaH1rye",
+            "FlowID": "FL_7",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_EBv9t2IhkmXSZsI",
+            "FlowID": "FL_8",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_AvEOXWe0wDB4YfA",
+            "FlowID": "FL_9",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_vhE2JZh6NfvHJOK",
+            "FlowID": "FL_10",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_25KKnWYS25Vbh4T",
+            "FlowID": "FL_11",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_xEfzfq1udjh58pv",
+            "FlowID": "FL_12",
+            "Autofill": []
+          },
+          {
+            "Type": "Block",
+            "ID": "BL_d870avayx8eqON8",
+            "FlowID": "FL_13",
+            "Autofill": []
+          },
+          {
+            "Type": "EndSurvey",
+            "FlowID": "FL_14"
+          }
+        ],
+        "Properties": {
+          "Count": 14,
+          "RemovedFieldsets": []
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID1",
+      "SecondaryAttribute": "Q1",
+      "Payload": {
+        "QuestionText": "你的年龄",
+        "DefaultChoices": false,
+        "DataExportTag": "Q1",
+        "QuestionID": "QID1",
+        "QuestionType": "TE",
+        "Selector": "SL",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "你的年龄",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Your age"
+          }
+        },
+        "NextChoiceId": 1,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID2",
+      "SecondaryAttribute": "Q2",
+      "Payload": {
+        "QuestionText": "性别",
+        "DefaultChoices": false,
+        "DataExportTag": "Q2",
+        "QuestionID": "QID2",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "性别",
+        "Choices": {
+          "1": {
+            "Display": "男"
+          },
+          "2": {
+            "Display": "女"
+          },
+          "3": {
+            "Display": "其他"
+          },
+          "4": {
+            "Display": "不愿透露"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Gender",
+            "Choices": {
+              "1": {
+                "Display": "Male"
+              },
+              "2": {
+                "Display": "Female"
+              },
+              "3": {
+                "Display": "Other"
+              },
+              "4": {
+                "Display": "Prefer not to say"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 5,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID3",
+      "SecondaryAttribute": "Q3",
+      "Payload": {
+        "QuestionText": "你目前的身份",
+        "DefaultChoices": false,
+        "DataExportTag": "Q3",
+        "QuestionID": "QID3",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "你目前的身份",
+        "Choices": {
+          "1": {
+            "Display": "本科生"
+          },
+          "2": {
+            "Display": "硕士生"
+          },
+          "3": {
+            "Display": "博士生"
+          },
+          "4": {
+            "Display": "已工作"
+          },
+          "5": {
+            "Display": "其他",
+            "TextEntry": "true",
+            "TextEntrySize": "Small"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Current status",
+            "Choices": {
+              "1": {
+                "Display": "Undergraduate"
+              },
+              "2": {
+                "Display": "Master's"
+              },
+              "3": {
+                "Display": "PhD"
+              },
+              "4": {
+                "Display": "Working"
+              },
+              "5": {
+                "Display": "Other"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 6,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID4",
+      "SecondaryAttribute": "Q4",
+      "Payload": {
+        "QuestionText": "你使用 AI 聊天工具多久了？（例：ChatGPT、Claude、豆包、Kimi、DeepSeek）",
+        "DefaultChoices": false,
+        "DataExportTag": "Q4",
+        "QuestionID": "QID4",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "你使用 AI 聊天工具多久了？",
+        "Choices": {
+          "1": {
+            "Display": "不到1个月"
+          },
+          "2": {
+            "Display": "1–3个月"
+          },
+          "3": {
+            "Display": "3个月–1年"
+          },
+          "4": {
+            "Display": "1年以上"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "How long have you been using AI chat tools? (e.g., ChatGPT, Claude, Gemini, Copilot)",
+            "Choices": {
+              "1": {
+                "Display": "<1 month"
+              },
+              "2": {
+                "Display": "1–3 months"
+              },
+              "3": {
+                "Display": "3 months–1 year"
+              },
+              "4": {
+                "Display": ">1 year"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 5,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID5",
+      "SecondaryAttribute": "Q5",
+      "Payload": {
+        "QuestionText": "你多久使用一次？",
+        "DefaultChoices": false,
+        "DataExportTag": "Q5",
+        "QuestionID": "QID5",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "你多久使用一次？",
+        "Choices": {
+          "1": {
+            "Display": "几乎每天"
+          },
+          "2": {
+            "Display": "每周几次"
+          },
+          "3": {
+            "Display": "每周一次左右"
+          },
+          "4": {
+            "Display": "更少"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "How often do you use them?",
+            "Choices": {
+              "1": {
+                "Display": "Almost daily"
+              },
+              "2": {
+                "Display": "Several times a week"
+              },
+              "3": {
+                "Display": "About weekly"
+              },
+              "4": {
+                "Display": "Less often"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 5,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID6",
+      "SecondaryAttribute": "Q6",
+      "Payload": {
+        "QuestionText": "你最常用的 AI 聊天工具（可多选）",
+        "DefaultChoices": false,
+        "DataExportTag": "Q6",
+        "QuestionID": "QID6",
+        "QuestionType": "MC",
+        "Selector": "MAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "你最常用的 AI 聊天工具（可多选）",
+        "Choices": {
+          "1": {
+            "Display": "ChatGPT"
+          },
+          "2": {
+            "Display": "Claude"
+          },
+          "3": {
+            "Display": "Gemini"
+          },
+          "4": {
+            "Display": "豆包"
+          },
+          "5": {
+            "Display": "Kimi"
+          },
+          "6": {
+            "Display": "DeepSeek"
+          },
+          "7": {
+            "Display": "文心一言"
+          },
+          "8": {
+            "Display": "通义千问"
+          },
+          "9": {
+            "Display": "Copilot"
+          },
+          "10": {
+            "Display": "其他",
+            "TextEntry": "true",
+            "TextEntrySize": "Small"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Which do you use most? (multi-select)",
+            "Choices": {
+              "1": {
+                "Display": "ChatGPT"
+              },
+              "2": {
+                "Display": "Claude"
+              },
+              "3": {
+                "Display": "Gemini"
+              },
+              "4": {
+                "Display": "豆包"
+              },
+              "5": {
+                "Display": "Kimi"
+              },
+              "6": {
+                "Display": "DeepSeek"
+              },
+              "7": {
+                "Display": "文心一言"
+              },
+              "8": {
+                "Display": "通义千问"
+              },
+              "9": {
+                "Display": "Copilot"
+              },
+              "10": {
+                "Display": "Other"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 11,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID7",
+      "SecondaryAttribute": "Q7",
+      "Payload": {
+        "QuestionText": "你有没有跟 AI 聊过工作/学习决定、人际关系、情绪或其他个人话题？",
+        "DefaultChoices": false,
+        "DataExportTag": "Q7",
+        "QuestionID": "QID7",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "你有没有跟 AI 聊过工作/学习决定、人际关系、情绪或其他个人话题？",
+        "Choices": {
+          "1": {
+            "Display": "经常"
+          },
+          "2": {
+            "Display": "偶尔"
+          },
+          "3": {
+            "Display": "很少"
+          },
+          "4": {
+            "Display": "从来没有"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Have you talked with an AI about work/study decisions, relationships, emotions, or other personal topics?",
+            "Choices": {
+              "1": {
+                "Display": "Often"
+              },
+              "2": {
+                "Display": "Sometimes"
+              },
+              "3": {
+                "Display": "Rarely"
+              },
+              "4": {
+                "Display": "Never"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 5,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID8",
+      "SecondaryAttribute": "Q8",
+      "Payload": {
+        "QuestionText": "联系方式（微信/手机/邮箱，仅用于约时间）",
+        "DefaultChoices": false,
+        "DataExportTag": "Q8",
+        "QuestionID": "QID8",
+        "QuestionType": "TE",
+        "Selector": "SL",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "联系方式",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Contact (WeChat/phone/email, scheduling only)"
+          }
+        },
+        "NextChoiceId": 1,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID9",
+      "SecondaryAttribute": "GIH",
+      "Payload": {
+        "QuestionText": "请根据你的实际情况，在以下每个陈述后选择你的同意程度。",
+        "DefaultChoices": false,
+        "DataExportTag": "GIH",
+        "QuestionID": "QID9",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "智识谦逊 GIH-6",
+        "Choices": {
+          "1": {
+            "Display": "我承认我的想法和态度可能是错的。"
+          },
+          "2": {
+            "Display": "我会根据新证据重新考虑自己的观点。"
+          },
+          "3": {
+            "Display": "我尊重跟我看法不同的人的观点。"
+          },
+          "4": {
+            "Display": "我接受我的信念和态度可能有错。"
+          },
+          "5": {
+            "Display": "面对相反的证据，我愿意改变自己的看法。"
+          },
+          "6": {
+            "Display": "我喜欢了解与我已有认知不同的新信息。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 完全不同意"
+          },
+          "2": {
+            "Display": "2"
+          },
+          "3": {
+            "Display": "3"
+          },
+          "4": {
+            "Display": "4"
+          },
+          "5": {
+            "Display": "5"
+          },
+          "6": {
+            "Display": "6"
+          },
+          "7": {
+            "Display": "7 完全同意"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Please indicate how much you agree with each statement.",
+            "Choices": {
+              "1": {
+                "Display": "I question my own opinions, positions, and viewpoints because they could be wrong."
+              },
+              "2": {
+                "Display": "I reconsider my opinions when presented with new evidence."
+              },
+              "3": {
+                "Display": "I recognize the value in opinions that are different from my own."
+              },
+              "4": {
+                "Display": "I accept that my beliefs and attitudes may be wrong."
+              },
+              "5": {
+                "Display": "In the face of conflicting evidence, I am open to changing my opinions."
+              },
+              "6": {
+                "Display": "I like finding out new information that differs from what I already think is true."
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Strongly disagree"
+              },
+              "2": {
+                "Display": "2"
+              },
+              "3": {
+                "Display": "3"
+              },
+              "4": {
+                "Display": "4"
+              },
+              "5": {
+                "Display": "5"
+              },
+              "6": {
+                "Display": "6"
+              },
+              "7": {
+                "Display": "7 Strongly agree"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 7,
+        "NextAnswerId": 8,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID10",
+      "SecondaryAttribute": "Dweck",
+      "Payload": {
+        "QuestionText": "请根据你的实际看法，在以下每个陈述后选择你的同意程度。",
+        "DefaultChoices": false,
+        "DataExportTag": "Dweck",
+        "QuestionID": "QID10",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "成长型思维 Dweck-3",
+        "Choices": {
+          "1": {
+            "Display": "一个人的聪明程度是天生固定的，无法真正改变。"
+          },
+          "2": {
+            "Display": "人可以学习新东西，但改变不了自己的基本智力水平。"
+          },
+          "3": {
+            "Display": "不管是谁，都无法显著改变自己的能力水平。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 完全不同意"
+          },
+          "2": {
+            "Display": "2"
+          },
+          "3": {
+            "Display": "3"
+          },
+          "4": {
+            "Display": "4"
+          },
+          "5": {
+            "Display": "5"
+          },
+          "6": {
+            "Display": "6"
+          },
+          "7": {
+            "Display": "7 完全同意"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Please indicate how much you agree with each statement.",
+            "Choices": {
+              "1": {
+                "Display": "You have a certain amount of intelligence, and you can't really do much to change it."
+              },
+              "2": {
+                "Display": "You can learn new things, but you can't really change your basic intelligence."
+              },
+              "3": {
+                "Display": "No matter who you are, you can't significantly change your ability level."
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Strongly disagree"
+              },
+              "2": {
+                "Display": "2"
+              },
+              "3": {
+                "Display": "3"
+              },
+              "4": {
+                "Display": "4"
+              },
+              "5": {
+                "Display": "5"
+              },
+              "6": {
+                "Display": "6"
+              },
+              "7": {
+                "Display": "7 Strongly agree"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 4,
+        "NextAnswerId": 8,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID11",
+      "SecondaryAttribute": "NFCS",
+      "Payload": {
+        "QuestionText": "请根据你的实际情况，在以下每个陈述后选择你的同意程度。",
+        "DefaultChoices": false,
+        "DataExportTag": "NFCS",
+        "QuestionID": "QID11",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "认知闭合需求 NFCS-15",
+        "Choices": {
+          "1": {
+            "Display": "我不喜欢不确定的情境。"
+          },
+          "2": {
+            "Display": "我不喜欢那些可以有许多不同答案的问题。"
+          },
+          "3": {
+            "Display": "我发现我的性格适合井井有条、循规蹈矩的生活方式。"
+          },
+          "4": {
+            "Display": "如果不明白生活中某件事为什么发生，我会觉得不舒服。"
+          },
+          "5": {
+            "Display": "当一个人和群体里其他所有人意见都不一致时，我会觉得烦躁。"
+          },
+          "6": {
+            "Display": "我不喜欢在不知道会发生什么的情况下进入一个情境。"
+          },
+          "7": {
+            "Display": "做出决定之后，我会感到如释重负。"
+          },
+          "8": {
+            "Display": "面对一个问题时，我非常渴望尽快找到答案。"
+          },
+          "9": {
+            "Display": "如果不能立即找到解决办法，我会很快变得不耐烦和恼火。"
+          },
+          "10": {
+            "Display": "我不愿意与可能作出意想不到的行为的人在一起。"
+          },
+          "11": {
+            "Display": "我不喜欢一句话可以有很多种理解的情况。"
+          },
+          "12": {
+            "Display": "我发现建立始终如一的规律能使我更好地享受生活。"
+          },
+          "13": {
+            "Display": "我喜欢有条不紊的生活方式。"
+          },
+          "14": {
+            "Display": "在形成自己的观点之前，我通常不会去征询很多不同的意见。"
+          },
+          "15": {
+            "Display": "我不喜欢不可预测的情境。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 强烈不同意"
+          },
+          "2": {
+            "Display": "2"
+          },
+          "3": {
+            "Display": "3"
+          },
+          "4": {
+            "Display": "4"
+          },
+          "5": {
+            "Display": "5"
+          },
+          "6": {
+            "Display": "6 强烈同意"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Please indicate how much you agree with each statement.",
+            "Choices": {
+              "1": {
+                "Display": "I don't like situations that are uncertain."
+              },
+              "2": {
+                "Display": "I dislike questions which could be answered in many different ways."
+              },
+              "3": {
+                "Display": "I find that a well-ordered life with regular hours suits my temperament."
+              },
+              "4": {
+                "Display": "I feel uncomfortable when I don't understand the reason why an event occurred in my life."
+              },
+              "5": {
+                "Display": "I feel irritated when one person disagrees with what everyone else in a group believes."
+              },
+              "6": {
+                "Display": "I don't like to go into a situation without knowing what I can expect from it."
+              },
+              "7": {
+                "Display": "When I have made a decision, I feel relieved."
+              },
+              "8": {
+                "Display": "When I am confronted with a problem, I'm dying to reach a solution very quickly."
+              },
+              "9": {
+                "Display": "I would quickly become impatient and irritated if I would not find a solution to a problem immediately."
+              },
+              "10": {
+                "Display": "I don't like to be with people who are capable of unexpected actions."
+              },
+              "11": {
+                "Display": "I dislike it when a person's statement could mean many different things."
+              },
+              "12": {
+                "Display": "I find that establishing a consistent routine enables me to enjoy life more."
+              },
+              "13": {
+                "Display": "I enjoy having a clear and structured mode of life."
+              },
+              "14": {
+                "Display": "I do not usually consult many different opinions before forming my own view."
+              },
+              "15": {
+                "Display": "I dislike unpredictable situations."
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Strongly disagree"
+              },
+              "2": {
+                "Display": "2"
+              },
+              "3": {
+                "Display": "3"
+              },
+              "4": {
+                "Display": "4"
+              },
+              "5": {
+                "Display": "5"
+              },
+              "6": {
+                "Display": "6 Strongly agree"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 16,
+        "NextAnswerId": 7,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID12",
+      "SecondaryAttribute": "IUS",
+      "Payload": {
+        "QuestionText": "请根据你的实际情况，在以下每个陈述后选择符合你的程度。",
+        "DefaultChoices": false,
+        "DataExportTag": "IUS",
+        "QuestionID": "QID12",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "未决不耐受 IUS-12",
+        "Choices": {
+          "1": {
+            "Display": "无法预料的事情会让我心烦意乱。"
+          },
+          "2": {
+            "Display": "如果不能拥有我所需要的全部信息，我会很沮丧。"
+          },
+          "3": {
+            "Display": "不确定性使我很难拥有一个完美的生活。"
+          },
+          "4": {
+            "Display": "我做事总会未雨绸缪，以避免措手不及。"
+          },
+          "5": {
+            "Display": "即使有最好的计划，一个小意外也能搞砸我的全盘计划。"
+          },
+          "6": {
+            "Display": "当到了采取行动的时候，不确定性会让我停滞不前。"
+          },
+          "7": {
+            "Display": "当我感到不确定时，我就不能很好的表现自己。"
+          },
+          "8": {
+            "Display": "我总是想知道我的未来是什么样子的。"
+          },
+          "9": {
+            "Display": "我无法忍受突发状况。"
+          },
+          "10": {
+            "Display": "一点点的疑虑都会阻止我行动。"
+          },
+          "11": {
+            "Display": "在做事之前，我应该能够规划好一切。"
+          },
+          "12": {
+            "Display": "我必须摆脱所有不确定的情形。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 完全不符合"
+          },
+          "2": {
+            "Display": "2 有点符合"
+          },
+          "3": {
+            "Display": "3 基本符合"
+          },
+          "4": {
+            "Display": "4 非常符合"
+          },
+          "5": {
+            "Display": "5 完全符合"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Please indicate how characteristic each statement is of you.",
+            "Choices": {
+              "1": {
+                "Display": "Unforeseen events upset me greatly."
+              },
+              "2": {
+                "Display": "It frustrates me not having all the information I need."
+              },
+              "3": {
+                "Display": "Uncertainty keeps me from living a full life."
+              },
+              "4": {
+                "Display": "One should always look ahead so as to avoid surprises."
+              },
+              "5": {
+                "Display": "A small unforeseen event can spoil everything, even with the best of planning."
+              },
+              "6": {
+                "Display": "When it's time to act, uncertainty paralyses me."
+              },
+              "7": {
+                "Display": "When I am uncertain I can't function very well."
+              },
+              "8": {
+                "Display": "I always want to know what the future has in store for me."
+              },
+              "9": {
+                "Display": "I can't stand being taken by surprise."
+              },
+              "10": {
+                "Display": "The smallest doubt can stop me from acting."
+              },
+              "11": {
+                "Display": "I should be able to organize everything in advance."
+              },
+              "12": {
+                "Display": "I must get away from all uncertain situations."
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Not at all characteristic"
+              },
+              "2": {
+                "Display": "2 A little characteristic"
+              },
+              "3": {
+                "Display": "3 Somewhat characteristic"
+              },
+              "4": {
+                "Display": "4 Very characteristic"
+              },
+              "5": {
+                "Display": "5 Entirely characteristic"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 13,
+        "NextAnswerId": 6,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID13",
+      "SecondaryAttribute": "RRS",
+      "Payload": {
+        "QuestionText": "请回想你感到郁闷、情绪低落的时候，以下情况符合你的程度：",
+        "DefaultChoices": false,
+        "DataExportTag": "RRS",
+        "QuestionID": "QID13",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "反刍-brooding RRS-5",
+        "Choices": {
+          "1": {
+            "Display": "我常常想我究竟做了什么会导致这样。"
+          },
+          "2": {
+            "Display": "我常常想我为什么总是这样。"
+          },
+          "3": {
+            "Display": "我常常思考现状，希望它有所好转。"
+          },
+          "4": {
+            "Display": "我常常想为什么我有这些问题，而别人却没有。"
+          },
+          "5": {
+            "Display": "我常常想我为什么不能把事情处理得更好。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 从不"
+          },
+          "2": {
+            "Display": "2 有时"
+          },
+          "3": {
+            "Display": "3 经常"
+          },
+          "4": {
+            "Display": "4 总是"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "When you feel down, sad, or depressed, how often do you...",
+            "Choices": {
+              "1": {
+                "Display": "Think \"What am I doing to deserve this?\""
+              },
+              "2": {
+                "Display": "Think \"Why do I always react this way?\""
+              },
+              "3": {
+                "Display": "Think about a recent situation, wishing it had gone better."
+              },
+              "4": {
+                "Display": "Think \"Why do I have problems other people don't have?\""
+              },
+              "5": {
+                "Display": "Think \"Why can't I handle things better?\""
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Almost never"
+              },
+              "2": {
+                "Display": "2 Sometimes"
+              },
+              "3": {
+                "Display": "3 Often"
+              },
+              "4": {
+                "Display": "4 Almost always"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 6,
+        "NextAnswerId": 5,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID14",
+      "SecondaryAttribute": "ECR",
+      "Payload": {
+        "QuestionText": "以下句子描述人们在亲近关系中的感受。请针对你生活中普遍的亲近关系（如亲密朋友、家人）作答。",
+        "DefaultChoices": false,
+        "DataExportTag": "ECR",
+        "QuestionID": "QID14",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "依恋 ECR-RS-9",
+        "Choices": {
+          "1": {
+            "Display": "我经常与他们讨论我所遇到的问题以及我关心的事情。"
+          },
+          "2": {
+            "Display": "我跟他们什么事情都讲。"
+          },
+          "3": {
+            "Display": "我觉得依赖他们是很自在的事情。"
+          },
+          "4": {
+            "Display": "我觉得对他们开诚布公不是一件很舒服的事情。"
+          },
+          "5": {
+            "Display": "总的来说，我不喜欢让他们知道自己内心深处的感觉。"
+          },
+          "6": {
+            "Display": "在需要的时候，我向他们求助是很有用的。"
+          },
+          "7": {
+            "Display": "我常担心他们并不真正在乎我。"
+          },
+          "8": {
+            "Display": "我担心我会被抛弃。"
+          },
+          "9": {
+            "Display": "我担心他们不会像我关心他们那样地关心我。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 完全不同意"
+          },
+          "2": {
+            "Display": "2"
+          },
+          "3": {
+            "Display": "3"
+          },
+          "4": {
+            "Display": "4"
+          },
+          "5": {
+            "Display": "5"
+          },
+          "6": {
+            "Display": "6"
+          },
+          "7": {
+            "Display": "7 完全同意"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "The following concern how you feel in close relationships in general.",
+            "Choices": {
+              "1": {
+                "Display": "I usually discuss my problems and concerns with them."
+              },
+              "2": {
+                "Display": "I talk things over with them."
+              },
+              "3": {
+                "Display": "I find it easy to depend on them."
+              },
+              "4": {
+                "Display": "I don't feel comfortable opening up to them."
+              },
+              "5": {
+                "Display": "I prefer not to show them how I feel deep down."
+              },
+              "6": {
+                "Display": "It helps to turn to them in times of need."
+              },
+              "7": {
+                "Display": "I often worry that they don't really care for me."
+              },
+              "8": {
+                "Display": "I'm afraid that they may abandon me."
+              },
+              "9": {
+                "Display": "I worry that they won't care about me as much as I care about them."
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Strongly disagree"
+              },
+              "2": {
+                "Display": "2"
+              },
+              "3": {
+                "Display": "3"
+              },
+              "4": {
+                "Display": "4"
+              },
+              "5": {
+                "Display": "5"
+              },
+              "6": {
+                "Display": "6"
+              },
+              "7": {
+                "Display": "7 Strongly agree"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 10,
+        "NextAnswerId": 8,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID15",
+      "SecondaryAttribute": "CSW",
+      "Payload": {
+        "QuestionText": "请根据你的实际情况，在以下每个陈述后选择你的同意程度。",
+        "DefaultChoices": false,
+        "DataExportTag": "CSW",
+        "QuestionID": "QID15",
+        "QuestionType": "Matrix",
+        "Selector": "Likert",
+        "SubSelector": "SingleAnswer",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText",
+          "TextPosition": "inline",
+          "ChoiceColumnWidth": 25,
+          "RepeatHeaders": "none",
+          "WhiteSpace": "OFF",
+          "MobileFirst": true
+        },
+        "QuestionDescription": "学业权变自我价值 CSW-5",
+        "Choices": {
+          "1": {
+            "Display": "学习/工作上表现好的时候，我感觉自己更有价值。"
+          },
+          "2": {
+            "Display": "每当考试或考核表现差，我的自尊心就受打击。"
+          },
+          "3": {
+            "Display": "我对自己的评价，很大程度上取决于我在学业/工作上的表现。"
+          },
+          "4": {
+            "Display": "知道自己在学业/工作上比别人强，会让我自我感觉良好。"
+          },
+          "5": {
+            "Display": "学业/工作上的挫折会让我怀疑自己的价值。"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "Answers": {
+          "1": {
+            "Display": "1 完全不同意"
+          },
+          "2": {
+            "Display": "2"
+          },
+          "3": {
+            "Display": "3"
+          },
+          "4": {
+            "Display": "4"
+          },
+          "5": {
+            "Display": "5"
+          },
+          "6": {
+            "Display": "6"
+          },
+          "7": {
+            "Display": "7 完全同意"
+          }
+        },
+        "AnswerOrder": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "ON",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Please indicate how much you agree with each statement.",
+            "Choices": {
+              "1": {
+                "Display": "I feel better about myself when I do well academically/professionally."
+              },
+              "2": {
+                "Display": "My self-esteem suffers whenever I do poorly on an exam or evaluation."
+              },
+              "3": {
+                "Display": "How I feel about myself depends largely on my academic/work performance."
+              },
+              "4": {
+                "Display": "Knowing I do better than others academically/professionally makes me feel good about myself."
+              },
+              "5": {
+                "Display": "Academic/professional setbacks make me doubt my worth."
+              }
+            },
+            "Answers": {
+              "1": {
+                "Display": "1 Strongly disagree"
+              },
+              "2": {
+                "Display": "2"
+              },
+              "3": {
+                "Display": "3"
+              },
+              "4": {
+                "Display": "4"
+              },
+              "5": {
+                "Display": "5"
+              },
+              "6": {
+                "Display": "6"
+              },
+              "7": {
+                "Display": "7 Strongly agree"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 6,
+        "NextAnswerId": 8,
+        "Randomization": {
+          "Advanced": null,
+          "Type": "All",
+          "TotalRandSubset": ""
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID16",
+      "SecondaryAttribute": "Q55",
+      "Payload": {
+        "QuestionText": "遇到烦心事时，你更可能先跟谁说？",
+        "DefaultChoices": false,
+        "DataExportTag": "Q55",
+        "QuestionID": "QID16",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "遇到烦心事时，你更可能先跟谁说？",
+        "Choices": {
+          "1": {
+            "Display": "家人或朋友"
+          },
+          "2": {
+            "Display": "AI 聊天工具"
+          },
+          "3": {
+            "Display": "都会，看情况"
+          },
+          "4": {
+            "Display": "都不说，自己消化"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "When something is bothering you, who are you most likely to talk to first?",
+            "Choices": {
+              "1": {
+                "Display": "Family or friends"
+              },
+              "2": {
+                "Display": "An AI chat tool"
+              },
+              "3": {
+                "Display": "Either, depends"
+              },
+              "4": {
+                "Display": "Neither, I keep it to myself"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 5,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID17",
+      "SecondaryAttribute": "Q56",
+      "Payload": {
+        "QuestionText": "有一件事你只跟 AI 说过、没跟任何人说过吗？",
+        "DefaultChoices": false,
+        "DataExportTag": "Q56",
+        "QuestionID": "QID17",
+        "QuestionType": "MC",
+        "Selector": "SAVR",
+        "SubSelector": "TX",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "有一件事你只跟 AI 说过、没跟任何人说过吗？",
+        "Choices": {
+          "1": {
+            "Display": "有"
+          },
+          "2": {
+            "Display": "没有"
+          },
+          "3": {
+            "Display": "不确定"
+          }
+        },
+        "ChoiceOrder": [
+          "1",
+          "2",
+          "3"
+        ],
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "Is there something you've told only an AI and no person?",
+            "Choices": {
+              "1": {
+                "Display": "Yes"
+              },
+              "2": {
+                "Display": "No"
+              },
+              "3": {
+                "Display": "Not sure"
+              }
+            }
+          }
+        },
+        "NextChoiceId": 4,
+        "NextAnswerId": 1,
+        "DisplayLogic": {
+          "0": {
+            "0": {
+              "LogicType": "Question",
+              "QuestionID": "QID16",
+              "QuestionIsInLoop": "no",
+              "ChoiceLocator": "q://QID16/SelectableChoice/2",
+              "Operator": "Selected",
+              "QuestionIDFromLocator": "QID16",
+              "LeftOperand": "q://QID16/SelectableChoice/2",
+              "Type": "Expression",
+              "Description": "<span class=\"ConjDesc\">If</span>  <span class=\"QuestionDesc\">Q55</span> <span class=\"LeftOpDesc\">AI 聊天工具</span> <span class=\"OpDesc\">Is Selected</span> "
+            },
+            "Type": "If"
+          },
+          "1": {
+            "0": {
+              "LogicType": "Question",
+              "QuestionID": "QID16",
+              "QuestionIsInLoop": "no",
+              "ChoiceLocator": "q://QID16/SelectableChoice/3",
+              "Operator": "Selected",
+              "QuestionIDFromLocator": "QID16",
+              "LeftOperand": "q://QID16/SelectableChoice/3",
+              "Type": "Expression",
+              "Description": "<span class=\"ConjDesc\">Or</span>  <span class=\"QuestionDesc\">Q55</span> <span class=\"LeftOpDesc\">都会，看情况</span> <span class=\"OpDesc\">Is Selected</span> "
+            },
+            "Type": "Or"
+          },
+          "Type": "BooleanExpression",
+          "inPage": false
+        },
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    },
+    {
+      "SurveyID": "SV_9RbE4tDTyNXUczI",
+      "Element": "SQ",
+      "PrimaryAttribute": "QID18",
+      "SecondaryAttribute": "Q57",
+      "Payload": {
+        "QuestionText": "用一两句话说说：你一般在什么情况下会想跟 AI 聊个人话题？",
+        "DefaultChoices": false,
+        "DataExportTag": "Q57",
+        "QuestionID": "QID18",
+        "QuestionType": "TE",
+        "Selector": "ML",
+        "Configuration": {
+          "QuestionDescriptionOption": "UseText"
+        },
+        "QuestionDescription": "用一两句话说说：你一般在什么情况下会想跟 AI 聊个人话题？",
+        "Validation": {
+          "Settings": {
+            "ForceResponse": "OFF",
+            "ForceResponseType": "ON",
+            "Type": "None"
+          }
+        },
+        "GradingData": [],
+        "Language": {
+          "EN": {
+            "QuestionText": "In a sentence or two: when do you tend to bring personal topics to an AI?"
+          }
+        },
+        "NextChoiceId": 1,
+        "NextAnswerId": 1,
+        "DataVisibility": {
+          "Private": false,
+          "Hidden": false
+        }
+      }
+    }
+  ]
+}

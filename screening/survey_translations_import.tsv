@@ -1,0 +1,155 @@
+Field	ZH-S	EN
+QID1_QuestionText	你的年龄	Your age
+QID2_QuestionText	性别	Gender
+QID2_1	男	Male
+QID2_2	女	Female
+QID2_3	其他	Other
+QID2_4	不愿透露	Prefer not to say
+QID3_QuestionText	你目前的身份	Current status
+QID3_1	本科生	Undergraduate
+QID3_2	硕士生	Master's
+QID3_3	博士生	PhD
+QID3_4	已工作	Working
+QID3_5	其他	Other
+QID4_QuestionText	你使用 AI 聊天工具多久了？（例：ChatGPT、Claude、豆包、Kimi、DeepSeek）	How long have you been using AI chat tools? (e.g., ChatGPT, Claude, Gemini, Copilot)
+QID4_1	不到1个月	<1 month
+QID4_2	1–3个月	1–3 months
+QID4_3	3个月–1年	3 months–1 year
+QID4_4	1年以上	>1 year
+QID5_QuestionText	你多久使用一次？	How often do you use them?
+QID5_1	几乎每天	Almost daily
+QID5_2	每周几次	Several times a week
+QID5_3	每周一次左右	About weekly
+QID5_4	更少	Less often
+QID6_QuestionText	你最常用的 AI 聊天工具（可多选）	Which do you use most? (multi-select)
+QID6_1	ChatGPT	ChatGPT
+QID6_2	Claude	Claude
+QID6_3	Gemini	Gemini
+QID6_4	豆包	豆包
+QID6_5	Kimi	Kimi
+QID6_6	DeepSeek	DeepSeek
+QID6_7	文心一言	文心一言
+QID6_8	通义千问	通义千问
+QID6_9	Copilot	Copilot
+QID6_10	其他	Other
+QID7_QuestionText	你有没有跟 AI 聊过工作/学习决定、人际关系、情绪或其他个人话题？	Have you talked with an AI about work/study decisions, relationships, emotions, or other personal topics?
+QID7_1	经常	Often
+QID7_2	偶尔	Sometimes
+QID7_3	很少	Rarely
+QID7_4	从来没有	Never
+QID8_QuestionText	联系方式（微信/手机/邮箱，仅用于约时间）	Contact (WeChat/phone/email, scheduling only)
+QID9_QuestionText	请根据你的实际情况，在以下每个陈述后选择你的同意程度。	Please indicate how much you agree with each statement.
+QID9_1	我承认我的想法和态度可能是错的。	I question my own opinions, positions, and viewpoints because they could be wrong.
+QID9_2	我会根据新证据重新考虑自己的观点。	I reconsider my opinions when presented with new evidence.
+QID9_3	我尊重跟我看法不同的人的观点。	I recognize the value in opinions that are different from my own.
+QID9_4	我接受我的信念和态度可能有错。	I accept that my beliefs and attitudes may be wrong.
+QID9_5	面对相反的证据，我愿意改变自己的看法。	In the face of conflicting evidence, I am open to changing my opinions.
+QID9_6	我喜欢了解与我已有认知不同的新信息。	I like finding out new information that differs from what I already think is true.
+QID9_SCALE_1	1 完全不同意	1 Strongly disagree
+QID9_SCALE_2	2	2
+QID9_SCALE_3	3	3
+QID9_SCALE_4	4	4
+QID9_SCALE_5	5	5
+QID9_SCALE_6	6	6
+QID9_SCALE_7	7 完全同意	7 Strongly agree
+QID10_QuestionText	请根据你的实际看法，在以下每个陈述后选择你的同意程度。	Please indicate how much you agree with each statement.
+QID10_1	一个人的聪明程度是天生固定的，无法真正改变。	You have a certain amount of intelligence, and you can't really do much to change it.
+QID10_2	人可以学习新东西，但改变不了自己的基本智力水平。	You can learn new things, but you can't really change your basic intelligence.
+QID10_3	不管是谁，都无法显著改变自己的能力水平。	No matter who you are, you can't significantly change your ability level.
+QID10_SCALE_1	1 完全不同意	1 Strongly disagree
+QID10_SCALE_2	2	2
+QID10_SCALE_3	3	3
+QID10_SCALE_4	4	4
+QID10_SCALE_5	5	5
+QID10_SCALE_6	6	6
+QID10_SCALE_7	7 完全同意	7 Strongly agree
+QID11_QuestionText	请根据你的实际情况，在以下每个陈述后选择你的同意程度。	Please indicate how much you agree with each statement.
+QID11_1	我不喜欢不确定的情境。	I don't like situations that are uncertain.
+QID11_2	我不喜欢那些可以有许多不同答案的问题。	I dislike questions which could be answered in many different ways.
+QID11_3	我发现我的性格适合井井有条、循规蹈矩的生活方式。	I find that a well-ordered life with regular hours suits my temperament.
+QID11_4	如果不明白生活中某件事为什么发生，我会觉得不舒服。	I feel uncomfortable when I don't understand the reason why an event occurred in my life.
+QID11_5	当一个人和群体里其他所有人意见都不一致时，我会觉得烦躁。	I feel irritated when one person disagrees with what everyone else in a group believes.
+QID11_6	我不喜欢在不知道会发生什么的情况下进入一个情境。	I don't like to go into a situation without knowing what I can expect from it.
+QID11_7	做出决定之后，我会感到如释重负。	When I have made a decision, I feel relieved.
+QID11_8	面对一个问题时，我非常渴望尽快找到答案。	When I am confronted with a problem, I'm dying to reach a solution very quickly.
+QID11_9	如果不能立即找到解决办法，我会很快变得不耐烦和恼火。	I would quickly become impatient and irritated if I would not find a solution to a problem immediately.
+QID11_10	我不愿意与可能作出意想不到的行为的人在一起。	I don't like to be with people who are capable of unexpected actions.
+QID11_11	我不喜欢一句话可以有很多种理解的情况。	I dislike it when a person's statement could mean many different things.
+QID11_12	我发现建立始终如一的规律能使我更好地享受生活。	I find that establishing a consistent routine enables me to enjoy life more.
+QID11_13	我喜欢有条不紊的生活方式。	I enjoy having a clear and structured mode of life.
+QID11_14	在形成自己的观点之前，我通常不会去征询很多不同的意见。	I do not usually consult many different opinions before forming my own view.
+QID11_15	我不喜欢不可预测的情境。	I dislike unpredictable situations.
+QID11_SCALE_1	1 强烈不同意	1 Strongly disagree
+QID11_SCALE_2	2	2
+QID11_SCALE_3	3	3
+QID11_SCALE_4	4	4
+QID11_SCALE_5	5	5
+QID11_SCALE_6	6 强烈同意	6 Strongly agree
+QID12_QuestionText	请根据你的实际情况，在以下每个陈述后选择符合你的程度。	Please indicate how characteristic each statement is of you.
+QID12_1	无法预料的事情会让我心烦意乱。	Unforeseen events upset me greatly.
+QID12_2	如果不能拥有我所需要的全部信息，我会很沮丧。	It frustrates me not having all the information I need.
+QID12_3	不确定性使我很难拥有一个完美的生活。	Uncertainty keeps me from living a full life.
+QID12_4	我做事总会未雨绸缪，以避免措手不及。	One should always look ahead so as to avoid surprises.
+QID12_5	即使有最好的计划，一个小意外也能搞砸我的全盘计划。	A small unforeseen event can spoil everything, even with the best of planning.
+QID12_6	当到了采取行动的时候，不确定性会让我停滞不前。	When it's time to act, uncertainty paralyses me.
+QID12_7	当我感到不确定时，我就不能很好的表现自己。	When I am uncertain I can't function very well.
+QID12_8	我总是想知道我的未来是什么样子的。	I always want to know what the future has in store for me.
+QID12_9	我无法忍受突发状况。	I can't stand being taken by surprise.
+QID12_10	一点点的疑虑都会阻止我行动。	The smallest doubt can stop me from acting.
+QID12_11	在做事之前，我应该能够规划好一切。	I should be able to organize everything in advance.
+QID12_12	我必须摆脱所有不确定的情形。	I must get away from all uncertain situations.
+QID12_SCALE_1	1 完全不符合	1 Not at all characteristic
+QID12_SCALE_2	2 有点符合	2 A little characteristic
+QID12_SCALE_3	3 基本符合	3 Somewhat characteristic
+QID12_SCALE_4	4 非常符合	4 Very characteristic
+QID12_SCALE_5	5 完全符合	5 Entirely characteristic
+QID13_QuestionText	请回想你感到郁闷、情绪低落的时候，以下情况符合你的程度：	When you feel down, sad, or depressed, how often do you...
+QID13_1	我常常想我究竟做了什么会导致这样。	"Think ""What am I doing to deserve this?"""
+QID13_2	我常常想我为什么总是这样。	"Think ""Why do I always react this way?"""
+QID13_3	我常常思考现状，希望它有所好转。	Think about a recent situation, wishing it had gone better.
+QID13_4	我常常想为什么我有这些问题，而别人却没有。	"Think ""Why do I have problems other people don't have?"""
+QID13_5	我常常想我为什么不能把事情处理得更好。	"Think ""Why can't I handle things better?"""
+QID13_SCALE_1	1 从不	1 Almost never
+QID13_SCALE_2	2 有时	2 Sometimes
+QID13_SCALE_3	3 经常	3 Often
+QID13_SCALE_4	4 总是	4 Almost always
+QID14_QuestionText	以下句子描述人们在亲近关系中的感受。请针对你生活中普遍的亲近关系（如亲密朋友、家人）作答。	The following concern how you feel in close relationships in general.
+QID14_1	我经常与他们讨论我所遇到的问题以及我关心的事情。	I usually discuss my problems and concerns with them.
+QID14_2	我跟他们什么事情都讲。	I talk things over with them.
+QID14_3	我觉得依赖他们是很自在的事情。	I find it easy to depend on them.
+QID14_4	我觉得对他们开诚布公不是一件很舒服的事情。	I don't feel comfortable opening up to them.
+QID14_5	总的来说，我不喜欢让他们知道自己内心深处的感觉。	I prefer not to show them how I feel deep down.
+QID14_6	在需要的时候，我向他们求助是很有用的。	It helps to turn to them in times of need.
+QID14_7	我常担心他们并不真正在乎我。	I often worry that they don't really care for me.
+QID14_8	我担心我会被抛弃。	I'm afraid that they may abandon me.
+QID14_9	我担心他们不会像我关心他们那样地关心我。	I worry that they won't care about me as much as I care about them.
+QID14_SCALE_1	1 完全不同意	1 Strongly disagree
+QID14_SCALE_2	2	2
+QID14_SCALE_3	3	3
+QID14_SCALE_4	4	4
+QID14_SCALE_5	5	5
+QID14_SCALE_6	6	6
+QID14_SCALE_7	7 完全同意	7 Strongly agree
+QID15_QuestionText	请根据你的实际情况，在以下每个陈述后选择你的同意程度。	Please indicate how much you agree with each statement.
+QID15_1	学习/工作上表现好的时候，我感觉自己更有价值。	I feel better about myself when I do well academically/professionally.
+QID15_2	每当考试或考核表现差，我的自尊心就受打击。	My self-esteem suffers whenever I do poorly on an exam or evaluation.
+QID15_3	我对自己的评价，很大程度上取决于我在学业/工作上的表现。	How I feel about myself depends largely on my academic/work performance.
+QID15_4	知道自己在学业/工作上比别人强，会让我自我感觉良好。	Knowing I do better than others academically/professionally makes me feel good about myself.
+QID15_5	学业/工作上的挫折会让我怀疑自己的价值。	Academic/professional setbacks make me doubt my worth.
+QID15_SCALE_1	1 完全不同意	1 Strongly disagree
+QID15_SCALE_2	2	2
+QID15_SCALE_3	3	3
+QID15_SCALE_4	4	4
+QID15_SCALE_5	5	5
+QID15_SCALE_6	6	6
+QID15_SCALE_7	7 完全同意	7 Strongly agree
+QID16_QuestionText	遇到烦心事时，你更可能先跟谁说？	When something is bothering you, who are you most likely to talk to first?
+QID16_1	家人或朋友	Family or friends
+QID16_2	AI 聊天工具	An AI chat tool
+QID16_3	都会，看情况	Either, depends
+QID16_4	都不说，自己消化	Neither, I keep it to myself
+QID17_QuestionText	有一件事你只跟 AI 说过、没跟任何人说过吗？	Is there something you've told only an AI and no person?
+QID17_1	有	Yes
+QID17_2	没有	No
+QID17_3	不确定	Not sure
+QID18_QuestionText	用一两句话说说：你一般在什么情况下会想跟 AI 聊个人话题？	In a sentence or two: when do you tend to bring personal topics to an AI?

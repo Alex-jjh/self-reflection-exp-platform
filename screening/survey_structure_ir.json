@@ -1,0 +1,900 @@
+{
+ "survey_title": "AI对话工具使用与心理特征调查",
+ "groups": [
+  {
+   "name": "B1 资格筛选",
+   "questions": [
+    {
+     "qid": "QID1",
+     "type": "S",
+     "text_zh": "你的年龄",
+     "text_en": "Your age",
+     "mandatory": true
+    },
+    {
+     "qid": "QID2",
+     "type": "L",
+     "text_zh": "性别",
+     "text_en": "Gender",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "男",
+       "en": "Male"
+      },
+      {
+       "code": "2",
+       "zh": "女",
+       "en": "Female"
+      },
+      {
+       "code": "3",
+       "zh": "其他",
+       "en": "Other"
+      },
+      {
+       "code": "4",
+       "zh": "不愿透露",
+       "en": "Prefer not to say"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID3",
+     "type": "L",
+     "text_zh": "你目前的身份",
+     "text_en": "Current status",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "本科生",
+       "en": "Undergraduate"
+      },
+      {
+       "code": "2",
+       "zh": "硕士生",
+       "en": "Master's"
+      },
+      {
+       "code": "3",
+       "zh": "博士生",
+       "en": "PhD"
+      },
+      {
+       "code": "4",
+       "zh": "已工作",
+       "en": "Working"
+      },
+      {
+       "code": "5",
+       "zh": "其他",
+       "en": "Other"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID4",
+     "type": "L",
+     "text_zh": "你使用 AI 聊天工具多久了？（例：ChatGPT、Claude、豆包、Kimi、DeepSeek）",
+     "text_en": "How long have you been using AI chat tools? (e.g., ChatGPT, Claude, Gemini, Copilot)",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "不到1个月",
+       "en": "<1 month"
+      },
+      {
+       "code": "2",
+       "zh": "1–3个月",
+       "en": "1–3 months"
+      },
+      {
+       "code": "3",
+       "zh": "3个月–1年",
+       "en": "3 months–1 year"
+      },
+      {
+       "code": "4",
+       "zh": "1年以上",
+       "en": ">1 year"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID5",
+     "type": "L",
+     "text_zh": "你多久使用一次？",
+     "text_en": "How often do you use them?",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "几乎每天",
+       "en": "Almost daily"
+      },
+      {
+       "code": "2",
+       "zh": "每周几次",
+       "en": "Several times a week"
+      },
+      {
+       "code": "3",
+       "zh": "每周一次左右",
+       "en": "About weekly"
+      },
+      {
+       "code": "4",
+       "zh": "更少",
+       "en": "Less often"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID6",
+     "type": "M",
+     "text_zh": "你最常用的 AI 聊天工具（可多选）",
+     "text_en": "Which do you use most? (multi-select)",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "ChatGPT",
+       "en": "ChatGPT"
+      },
+      {
+       "code": "2",
+       "zh": "Claude",
+       "en": "Claude"
+      },
+      {
+       "code": "3",
+       "zh": "Gemini",
+       "en": "Gemini"
+      },
+      {
+       "code": "4",
+       "zh": "豆包",
+       "en": "豆包"
+      },
+      {
+       "code": "5",
+       "zh": "Kimi",
+       "en": "Kimi"
+      },
+      {
+       "code": "6",
+       "zh": "DeepSeek",
+       "en": "DeepSeek"
+      },
+      {
+       "code": "7",
+       "zh": "文心一言",
+       "en": "文心一言"
+      },
+      {
+       "code": "8",
+       "zh": "通义千问",
+       "en": "通义千问"
+      },
+      {
+       "code": "9",
+       "zh": "Copilot",
+       "en": "Copilot"
+      },
+      {
+       "code": "10",
+       "zh": "其他",
+       "en": "Other"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID7",
+     "type": "L",
+     "text_zh": "你有没有跟 AI 聊过工作/学习决定、人际关系、情绪或其他个人话题？",
+     "text_en": "Have you talked with an AI about work/study decisions, relationships, emotions, or other personal topics?",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "经常",
+       "en": "Often"
+      },
+      {
+       "code": "2",
+       "zh": "偶尔",
+       "en": "Sometimes"
+      },
+      {
+       "code": "3",
+       "zh": "很少",
+       "en": "Rarely"
+      },
+      {
+       "code": "4",
+       "zh": "从来没有",
+       "en": "Never"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID8",
+     "type": "S",
+     "text_zh": "联系方式（微信/手机/邮箱，仅用于约时间）",
+     "text_en": "Contact (WeChat/phone/email, scheduling only)",
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "智识谦逊 GIH-6",
+   "questions": [
+    {
+     "qid": "QID9",
+     "type": "F",
+     "text_zh": "请根据你的实际情况，在以下每个陈述后选择你的同意程度。",
+     "text_en": "Please indicate how much you agree with each statement.",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "我承认我的想法和态度可能是错的。",
+       "en": "I question my own opinions, positions, and viewpoints because they could be wrong."
+      },
+      {
+       "code": "2",
+       "zh": "我会根据新证据重新考虑自己的观点。",
+       "en": "I reconsider my opinions when presented with new evidence."
+      },
+      {
+       "code": "3",
+       "zh": "我尊重跟我看法不同的人的观点。",
+       "en": "I recognize the value in opinions that are different from my own."
+      },
+      {
+       "code": "4",
+       "zh": "我接受我的信念和态度可能有错。",
+       "en": "I accept that my beliefs and attitudes may be wrong."
+      },
+      {
+       "code": "5",
+       "zh": "面对相反的证据，我愿意改变自己的看法。",
+       "en": "In the face of conflicting evidence, I am open to changing my opinions."
+      },
+      {
+       "code": "6",
+       "zh": "我喜欢了解与我已有认知不同的新信息。",
+       "en": "I like finding out new information that differs from what I already think is true."
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 完全不同意",
+       "en": "1 Strongly disagree"
+      },
+      {
+       "code": "2",
+       "zh": "2",
+       "en": "2"
+      },
+      {
+       "code": "3",
+       "zh": "3",
+       "en": "3"
+      },
+      {
+       "code": "4",
+       "zh": "4",
+       "en": "4"
+      },
+      {
+       "code": "5",
+       "zh": "5",
+       "en": "5"
+      },
+      {
+       "code": "6",
+       "zh": "6",
+       "en": "6"
+      },
+      {
+       "code": "7",
+       "zh": "7 完全同意",
+       "en": "7 Strongly agree"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "成长型思维 Dweck-3",
+   "questions": [
+    {
+     "qid": "QID10",
+     "type": "F",
+     "text_zh": "请根据你的实际看法，在以下每个陈述后选择你的同意程度。",
+     "text_en": "Please indicate how much you agree with each statement.",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "一个人的聪明程度是天生固定的，无法真正改变。",
+       "en": "You have a certain amount of intelligence, and you can't really do much to change it."
+      },
+      {
+       "code": "2",
+       "zh": "人可以学习新东西，但改变不了自己的基本智力水平。",
+       "en": "You can learn new things, but you can't really change your basic intelligence."
+      },
+      {
+       "code": "3",
+       "zh": "不管是谁，都无法显著改变自己的能力水平。",
+       "en": "No matter who you are, you can't significantly change your ability level."
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 完全不同意",
+       "en": "1 Strongly disagree"
+      },
+      {
+       "code": "2",
+       "zh": "2",
+       "en": "2"
+      },
+      {
+       "code": "3",
+       "zh": "3",
+       "en": "3"
+      },
+      {
+       "code": "4",
+       "zh": "4",
+       "en": "4"
+      },
+      {
+       "code": "5",
+       "zh": "5",
+       "en": "5"
+      },
+      {
+       "code": "6",
+       "zh": "6",
+       "en": "6"
+      },
+      {
+       "code": "7",
+       "zh": "7 完全同意",
+       "en": "7 Strongly agree"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "认知闭合需求 NFCS-15",
+   "questions": [
+    {
+     "qid": "QID11",
+     "type": "F",
+     "text_zh": "请根据你的实际情况，在以下每个陈述后选择你的同意程度。",
+     "text_en": "Please indicate how much you agree with each statement.",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "我不喜欢不确定的情境。",
+       "en": "I don't like situations that are uncertain."
+      },
+      {
+       "code": "2",
+       "zh": "我不喜欢那些可以有许多不同答案的问题。",
+       "en": "I dislike questions which could be answered in many different ways."
+      },
+      {
+       "code": "3",
+       "zh": "我发现我的性格适合井井有条、循规蹈矩的生活方式。",
+       "en": "I find that a well-ordered life with regular hours suits my temperament."
+      },
+      {
+       "code": "4",
+       "zh": "如果不明白生活中某件事为什么发生，我会觉得不舒服。",
+       "en": "I feel uncomfortable when I don't understand the reason why an event occurred in my life."
+      },
+      {
+       "code": "5",
+       "zh": "当一个人和群体里其他所有人意见都不一致时，我会觉得烦躁。",
+       "en": "I feel irritated when one person disagrees with what everyone else in a group believes."
+      },
+      {
+       "code": "6",
+       "zh": "我不喜欢在不知道会发生什么的情况下进入一个情境。",
+       "en": "I don't like to go into a situation without knowing what I can expect from it."
+      },
+      {
+       "code": "7",
+       "zh": "做出决定之后，我会感到如释重负。",
+       "en": "When I have made a decision, I feel relieved."
+      },
+      {
+       "code": "8",
+       "zh": "面对一个问题时，我非常渴望尽快找到答案。",
+       "en": "When I am confronted with a problem, I'm dying to reach a solution very quickly."
+      },
+      {
+       "code": "9",
+       "zh": "如果不能立即找到解决办法，我会很快变得不耐烦和恼火。",
+       "en": "I would quickly become impatient and irritated if I would not find a solution to a problem immediately."
+      },
+      {
+       "code": "10",
+       "zh": "我不愿意与可能作出意想不到的行为的人在一起。",
+       "en": "I don't like to be with people who are capable of unexpected actions."
+      },
+      {
+       "code": "11",
+       "zh": "我不喜欢一句话可以有很多种理解的情况。",
+       "en": "I dislike it when a person's statement could mean many different things."
+      },
+      {
+       "code": "12",
+       "zh": "我发现建立始终如一的规律能使我更好地享受生活。",
+       "en": "I find that establishing a consistent routine enables me to enjoy life more."
+      },
+      {
+       "code": "13",
+       "zh": "我喜欢有条不紊的生活方式。",
+       "en": "I enjoy having a clear and structured mode of life."
+      },
+      {
+       "code": "14",
+       "zh": "在形成自己的观点之前，我通常不会去征询很多不同的意见。",
+       "en": "I do not usually consult many different opinions before forming my own view."
+      },
+      {
+       "code": "15",
+       "zh": "我不喜欢不可预测的情境。",
+       "en": "I dislike unpredictable situations."
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 强烈不同意",
+       "en": "1 Strongly disagree"
+      },
+      {
+       "code": "2",
+       "zh": "2",
+       "en": "2"
+      },
+      {
+       "code": "3",
+       "zh": "3",
+       "en": "3"
+      },
+      {
+       "code": "4",
+       "zh": "4",
+       "en": "4"
+      },
+      {
+       "code": "5",
+       "zh": "5",
+       "en": "5"
+      },
+      {
+       "code": "6",
+       "zh": "6 强烈同意",
+       "en": "6 Strongly agree"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "未决不耐受 IUS-12",
+   "questions": [
+    {
+     "qid": "QID12",
+     "type": "F",
+     "text_zh": "请根据你的实际情况，在以下每个陈述后选择符合你的程度。",
+     "text_en": "Please indicate how characteristic each statement is of you.",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "无法预料的事情会让我心烦意乱。",
+       "en": "Unforeseen events upset me greatly."
+      },
+      {
+       "code": "2",
+       "zh": "如果不能拥有我所需要的全部信息，我会很沮丧。",
+       "en": "It frustrates me not having all the information I need."
+      },
+      {
+       "code": "3",
+       "zh": "不确定性使我很难拥有一个完美的生活。",
+       "en": "Uncertainty keeps me from living a full life."
+      },
+      {
+       "code": "4",
+       "zh": "我做事总会未雨绸缪，以避免措手不及。",
+       "en": "One should always look ahead so as to avoid surprises."
+      },
+      {
+       "code": "5",
+       "zh": "即使有最好的计划，一个小意外也能搞砸我的全盘计划。",
+       "en": "A small unforeseen event can spoil everything, even with the best of planning."
+      },
+      {
+       "code": "6",
+       "zh": "当到了采取行动的时候，不确定性会让我停滞不前。",
+       "en": "When it's time to act, uncertainty paralyses me."
+      },
+      {
+       "code": "7",
+       "zh": "当我感到不确定时，我就不能很好的表现自己。",
+       "en": "When I am uncertain I can't function very well."
+      },
+      {
+       "code": "8",
+       "zh": "我总是想知道我的未来是什么样子的。",
+       "en": "I always want to know what the future has in store for me."
+      },
+      {
+       "code": "9",
+       "zh": "我无法忍受突发状况。",
+       "en": "I can't stand being taken by surprise."
+      },
+      {
+       "code": "10",
+       "zh": "一点点的疑虑都会阻止我行动。",
+       "en": "The smallest doubt can stop me from acting."
+      },
+      {
+       "code": "11",
+       "zh": "在做事之前，我应该能够规划好一切。",
+       "en": "I should be able to organize everything in advance."
+      },
+      {
+       "code": "12",
+       "zh": "我必须摆脱所有不确定的情形。",
+       "en": "I must get away from all uncertain situations."
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 完全不符合",
+       "en": "1 Not at all characteristic"
+      },
+      {
+       "code": "2",
+       "zh": "2 有点符合",
+       "en": "2 A little characteristic"
+      },
+      {
+       "code": "3",
+       "zh": "3 基本符合",
+       "en": "3 Somewhat characteristic"
+      },
+      {
+       "code": "4",
+       "zh": "4 非常符合",
+       "en": "4 Very characteristic"
+      },
+      {
+       "code": "5",
+       "zh": "5 完全符合",
+       "en": "5 Entirely characteristic"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "反刍-brooding RRS-5",
+   "questions": [
+    {
+     "qid": "QID13",
+     "type": "F",
+     "text_zh": "请回想你感到郁闷、情绪低落的时候，以下情况符合你的程度：",
+     "text_en": "When you feel down, sad, or depressed, how often do you...",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "我常常想我究竟做了什么会导致这样。",
+       "en": "Think \"What am I doing to deserve this?\""
+      },
+      {
+       "code": "2",
+       "zh": "我常常想我为什么总是这样。",
+       "en": "Think \"Why do I always react this way?\""
+      },
+      {
+       "code": "3",
+       "zh": "我常常思考现状，希望它有所好转。",
+       "en": "Think about a recent situation, wishing it had gone better."
+      },
+      {
+       "code": "4",
+       "zh": "我常常想为什么我有这些问题，而别人却没有。",
+       "en": "Think \"Why do I have problems other people don't have?\""
+      },
+      {
+       "code": "5",
+       "zh": "我常常想我为什么不能把事情处理得更好。",
+       "en": "Think \"Why can't I handle things better?\""
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 从不",
+       "en": "1 Almost never"
+      },
+      {
+       "code": "2",
+       "zh": "2 有时",
+       "en": "2 Sometimes"
+      },
+      {
+       "code": "3",
+       "zh": "3 经常",
+       "en": "3 Often"
+      },
+      {
+       "code": "4",
+       "zh": "4 总是",
+       "en": "4 Almost always"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "依恋 ECR-RS-9",
+   "questions": [
+    {
+     "qid": "QID14",
+     "type": "F",
+     "text_zh": "以下句子描述人们在亲近关系中的感受。请针对你生活中普遍的亲近关系（如亲密朋友、家人）作答。",
+     "text_en": "The following concern how you feel in close relationships in general.",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "我经常与他们讨论我所遇到的问题以及我关心的事情。",
+       "en": "I usually discuss my problems and concerns with them."
+      },
+      {
+       "code": "2",
+       "zh": "我跟他们什么事情都讲。",
+       "en": "I talk things over with them."
+      },
+      {
+       "code": "3",
+       "zh": "我觉得依赖他们是很自在的事情。",
+       "en": "I find it easy to depend on them."
+      },
+      {
+       "code": "4",
+       "zh": "我觉得对他们开诚布公不是一件很舒服的事情。",
+       "en": "I don't feel comfortable opening up to them."
+      },
+      {
+       "code": "5",
+       "zh": "总的来说，我不喜欢让他们知道自己内心深处的感觉。",
+       "en": "I prefer not to show them how I feel deep down."
+      },
+      {
+       "code": "6",
+       "zh": "在需要的时候，我向他们求助是很有用的。",
+       "en": "It helps to turn to them in times of need."
+      },
+      {
+       "code": "7",
+       "zh": "我常担心他们并不真正在乎我。",
+       "en": "I often worry that they don't really care for me."
+      },
+      {
+       "code": "8",
+       "zh": "我担心我会被抛弃。",
+       "en": "I'm afraid that they may abandon me."
+      },
+      {
+       "code": "9",
+       "zh": "我担心他们不会像我关心他们那样地关心我。",
+       "en": "I worry that they won't care about me as much as I care about them."
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 完全不同意",
+       "en": "1 Strongly disagree"
+      },
+      {
+       "code": "2",
+       "zh": "2",
+       "en": "2"
+      },
+      {
+       "code": "3",
+       "zh": "3",
+       "en": "3"
+      },
+      {
+       "code": "4",
+       "zh": "4",
+       "en": "4"
+      },
+      {
+       "code": "5",
+       "zh": "5",
+       "en": "5"
+      },
+      {
+       "code": "6",
+       "zh": "6",
+       "en": "6"
+      },
+      {
+       "code": "7",
+       "zh": "7 完全同意",
+       "en": "7 Strongly agree"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "学业权变自我价值 CSW-5",
+   "questions": [
+    {
+     "qid": "QID15",
+     "type": "F",
+     "text_zh": "请根据你的实际情况，在以下每个陈述后选择你的同意程度。",
+     "text_en": "Please indicate how much you agree with each statement.",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "学习/工作上表现好的时候，我感觉自己更有价值。",
+       "en": "I feel better about myself when I do well academically/professionally."
+      },
+      {
+       "code": "2",
+       "zh": "每当考试或考核表现差，我的自尊心就受打击。",
+       "en": "My self-esteem suffers whenever I do poorly on an exam or evaluation."
+      },
+      {
+       "code": "3",
+       "zh": "我对自己的评价，很大程度上取决于我在学业/工作上的表现。",
+       "en": "How I feel about myself depends largely on my academic/work performance."
+      },
+      {
+       "code": "4",
+       "zh": "知道自己在学业/工作上比别人强，会让我自我感觉良好。",
+       "en": "Knowing I do better than others academically/professionally makes me feel good about myself."
+      },
+      {
+       "code": "5",
+       "zh": "学业/工作上的挫折会让我怀疑自己的价值。",
+       "en": "Academic/professional setbacks make me doubt my worth."
+      }
+     ],
+     "scale": [
+      {
+       "code": "1",
+       "zh": "1 完全不同意",
+       "en": "1 Strongly disagree"
+      },
+      {
+       "code": "2",
+       "zh": "2",
+       "en": "2"
+      },
+      {
+       "code": "3",
+       "zh": "3",
+       "en": "3"
+      },
+      {
+       "code": "4",
+       "zh": "4",
+       "en": "4"
+      },
+      {
+       "code": "5",
+       "zh": "5",
+       "en": "5"
+      },
+      {
+       "code": "6",
+       "zh": "6",
+       "en": "6"
+      },
+      {
+       "code": "7",
+       "zh": "7 完全同意",
+       "en": "7 Strongly agree"
+      }
+     ],
+     "mandatory": true
+    }
+   ]
+  },
+  {
+   "name": "B3 基线",
+   "questions": [
+    {
+     "qid": "QID16",
+     "type": "L",
+     "text_zh": "遇到烦心事时，你更可能先跟谁说？",
+     "text_en": "When something is bothering you, who are you most likely to talk to first?",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "家人或朋友",
+       "en": "Family or friends"
+      },
+      {
+       "code": "2",
+       "zh": "AI 聊天工具",
+       "en": "An AI chat tool"
+      },
+      {
+       "code": "3",
+       "zh": "都会，看情况",
+       "en": "Either, depends"
+      },
+      {
+       "code": "4",
+       "zh": "都不说，自己消化",
+       "en": "Neither, I keep it to myself"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID17",
+     "type": "L",
+     "text_zh": "有一件事你只跟 AI 说过、没跟任何人说过吗？",
+     "text_en": "Is there something you've told only an AI and no person?",
+     "answers": [
+      {
+       "code": "1",
+       "zh": "有",
+       "en": "Yes"
+      },
+      {
+       "code": "2",
+       "zh": "没有",
+       "en": "No"
+      },
+      {
+       "code": "3",
+       "zh": "不确定",
+       "en": "Not sure"
+      }
+     ],
+     "mandatory": true
+    },
+    {
+     "qid": "QID18",
+     "type": "T",
+     "text_zh": "用一两句话说说：你一般在什么情况下会想跟 AI 聊个人话题？",
+     "text_en": "In a sentence or two: when do you tend to bring personal topics to an AI?",
+     "mandatory": false
+    }
+   ]
+  }
+ ]
+}

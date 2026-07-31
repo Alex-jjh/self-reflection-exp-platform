@@ -1,0 +1,155 @@
+QuestionID	Field	English
+QID1	QuestionText	Your age
+QID2	QuestionText	Gender
+QID2	ANSWER_CHOICE.1	Male
+QID2	ANSWER_CHOICE.2	Female
+QID2	ANSWER_CHOICE.3	Other
+QID2	ANSWER_CHOICE.4	Prefer not to say
+QID3	QuestionText	Current status
+QID3	ANSWER_CHOICE.1	Undergraduate
+QID3	ANSWER_CHOICE.2	Master's
+QID3	ANSWER_CHOICE.3	PhD
+QID3	ANSWER_CHOICE.4	Working
+QID3	ANSWER_CHOICE.5	Other
+QID4	QuestionText	How long have you been using AI chat tools? (e.g., ChatGPT, Claude, Gemini, Copilot)
+QID4	ANSWER_CHOICE.1	<1 month
+QID4	ANSWER_CHOICE.2	1–3 months
+QID4	ANSWER_CHOICE.3	3 months–1 year
+QID4	ANSWER_CHOICE.4	>1 year
+QID5	QuestionText	How often do you use them?
+QID5	ANSWER_CHOICE.1	Almost daily
+QID5	ANSWER_CHOICE.2	Several times a week
+QID5	ANSWER_CHOICE.3	About weekly
+QID5	ANSWER_CHOICE.4	Less often
+QID6	QuestionText	Which do you use most? (multi-select)
+QID6	ANSWER_CHOICE.1	ChatGPT
+QID6	ANSWER_CHOICE.2	Claude
+QID6	ANSWER_CHOICE.3	Gemini
+QID6	ANSWER_CHOICE.4	豆包
+QID6	ANSWER_CHOICE.5	Kimi
+QID6	ANSWER_CHOICE.6	DeepSeek
+QID6	ANSWER_CHOICE.7	文心一言
+QID6	ANSWER_CHOICE.8	通义千问
+QID6	ANSWER_CHOICE.9	Copilot
+QID6	ANSWER_CHOICE.10	Other
+QID7	QuestionText	Have you talked with an AI about work/study decisions, relationships, emotions, or other personal topics?
+QID7	ANSWER_CHOICE.1	Often
+QID7	ANSWER_CHOICE.2	Sometimes
+QID7	ANSWER_CHOICE.3	Rarely
+QID7	ANSWER_CHOICE.4	Never
+QID8	QuestionText	Contact (WeChat/phone/email, scheduling only)
+QID9	QuestionText	Please indicate how much you agree with each statement.
+QID9	ANSWER_CHOICE.1	I question my own opinions, positions, and viewpoints because they could be wrong.
+QID9	ANSWER_CHOICE.2	I reconsider my opinions when presented with new evidence.
+QID9	ANSWER_CHOICE.3	I recognize the value in opinions that are different from my own.
+QID9	ANSWER_CHOICE.4	I accept that my beliefs and attitudes may be wrong.
+QID9	ANSWER_CHOICE.5	In the face of conflicting evidence, I am open to changing my opinions.
+QID9	ANSWER_CHOICE.6	I like finding out new information that differs from what I already think is true.
+QID9	ANSWER.1	1 Strongly disagree
+QID9	ANSWER.2	2
+QID9	ANSWER.3	3
+QID9	ANSWER.4	4
+QID9	ANSWER.5	5
+QID9	ANSWER.6	6
+QID9	ANSWER.7	7 Strongly agree
+QID10	QuestionText	Please indicate how much you agree with each statement.
+QID10	ANSWER_CHOICE.1	You have a certain amount of intelligence, and you can't really do much to change it.
+QID10	ANSWER_CHOICE.2	You can learn new things, but you can't really change your basic intelligence.
+QID10	ANSWER_CHOICE.3	No matter who you are, you can't significantly change your ability level.
+QID10	ANSWER.1	1 Strongly disagree
+QID10	ANSWER.2	2
+QID10	ANSWER.3	3
+QID10	ANSWER.4	4
+QID10	ANSWER.5	5
+QID10	ANSWER.6	6
+QID10	ANSWER.7	7 Strongly agree
+QID11	QuestionText	Please indicate how much you agree with each statement.
+QID11	ANSWER_CHOICE.1	I don't like situations that are uncertain.
+QID11	ANSWER_CHOICE.2	I dislike questions which could be answered in many different ways.
+QID11	ANSWER_CHOICE.3	I find that a well-ordered life with regular hours suits my temperament.
+QID11	ANSWER_CHOICE.4	I feel uncomfortable when I don't understand the reason why an event occurred in my life.
+QID11	ANSWER_CHOICE.5	I feel irritated when one person disagrees with what everyone else in a group believes.
+QID11	ANSWER_CHOICE.6	I don't like to go into a situation without knowing what I can expect from it.
+QID11	ANSWER_CHOICE.7	When I have made a decision, I feel relieved.
+QID11	ANSWER_CHOICE.8	When I am confronted with a problem, I'm dying to reach a solution very quickly.
+QID11	ANSWER_CHOICE.9	I would quickly become impatient and irritated if I would not find a solution to a problem immediately.
+QID11	ANSWER_CHOICE.10	I don't like to be with people who are capable of unexpected actions.
+QID11	ANSWER_CHOICE.11	I dislike it when a person's statement could mean many different things.
+QID11	ANSWER_CHOICE.12	I find that establishing a consistent routine enables me to enjoy life more.
+QID11	ANSWER_CHOICE.13	I enjoy having a clear and structured mode of life.
+QID11	ANSWER_CHOICE.14	I do not usually consult many different opinions before forming my own view.
+QID11	ANSWER_CHOICE.15	I dislike unpredictable situations.
+QID11	ANSWER.1	1 Strongly disagree
+QID11	ANSWER.2	2
+QID11	ANSWER.3	3
+QID11	ANSWER.4	4
+QID11	ANSWER.5	5
+QID11	ANSWER.6	6 Strongly agree
+QID12	QuestionText	Please indicate how characteristic each statement is of you.
+QID12	ANSWER_CHOICE.1	Unforeseen events upset me greatly.
+QID12	ANSWER_CHOICE.2	It frustrates me not having all the information I need.
+QID12	ANSWER_CHOICE.3	Uncertainty keeps me from living a full life.
+QID12	ANSWER_CHOICE.4	One should always look ahead so as to avoid surprises.
+QID12	ANSWER_CHOICE.5	A small unforeseen event can spoil everything, even with the best of planning.
+QID12	ANSWER_CHOICE.6	When it's time to act, uncertainty paralyses me.
+QID12	ANSWER_CHOICE.7	When I am uncertain I can't function very well.
+QID12	ANSWER_CHOICE.8	I always want to know what the future has in store for me.
+QID12	ANSWER_CHOICE.9	I can't stand being taken by surprise.
+QID12	ANSWER_CHOICE.10	The smallest doubt can stop me from acting.
+QID12	ANSWER_CHOICE.11	I should be able to organize everything in advance.
+QID12	ANSWER_CHOICE.12	I must get away from all uncertain situations.
+QID12	ANSWER.1	1 Not at all characteristic
+QID12	ANSWER.2	2 A little characteristic
+QID12	ANSWER.3	3 Somewhat characteristic
+QID12	ANSWER.4	4 Very characteristic
+QID12	ANSWER.5	5 Entirely characteristic
+QID13	QuestionText	When you feel down, sad, or depressed, how often do you...
+QID13	ANSWER_CHOICE.1	"Think ""What am I doing to deserve this?"""
+QID13	ANSWER_CHOICE.2	"Think ""Why do I always react this way?"""
+QID13	ANSWER_CHOICE.3	Think about a recent situation, wishing it had gone better.
+QID13	ANSWER_CHOICE.4	"Think ""Why do I have problems other people don't have?"""
+QID13	ANSWER_CHOICE.5	"Think ""Why can't I handle things better?"""
+QID13	ANSWER.1	1 Almost never
+QID13	ANSWER.2	2 Sometimes
+QID13	ANSWER.3	3 Often
+QID13	ANSWER.4	4 Almost always
+QID14	QuestionText	The following concern how you feel in close relationships in general.
+QID14	ANSWER_CHOICE.1	I usually discuss my problems and concerns with them.
+QID14	ANSWER_CHOICE.2	I talk things over with them.
+QID14	ANSWER_CHOICE.3	I find it easy to depend on them.
+QID14	ANSWER_CHOICE.4	I don't feel comfortable opening up to them.
+QID14	ANSWER_CHOICE.5	I prefer not to show them how I feel deep down.
+QID14	ANSWER_CHOICE.6	It helps to turn to them in times of need.
+QID14	ANSWER_CHOICE.7	I often worry that they don't really care for me.
+QID14	ANSWER_CHOICE.8	I'm afraid that they may abandon me.
+QID14	ANSWER_CHOICE.9	I worry that they won't care about me as much as I care about them.
+QID14	ANSWER.1	1 Strongly disagree
+QID14	ANSWER.2	2
+QID14	ANSWER.3	3
+QID14	ANSWER.4	4
+QID14	ANSWER.5	5
+QID14	ANSWER.6	6
+QID14	ANSWER.7	7 Strongly agree
+QID15	QuestionText	Please indicate how much you agree with each statement.
+QID15	ANSWER_CHOICE.1	I feel better about myself when I do well academically/professionally.
+QID15	ANSWER_CHOICE.2	My self-esteem suffers whenever I do poorly on an exam or evaluation.
+QID15	ANSWER_CHOICE.3	How I feel about myself depends largely on my academic/work performance.
+QID15	ANSWER_CHOICE.4	Knowing I do better than others academically/professionally makes me feel good about myself.
+QID15	ANSWER_CHOICE.5	Academic/professional setbacks make me doubt my worth.
+QID15	ANSWER.1	1 Strongly disagree
+QID15	ANSWER.2	2
+QID15	ANSWER.3	3
+QID15	ANSWER.4	4
+QID15	ANSWER.5	5
+QID15	ANSWER.6	6
+QID15	ANSWER.7	7 Strongly agree
+QID16	QuestionText	When something is bothering you, who are you most likely to talk to first?
+QID16	ANSWER_CHOICE.1	Family or friends
+QID16	ANSWER_CHOICE.2	An AI chat tool
+QID16	ANSWER_CHOICE.3	Either, depends
+QID16	ANSWER_CHOICE.4	Neither, I keep it to myself
+QID17	QuestionText	Is there something you've told only an AI and no person?
+QID17	ANSWER_CHOICE.1	Yes
+QID17	ANSWER_CHOICE.2	No
+QID17	ANSWER_CHOICE.3	Not sure
+QID18	QuestionText	In a sentence or two: when do you tend to bring personal topics to an AI?
