@@ -149,7 +149,7 @@ def init_session(participant_id: str, language: str = "zh"):
     ss.log_path = SESSIONS_DIR / f"{participant_id}__{ss.session_id}.jsonl"
     ss.initialized = True
     log_event("session_start", condition_order=ss.condition_order,
-              model=MODEL_ID, temperature=TEMPERATURE, language=ss.language)
+              model=MODEL_ID, sampling="model-default", language=ss.language)
 
 
 def advance_episode():
