@@ -42,7 +42,8 @@ OUT_DIR = ROOT / "pilot-transcripts"
 
 DEFAULT_MODEL = "us.anthropic.claude-sonnet-5"  # keep in sync with app.py MODEL_ID
 DEFAULT_REGION = "us-west-2"
-TEMPERATURE = 0.7  # fixed across conditions per INSTRUMENT_SPEC R1
+SAMPLING = "model-default"  # Sonnet 5 deprecates `temperature` (Converse rejects it);
+                            # R1's substance = identical sampling config across conditions
 MAX_TOKENS = 600   # responses should be short (2-5 sentences)
 
 CONDITIONS = ["supportive", "challenging", "neutral"]
@@ -86,7 +87,7 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str,
             modelId=model_id,
             system=[{"text": system_prompt}],
             messages=messages,
-            inferenceConfig={"temperature": TEMPERATURE, "maxTokens": MAX_TOKENS},
+            inferenceConfig={"maxTokens": MAX_TOKENS},
         )
         ai_text = resp["output"]["message"]["content"][0]["text"]
         messages.append({"role": "assistant", "content": [{"text": ai_text}]})
@@ -98,7 +99,7 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str,
         "lang": lang,
         "condition": condition,
         "model": model_id,
-        "temperature": TEMPERATURE,
+        "sampling": SAMPLING,
         "timestamp": datetime.datetime.now().isoformat(timespec="seconds"),
         "transcript": transcript,
     }
@@ -111,7 +112,7 @@ def save(result: dict) -> Path:
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     # also a readable .md for coding review
     md_lines = [f"# {result['script']} × {result['condition']}",
-                f"model: {result['model']} · temp: {result['temperature']} · {result['timestamp']}", ""]
+                f"model: {result['model']} · sampling: {result['sampling']} · {result['timestamp']}", ""]
     for t in result["transcript"]:
         md_lines += [f"**U{t['turn']}:** {t['user']}", "", f"**AI:** {t['assistant']}", "", "---", ""]
     out.with_suffix(".md").write_text("\n".join(md_lines), encoding="utf-8")

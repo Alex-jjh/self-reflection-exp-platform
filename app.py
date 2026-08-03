@@ -31,7 +31,11 @@ SESSIONS_DIR = ROOT / "sessions"
 
 MODEL_ID = "us.anthropic.claude-sonnet-5"  # frozen for Phase A after 3x3 re-validation (08-03 upgrade from sonnet-4-6)
 REGION = "us-west-2"
-TEMPERATURE = 0.7
+# NOTE (08-03): Sonnet 5 deprecates the `temperature` parameter (Converse
+# ValidationException if sent). All conditions share the model's default
+# sampling — R1's substance (no sampling difference across conditions)
+# still holds; the spec's "fixed temp" wording should be read as "fixed
+# sampling config".
 MAX_TOKENS = 600
 TURNS_PER_CONDITION = 8
 
@@ -112,7 +116,7 @@ def call_model(messages: list) -> str:
         modelId=MODEL_ID,
         system=[{"text": load_condition(st.session_state.current_condition)}],
         messages=messages,
-        inferenceConfig={"temperature": TEMPERATURE, "maxTokens": MAX_TOKENS},
+        inferenceConfig={"maxTokens": MAX_TOKENS},
     )
     return resp["output"]["message"]["content"][0]["text"]
 
