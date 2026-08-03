@@ -21,11 +21,15 @@ from pathlib import Path
 import boto3
 import streamlit as st
 
+from bedrock_auth import key_status, load_bedrock_key
+
+load_bedrock_key()  # before any boto3 client; falls back to default chain
+
 ROOT = Path(__file__).resolve().parent
 CONDITIONS_DIR = ROOT / "conditions"
 SESSIONS_DIR = ROOT / "sessions"
 
-MODEL_ID = "us.anthropic.claude-sonnet-4-6"
+MODEL_ID = "us.anthropic.claude-sonnet-5"  # frozen for Phase A after 3x3 re-validation (08-03 upgrade from sonnet-4-6)
 REGION = "us-west-2"
 TEMPERATURE = 0.7
 MAX_TOKENS = 600
@@ -159,6 +163,7 @@ st.set_page_config(page_title="对话研究", page_icon="💬", layout="centered
 
 if "initialized" not in st.session_state:
     st.title("对话研究 · Session")
+    st.caption(key_status())
     pid = st.text_input("参与者编号（主持人输入）", placeholder="P01")
     lang = st.radio("Session 语言（主持人选择，与参与者的 AI 常用语一致）",
                     ["zh", "en"], horizontal=True)
@@ -173,6 +178,7 @@ ss = st.session_state
 # --- facilitator sidebar (R6) ---
 with st.sidebar:
     st.caption("主持人视图")
+    st.caption(key_status())
     st.write(f"参与者：{ss.participant_id} · 语言：{ss.language}")
     order_labels = " → ".join(CONDITION_LABELS[c] for c in ss.condition_order)
     st.write(f"条件顺序：{order_labels}")

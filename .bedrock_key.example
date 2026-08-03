@@ -1,0 +1,15 @@
+# Bedrock long-term API key — DO NOT COMMIT (gitignored as .bedrock_key)
+#
+# Setup:
+#   1. Generate a long-term Bedrock API key in the OTHER account's console:
+#      Bedrock console -> API keys -> Generate long-term key
+#   2. Copy this file:        cp .bedrock_key.example .bedrock_key
+#   3. Paste the key below (first non-comment line = the key)
+#   4. Rotation: the key must be refreshed EVERY 7 DAYS.
+#      app.py shows a sidebar warning when this file is >6 days old.
+#
+# The key is injected as AWS_BEARER_TOKEN_BEDROCK at startup, which boto3
+# uses ONLY for bedrock-runtime — it does not touch or conflict with any
+# other AWS credentials in the environment.
+#
+PASTE-KEY-HERE

@@ -24,16 +24,23 @@ import argparse
 import datetime
 import json
 import re
+import sys
 from pathlib import Path
 
 import boto3
+
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+from bedrock_auth import key_status, load_bedrock_key
+
+load_bedrock_key()
+print(key_status())
 
 ROOT = Path(__file__).resolve().parent.parent
 CONDITIONS_DIR = ROOT / "conditions"
 SCRIPTS_DIR = ROOT / "frozen-scripts"
 OUT_DIR = ROOT / "pilot-transcripts"
 
-DEFAULT_MODEL = "us.anthropic.claude-sonnet-4-6"
+DEFAULT_MODEL = "us.anthropic.claude-sonnet-5"  # keep in sync with app.py MODEL_ID
 DEFAULT_REGION = "us-west-2"
 TEMPERATURE = 0.7  # fixed across conditions per INSTRUMENT_SPEC R1
 MAX_TOKENS = 600   # responses should be short (2-5 sentences)

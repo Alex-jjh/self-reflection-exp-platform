@@ -21,7 +21,11 @@ SURF_SIX_PAGER / SURF_PROPOSAL_V4 there.
 
 ```bash
 python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
-# AWS credentials via default chain; model: us.anthropic.claude-sonnet-4-6 (us-west-2)
+# Auth (study account): cp .bedrock_key.example .bedrock_key, paste the
+# long-term Bedrock API key (rotate EVERY 7 DAYS — the UI shows a
+# red/yellow banner as expiry approaches). Falls back to the default AWS
+# credential chain if the file is absent.
+# Model: us.anthropic.claude-sonnet-5 (us-west-2)
 .venv/bin/streamlit run app.py
 ```
 
