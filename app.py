@@ -112,13 +112,19 @@ def log_event(kind: str, **fields):
 
 def call_model(messages: list) -> str:
     client = boto3.client("bedrock-runtime", region_name=REGION)
-    resp = client.converse(
-        modelId=MODEL_ID,
-        system=[{"text": load_condition(st.session_state.current_condition)}],
-        messages=messages,
-        inferenceConfig={"maxTokens": MAX_TOKENS},
-    )
-    return resp["output"]["message"]["content"][0]["text"]
+    for attempt in range(3):  # Sonnet 5 occasionally returns reasoning-only (no text) output
+        resp = client.converse(
+            modelId=MODEL_ID,
+            system=[{"text": load_condition(st.session_state.current_condition)}],
+            messages=messages,
+            inferenceConfig={"maxTokens": MAX_TOKENS},
+        )
+        text = "".join(
+            b["text"] for b in resp["output"]["message"]["content"] if "text" in b)
+        if text.strip():
+            return text
+    # never append an empty assistant turn — Converse rejects it on the next call
+    raise RuntimeError("model returned empty text after 3 attempts")
 
 
 def init_session(participant_id: str, language: str = "zh"):

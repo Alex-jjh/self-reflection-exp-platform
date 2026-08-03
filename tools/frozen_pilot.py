@@ -83,13 +83,22 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str,
     transcript = []
     for i, turn in enumerate(user_turns, 1):
         messages.append({"role": "user", "content": [{"text": turn}]})
-        resp = client.converse(
-            modelId=model_id,
-            system=[{"text": system_prompt}],
-            messages=messages,
-            inferenceConfig={"maxTokens": MAX_TOKENS},
-        )
-        ai_text = resp["output"]["message"]["content"][0]["text"]
+        ai_text = ""
+        for attempt in range(3):  # Sonnet 5 occasionally returns reasoning-only (no text) output
+            resp = client.converse(
+                modelId=model_id,
+                system=[{"text": system_prompt}],
+                messages=messages,
+                inferenceConfig={"maxTokens": MAX_TOKENS},
+            )
+            ai_text = "".join(
+                b["text"] for b in resp["output"]["message"]["content"] if "text" in b)
+            if ai_text.strip():
+                break
+            print(f"  turn {i}: empty text response (attempt {attempt + 1}), retrying…")
+        if not ai_text.strip():
+            raise RuntimeError(
+                f"{script_path.stem}/{condition} turn {i}: empty response after 3 attempts")
         messages.append({"role": "assistant", "content": [{"text": ai_text}]})
         transcript.append({"turn": i, "user": turn, "assistant": ai_text})
         print(f"  turn {i}/{len(user_turns)} done")
