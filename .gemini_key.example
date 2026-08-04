@@ -1,0 +1,5 @@
+# Google AI Studio / Gemini API key for cross-model comparison
+# (tools/model_compare.py). Get one at https://aistudio.google.com/apikey
+# Not used by app.py — the study instrument runs on Bedrock only.
+# Copy to .gemini_key (gitignored) and paste the key on one line.
+PASTE-KEY-HERE

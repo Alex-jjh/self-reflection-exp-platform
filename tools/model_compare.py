@@ -67,6 +67,14 @@ OPENAI_KEY_FILE = ROOT / ".openai_key"
 XJTLU_KEY_FILE = ROOT / ".xjtlu_key"
 XJTLU_BASE_URL = "https://aiagent.xjtlu.edu.cn/api/aigw/v1"
 
+# Google AI Studio, via the official google-genai SDK. Worth having as its own
+# backend rather than through an OpenAI-compatible shim: Alex observed Gemini
+# colluding in AI Studio with NO system prompt at all, which — if it holds —
+# means the product layer is not the whole story and vendor training differs
+# too. Testing that needs a no-system-prompt arm, which this backend supports
+# (see --no-system).
+GEMINI_KEY_FILE = ROOT / ".gemini_key"
+
 # Default set: the frozen study model plus the OpenAI tier closest to what
 # participants use daily. Extend with --models.
 DEFAULT_MODELS = [
@@ -147,6 +155,11 @@ def load_xjtlu_key():
     return _key_from(XJTLU_KEY_FILE, "XJTLU_API_KEY")
 
 
+def load_gemini_key():
+    return _key_from(GEMINI_KEY_FILE, "GEMINI_API_KEY") or \
+        os.environ.get("GOOGLE_API_KEY") or None
+
+
 def backend_for(model_id: str) -> str:
     if model_id.startswith("xjtlu:"):
         return "xjtlu"           # XJTLU gateway; ID after the prefix is the slug
@@ -154,6 +167,8 @@ def backend_for(model_id: str) -> str:
         return "mantle"          # Bedrock's OpenAI-compatible endpoint
     if model_id.startswith("gpt"):
         return "openai"          # api.openai.com with a direct key
+    if model_id.startswith("gemini"):
+        return "gemini"          # Google AI Studio via google-genai
     return "bedrock"
 
 
@@ -237,12 +252,50 @@ def call_xjtlu(model_id: str, system: str, turns: list) -> str:
     return r.choices[0].message.content or ""
 
 
+def call_gemini(model_id: str, system: str, turns: list) -> str:
+    """Google AI Studio via google-genai. `system` may be empty, which is the
+    no-system-prompt arm."""
+    key = load_gemini_key()
+    if not key:
+        raise RuntimeError(
+            "no Gemini key — put one in .gemini_key (gitignored) or set GEMINI_API_KEY")
+    try:
+        from google import genai
+        from google.genai import types
+    except ImportError:
+        raise RuntimeError("pip install -U google-genai  (needed for gemini models)")
+    client = genai.Client(api_key=key)
+    contents = [
+        types.Content(role=("user" if role == "user" else "model"),
+                      parts=[types.Part(text=text)])
+        for role, text in turns
+    ]
+    cfg = {"max_output_tokens": MAX_TOKENS}
+    if system.strip():
+        cfg["system_instruction"] = system
+    resp = client.models.generate_content(
+        model=model_id, contents=contents,
+        config=types.GenerateContentConfig(**cfg))
+    return resp.text or ""
+
+
 BACKENDS = {"bedrock": call_bedrock, "mantle": call_mantle,
-            "openai": call_openai, "xjtlu": call_xjtlu}
+            "openai": call_openai, "xjtlu": call_xjtlu, "gemini": call_gemini}
 
 
-def run_model(model_id: str, condition: str, lang: str, n_turns: int) -> dict:
-    system = load_condition(condition, lang)
+def run_model(model_id: str, condition: str, lang: str, n_turns: int,
+              no_system: bool = False) -> dict:
+    # The no-system arm is the control for "is the collusion coming from the
+    # product's prompt or from the model itself?" — a bare model with no
+    # instruction at all. Only meaningful on backends that accept an empty
+    # system prompt; Bedrock Converse rejects one, so it gets a single space.
+    system = "" if no_system else load_condition(condition, lang)
+    if no_system and backend_for(model_id) in ("bedrock", "mantle", "openai", "xjtlu"):
+        # Converse rejects a blank system field (and a bare space), so the arm
+        # can never be *literally* empty there. Use the most contentless
+        # instruction possible and note it in the report — this is a real
+        # asymmetry between backends, not something to paper over.
+        system = "You are a helpful assistant."
     call = BACKENDS[backend_for(model_id)]
     user_turns = [DEFAULT_INPUT[lang]] + FOLLOWUPS[lang][: max(0, n_turns - 1)]
 
@@ -273,13 +326,23 @@ def scan_signals(text: str) -> dict:
     return hits
 
 
-def write_report(results: list, condition: str, lang: str, stamp: str) -> Path:
+def write_report(results: list, condition: str, lang: str, stamp: str,
+                 no_system: bool = False) -> Path:
     OUT_DIR.mkdir(exist_ok=True)
     out = OUT_DIR / f"compare__{condition}__{lang}__{stamp}.md"
     L = []
     L.append(f"# Model comparison — {condition} ({lang})\n")
-    L.append(f"Run {stamp}. Prompt: `conditions/{lang}/{condition}.txt` + probe, "
-             f"maxTokens {MAX_TOKENS}.\n")
+    if no_system:
+        L.append(f"Run {stamp}. **No system prompt** (control arm: bare model), "
+                 f"maxTokens {MAX_TOKENS}.\n")
+        L.append("> Backend asymmetry: Gemini receives *no* `system_instruction` "
+                 "at all. Bedrock Converse rejects a blank system field, so "
+                 "Claude/GPT get the most contentless instruction possible "
+                 "(\"You are a helpful assistant.\"). Read the Claude/GPT arm as "
+                 "near-bare, not bare.\n")
+    else:
+        L.append(f"Run {stamp}. Prompt: `conditions/{lang}/{condition}.txt` + probe, "
+                 f"maxTokens {MAX_TOKENS}.\n")
     L.append("> Signal counts below are lexical screening aids, not codes. "
              "Confirm every hit by reading the text; expect misses.\n")
 
@@ -340,6 +403,9 @@ def main():
     ap.add_argument("--input", help="override the opening user message")
     ap.add_argument("--turns", type=int, default=1,
                     help="1 = opening line only; up to 3 uses scripted follow-ups")
+    ap.add_argument("--no-system", action="store_true",
+                    help="send no system prompt at all — the control arm for "
+                         "'is the collusion the product prompt or the model?'")
     args = ap.parse_args()
 
     load_bedrock_key()
@@ -353,12 +419,14 @@ def main():
     results = []
     for m in models:
         print(f"\n== {m} ({backend_for(m)}) ==")
-        r = run_model(m.strip(), args.condition, args.lang, args.turns)
+        r = run_model(m.strip(), args.condition, args.lang, args.turns,
+                      no_system=args.no_system)
         if r.get("error"):
             print(f"    ERROR: {r['error'][:140]}")
         results.append(r)
 
-    out = write_report(results, args.condition, args.lang, stamp)
+    label = f"{args.condition}" if not args.no_system else "NOSYSTEM"
+    out = write_report(results, label, args.lang, stamp, no_system=args.no_system)
     print(f"\nwrote {out.relative_to(ROOT)}")
     ok = [r for r in results if not r.get("error")]
     if len(ok) < len(results):
