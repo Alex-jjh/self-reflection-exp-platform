@@ -34,7 +34,17 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 JSONL events: `session_start`, `episode_start`, `user_turn` (text, chars,
 inter-turn latency), `ai_turn` (text, response latency), `regenerate`
 (replaced + new response, latency-to-click), `ratings` (smart/understands/
-helpful, 7-pt), `episode_end_by_facilitator`, `session_end`.
+helpful, 7-pt), `episode_end_by_facilitator`, `session_end`,
+`session_resumed` (after a refresh), `model_error` (a turn that failed and
+was rolled back — the participant's text is kept in the log even though it
+never reached the model).
+
+Each event is appended and the file closed before the next render, so a
+crash, a kill, or a power loss cannot lose a turn that already happened.
+The log is the complete record: **if the browser is refreshed mid-session,
+enter the same participant ID and choose "恢复这份 session"** — state is
+rebuilt from the log (current episode's history only, so conditions stay
+isolated). Choosing "新建" instead splits one participant across two files.
 Probe offer/response are recoverable from turn text (coded later);
 regenerate events are first-class.
 
