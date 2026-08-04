@@ -210,6 +210,8 @@ def resume_session(log_path: Path):
     ss.turn_count = sum(1 for r, _ in ss.display if r == "user")
     ss.last_user_ts = None  # inter-turn latency is not meaningful across a refresh
     ss.pending_retry = None
+    ss.awaiting_reply = False
+    ss.reply_started_at = None
     ss.initialized = True
     log_event("session_resumed", resumed_from=log_path.name,
               rebuilt_turns=ss.turn_count, episode=ss.episode_index)
@@ -231,6 +233,8 @@ def init_session(participant_id: str, language: str = "zh"):
     ss.display = []            # [(role, text)] for rendering
     ss.last_user_ts = None
     ss.pending_retry = None
+    ss.awaiting_reply = False
+    ss.reply_started_at = None
     ss.episode_done = False
     ss.session_done = False
     ss.ratings_pending = False
@@ -255,6 +259,8 @@ def advance_episode():
     ss.episode_done = False
     ss.last_user_ts = None
     ss.pending_retry = None
+    ss.awaiting_reply = False
+    ss.reply_started_at = None
     log_event("episode_start", episode=ss.episode_index)
 
 
@@ -414,6 +420,41 @@ if regen_clicked:
                   latency_s=round(time.time() - t0, 2))
         st.rerun()
 
+# --- pending reply: the user's message is already on screen (rendered by the
+# history loop above), so now show a thinking indicator in the assistant's
+# position and fetch the reply. Splitting send from fetch across two renders is
+# what makes the UI behave like a real chat client: without it the whole turn
+# is computed before anything paints, and the participant stares at an
+# unchanged screen for 8-15s and then sees two messages appear at once.
+if ss.awaiting_reply:
+    with st.chat_message("assistant"):
+        with st.spinner(T["thinking"]):
+            try:
+                ai_text = call_model(ss.messages)
+            except Exception as exc:
+                # Throttling, an expired key, a dropped connection. Without this
+                # the traceback lands on the participant's screen AND the user
+                # turn stays in history with no assistant reply after it, which
+                # makes every subsequent Converse call fail too. Roll the turn
+                # back so the participant can simply send again.
+                rolled_back = ss.display[-1][1]
+                ss.messages.pop()
+                ss.display.pop()
+                ss.turn_count -= 1
+                ss.last_user_ts = None
+                ss.awaiting_reply = False
+                ss.pending_retry = rolled_back
+                log_event("model_error", where="user_turn", error=repr(exc),
+                          rolled_back_text=rolled_back)
+                st.rerun()
+    ss.messages.append({"role": "assistant", "content": [{"text": ai_text}]})
+    ss.display.append(("assistant", ai_text))
+    log_event("ai_turn", text=ai_text,
+              response_latency_s=round(time.time() - ss.reply_started_at, 2))
+    ss.awaiting_reply = False
+    ss.pending_retry = None
+    st.rerun()
+
 # --- chat input ---
 if not ss.episode_done:
     user_text = st.chat_input(T["input_placeholder"])
@@ -427,32 +468,14 @@ if not ss.episode_done:
         ss.display.append(("user", user_text))
         log_event("user_turn", text=user_text, chars=len(user_text),
                   inter_turn_latency_s=inter_turn)
-        t0 = time.time()
-        try:
-            with st.spinner(T["thinking"]):
-                ai_text = call_model(ss.messages)
-        except Exception as exc:
-            # Throttling, an expired key, a dropped connection. Without this the
-            # traceback lands on the participant's screen AND the user turn stays
-            # in history with no assistant reply after it, which makes every
-            # subsequent Converse call fail too. Roll the turn back so the
-            # participant can simply send again.
-            ss.messages.pop()
-            ss.display.pop()
-            ss.turn_count -= 1
-            ss.last_user_ts = None
-            ss.pending_retry = user_text
-            log_event("model_error", where="user_turn", error=repr(exc),
-                      rolled_back_text=user_text)
-            st.error(T["error"])
-        else:
-            ss.messages.append({"role": "assistant", "content": [{"text": ai_text}]})
-            ss.display.append(("assistant", ai_text))
-            log_event("ai_turn", text=ai_text,
-                      response_latency_s=round(time.time() - t0, 2))
-            ss.pending_retry = None
-            st.rerun()
+        # paint the user's message first; the reply is fetched on the next run
+        ss.awaiting_reply = True
+        ss.reply_started_at = time.time()
+        st.rerun()
 
-# If a turn was rolled back, show the text so it is not lost to retyping.
+# If a turn was rolled back, explain and show the text so it need not be
+# retyped. Rendered here (not at the failure site) because the failure path
+# reruns to clear the thinking indicator, which would wipe an st.error there.
 if "pending_retry" in ss and ss.pending_retry:
+    st.error(T["error"])
     st.info(f"{T['retry']}：{ss.pending_retry}")
