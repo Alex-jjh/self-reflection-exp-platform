@@ -20,6 +20,8 @@ branch turns ("[if AI did X] say A / [if Y] say B") are resolved manually —
 for the automated run we send the first branch and note it in the transcript.
 """
 
+from __future__ import annotations  # keep annotations lazy: the session laptop's venv is 3.9
+
 import argparse
 import datetime
 import json

@@ -1,9 +1,17 @@
 .venv/
 __pycache__/
 *.pyc
-pilot-transcripts/
 .DS_Store
+
+# Participant data — NEVER tracked. Real people, consent-scoped.
 sessions/
+
+# NOTE: pilot-transcripts/ is deliberately NOT ignored. Those are synthetic:
+# authored frozen scripts (frozen-scripts/) replayed against condition
+# prompts — no human subject, no consent scope. They are the instrument's
+# validation evidence and the provenance for the v1-freeze, so they belong
+# in the repo alongside the prompts that produced them.
+
 screening/items/
 refsrc
 .bedrock_key

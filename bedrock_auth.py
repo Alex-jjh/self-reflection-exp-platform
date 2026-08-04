@@ -12,6 +12,8 @@ key_age_days() lets the UI surface a warning before expiry bites
 mid-session.
 """
 
+from __future__ import annotations  # keep annotations lazy: the session laptop's venv is 3.9
+
 import datetime
 import os
 from pathlib import Path

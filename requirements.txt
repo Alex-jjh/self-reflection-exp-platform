@@ -1,2 +1,5 @@
-boto3
+# The session laptop's venv is Python 3.9 (CommandLineTools). Keep the code
+# 3.9-compatible — use `from __future__ import annotations` rather than PEP 604
+# (`X | None`) or bare `list[str]` at def time.
+boto3>=1.39.9  # AWS_BEARER_TOKEN_BEDROCK support (bedrock_auth.py)
 streamlit
