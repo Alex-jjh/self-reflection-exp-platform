@@ -15,3 +15,8 @@ sessions/
 screening/items/
 refsrc
 .bedrock_key
+
+# Exploratory cross-model comparison output (commit selectively if it informs a decision)
+model-comparison/
+.openai_key
+.xjtlu_key

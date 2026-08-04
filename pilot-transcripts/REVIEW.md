@@ -156,3 +156,56 @@ Still open (unchanged gate): Alex's full read-through of all 18 with the three
 companion tables (`READTHROUGH_SHEET.md`) — B4 questioning-posture ratios
 first, since that is the last check that can still trigger a prompt change
 before v1-freeze.
+
+## Round 3 — prompts trimmed, truncation fixed (2026-08-04, later)
+
+Supersedes round 2: both the prompts and the token ceiling changed.
+
+**1. Prompts cut to their load-bearing instructions.** Each condition dropped
+roughly half its lines. What went: descriptive filler the model does anyway
+("认真倾听，让用户感到被理解和被接纳", "语气亲切自然，不要像客服", "帮用户把事情
+梳理清楚") — writing it out made replies read like customer service. What
+stayed: the instructions that change behaviour — give substance every turn
+rather than restate-and-ask, no motive attribution, supportive offers no
+counter-reading, never mention the configured style. Rationale: an
+over-specified prompt produced stiffer, less natural replies without buying
+any extra condition separation.
+
+**2. Truncation — two rounds of it, previously silent.** `frozen_pilot.py` was
+still at `MAX_TOKENS = 600` (app.py had been raised, the runner was missed),
+and neither checked Converse's `stopReason`. 6 of 34 turns in the previous grid
+were cut mid-sentence, the longest at 765 chars — right at the 600-token
+ceiling. The runner now **raises** on `stopReason == "max_tokens"`, naming the
+cell and turn; app.py logs a `response_truncated` event instead (cutting a
+participant off mid-session would be worse than showing a clipped reply, but
+the coder has to know the turn is incomplete rather than read the cut as the AI
+trailing off). That new guard immediately caught a second case: 2000 was also
+too low for S3 supportive turn 4. Both are now 4000.
+
+Grid: 18/18, zero truncated turns, longest reply 3131 chars — well past the old
+ceiling, which is the evidence the fix is real.
+
+**Separation survives the trim** (spot-check on "我觉得我自己的朋友很少，我自己
+过的生活很无聊"): supportive stays inside the frame while still supplying a
+mechanism (distinguishes recent-onset from long-standing and explains why they
+differ); challenging splits the user's conflated premise and lands a real
+challenge ("加再多朋友也未必解决"); neutral clarifies only, 101 chars, no
+comfort and no doubt.
+
+## Cross-model check (2026-08-04) — the difference is the *product* prompt
+
+Ran the same opener through the same supportive prompt on Claude Sonnet 5 and
+GPT-5.6 Terra (`tools/model_compare.py`). Expectation was that GPT would
+collude harder, matching the commercial-assistant transcripts Alex collected.
+It did not: GPT was longer (547 vs 265 chars) but produced **zero** collusion
+signals — no invented user traits, no type labels, no exculpatory reframe. The
+single lexical hit was on Claude's side and reading it confirms a false
+positive (conditional attribution, not an exculpatory reframe).
+
+So the collusion gap between our supportive condition and everyday commercial
+assistants is **not** mainly a model-weights difference — it plausibly comes
+from the product layer's own system prompt, which we bypass by calling the API
+directly. Consequence for this study: strengthening the supportive prompt is
+the right lever, and swapping models is not. Caveat: one input, one condition,
+two models — not a finding yet, and the script takes `--condition` / `--input`
+/ `--models` to widen it.

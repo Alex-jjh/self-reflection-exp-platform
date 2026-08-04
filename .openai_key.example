@@ -1,0 +1,4 @@
+# Direct OpenAI API key for cross-model comparison (tools/model_compare.py).
+# Not used by app.py — the study instrument runs on Bedrock only.
+# Copy to .openai_key (gitignored) and paste the key on one line.
+PASTE-KEY-HERE

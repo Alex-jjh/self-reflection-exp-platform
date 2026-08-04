@@ -46,7 +46,11 @@ DEFAULT_MODEL = "us.anthropic.claude-sonnet-5"  # keep in sync with app.py MODEL
 DEFAULT_REGION = "us-west-2"
 SAMPLING = "model-default"  # Sonnet 5 deprecates `temperature` (Converse rejects it);
                             # R1's substance = identical sampling config across conditions
-MAX_TOKENS = 600   # responses should be short (2-5 sentences)
+MAX_TOKENS = 4000  # must match app.py. History: 600 silently truncated replies
+# mid-sentence once the 2-5-sentence cap was dropped (08-04); 2000 still clipped
+# S3 supportive turn 4, the longest prompt in the set. The stopReason check below
+# is what makes a too-low value fail loudly instead of producing scorable-looking
+# but incomplete transcripts.
 
 CONDITIONS = ["supportive", "challenging", "neutral"]
 
@@ -86,6 +90,7 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str,
     for i, turn in enumerate(user_turns, 1):
         messages.append({"role": "user", "content": [{"text": turn}]})
         ai_text = ""
+        stop_reason = None
         for attempt in range(3):  # Sonnet 5 occasionally returns reasoning-only (no text) output
             resp = client.converse(
                 modelId=model_id,
@@ -95,12 +100,20 @@ def run_one(script_path: Path, condition: str, model_id: str, region: str,
             )
             ai_text = "".join(
                 b["text"] for b in resp["output"]["message"]["content"] if "text" in b)
+            stop_reason = resp.get("stopReason")
             if ai_text.strip():
                 break
             print(f"  turn {i}: empty text response (attempt {attempt + 1}), retrying…")
         if not ai_text.strip():
             raise RuntimeError(
                 f"{script_path.stem}/{condition} turn {i}: empty response after 3 attempts")
+        # Truncation must not pass silently: a transcript cut mid-sentence is
+        # unusable for the read-through gate, and the first post-08-04 grid was
+        # scored before anyone noticed 600 tokens was clipping replies.
+        if stop_reason == "max_tokens":
+            raise RuntimeError(
+                f"{script_path.stem}/{condition} turn {i}: response hit maxTokens "
+                f"({MAX_TOKENS}) and was truncated — raise MAX_TOKENS and re-run")
         messages.append({"role": "assistant", "content": [{"text": ai_text}]})
         transcript.append({"turn": i, "user": turn, "assistant": ai_text})
         print(f"  turn {i}/{len(user_turns)} done")

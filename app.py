@@ -30,13 +30,20 @@ CONDITIONS_DIR = ROOT / "conditions"
 SESSIONS_DIR = ROOT / "sessions"
 
 MODEL_ID = "us.anthropic.claude-sonnet-5"  # frozen for Phase A after 3x3 re-validation (08-03 upgrade from sonnet-4-6)
+# Context (checked 08-04): history is kept in full within an episode and cleared
+# between them, so the 1M-context variants are unnecessary here — a whole 8-turn
+# episode is ~1K tokens. `global.anthropic.claude-sonnet-5` also works; both
+# `[1m]` variants return "account is not authorized" on the study account (a
+# permissions gap, not a bad ID), so switching to one would break every session.
 REGION = "us-west-2"
 # NOTE (08-03): Sonnet 5 deprecates the `temperature` parameter (Converse
 # ValidationException if sent). All conditions share the model's default
 # sampling — R1's substance (no sampling difference across conditions)
 # still holds; the spec's "fixed temp" wording should be read as "fixed
 # sampling config".
-MAX_TOKENS = 600
+MAX_TOKENS = 4000  # raised 08-04: the 2-5-sentence cap was dropped, so 600
+# (and then 2000) truncated mid-reply. Same ceiling for all three conditions so
+# length cannot differ by construction.
 TURNS_PER_CONDITION = 8
 
 # Latin square (3 conditions): assignment by participant number mod 3
@@ -136,6 +143,11 @@ def call_model(messages: list) -> str:
         text = "".join(
             b["text"] for b in resp["output"]["message"]["content"] if "text" in b)
         if text.strip():
+            # A truncated reply is still shown — cutting it would be worse mid-session —
+            # but it is flagged in the log so the coder knows the turn is incomplete
+            # rather than reading the cut-off as the AI trailing away.
+            if resp.get("stopReason") == "max_tokens":
+                log_event("response_truncated", max_tokens=MAX_TOKENS, chars=len(text))
             return text
     # never append an empty assistant turn — Converse rejects it on the next call
     raise RuntimeError("model returned empty text after 3 attempts")
