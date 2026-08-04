@@ -72,18 +72,26 @@
 1. **时长**：信息单写 "typically 45–90 minutes"，我们的 session 是
    90–120 分钟。"typically" 是否容纳 120？还是我们压缩流程/信息单
    出 V2？
-2. **Scroll-back 录屏 vs "原文不留存"**：six-pager 的设计承诺是
-   "we take notes rather than raw text"，但官方录制=屏幕共享录像——
-   参与者滚动自己真实聊天记录时原文会进视频。二选一：
-   (a) scroll-back 段**暂停屏幕共享录制**，只留音频+主持人笔记
-   （忠于原设计，推荐）；(b) 如实告知"滚动的内容会进录像"并在
-   同意时单独确认。**dry-run 前必须定**。
+2. ~~Scroll-back 录屏 vs "原文不留存"~~ → **已化解（08-04 Alex
+   裁决）**：参与者一般在**自己手机上**和 AI 聊天，scroll-back 在
+   参与者手机上进行，手机屏幕**不入会议录制**（录的是主持人侧
+   屏幕共享+双方音频）。参与者拿着手机口述，主持人用结构化提问
+   提取（见 SESSION_PROTOCOL 2b 更新），原文自然不落任何记录——
+   与"take notes rather than raw text"的设计承诺一致，无需二选一。
+   残余确认项：给 Brennan 提一句"scroll-back 发生在参与者自己
+   设备上、不入录制"即可，预计无争议。
 3. **捐赠档的伦理覆盖**：官方信息单覆盖"原型交互日志"+媒体历史
    导出类比（YouTube 条款），参与者**自己账号聊天记录**的捐赠
    是否需要伦理侧补一档，请 Brennan 判断。in-situ prompt 同问。
 4. **供应商清单**：官方列 OpenAI/Qwen/DeepSeek "or similar
-   services"；我们实际用 AWS Bedrock（Anthropic）。大概率被
-   "similar"覆盖，口头确认一下留痕。
+   services"；我们实际用 **AWS Bedrock（Anthropic 模型，美国区
+   endpoint）**。跨境传输规则依据 AWS 的数据隐私与跨区传输框架，
+   给参与者/伦理侧可附的链接：
+   - AWS 数据隐私常见问题：https://aws.amazon.com/compliance/data-privacy-faq/
+   - AWS Bedrock 数据保护（输入输出不用于训练、不出所选区域）：
+     https://docs.aws.amazon.com/bedrock/latest/userguide/data-protection.html
+   大概率被"similar services"覆盖，口头确认留痕；若信息单出 V2，
+   建议供应商例举里加 "AWS Bedrock (Anthropic)" 一项。
 
 ## 伦理基础（不变）
 
