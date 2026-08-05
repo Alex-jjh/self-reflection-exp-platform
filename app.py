@@ -27,7 +27,12 @@ load_bedrock_key()  # before any boto3 client; falls back to default chain
 
 ROOT = Path(__file__).resolve().parent
 CONDITIONS_DIR = ROOT / "conditions"
-SESSIONS_DIR = ROOT / "sessions"
+# Participant data lives in a separate PRIVATE repo (platform/data split,
+# 08-05): logs land there and are committed per session — the platform repo
+# structurally cannot contain participant data. Falls back to the local
+# sessions/ dir if the data repo isn't cloned (e.g. a fresh dev machine).
+_DATA_REPO = ROOT.parent / "self-reflection-session-data" / "sessions"
+SESSIONS_DIR = _DATA_REPO if _DATA_REPO.parent.exists() else ROOT / "sessions"
 
 MODEL_ID = "us.anthropic.claude-sonnet-5"  # frozen for Phase A after 3x3 re-validation (08-03 upgrade from sonnet-4-6)
 # Context (checked 08-04): history is kept in full within an episode and cleared
@@ -131,22 +136,40 @@ def log_event(kind: str, **fields):
         f.write(json.dumps(event, ensure_ascii=False) + "\n")
 
 
-def call_model(messages: list) -> str:
+def call_model(messages: list, placeholder=None) -> str:
+    """Fetch a reply, streaming into `placeholder` when given.
+
+    Streaming was added after P01: a 30-100s blank wait made the AI feel
+    broken ('转太慢了'; the facilitator: '我也难受') and plausibly bled into
+    the perceived-competence ratings. With a placeholder the text appears
+    token by token like every commercial chat UI the participants know.
+    """
     client = boto3.client("bedrock-runtime", region_name=REGION)
     for attempt in range(3):  # Sonnet 5 occasionally returns reasoning-only (no text) output
-        resp = client.converse(
+        stream = client.converse_stream(
             modelId=MODEL_ID,
             system=[{"text": load_condition(st.session_state.current_condition)}],
             messages=messages,
             inferenceConfig={"maxTokens": MAX_TOKENS},
         )
-        text = "".join(
-            b["text"] for b in resp["output"]["message"]["content"] if "text" in b)
+        text = ""
+        stop_reason = None
+        for event in stream["stream"]:
+            if "contentBlockDelta" in event:
+                delta = event["contentBlockDelta"]["delta"].get("text", "")
+                if delta:
+                    text += delta
+                    if placeholder is not None:
+                        placeholder.markdown(text + " ▌")
+            elif "messageStop" in event:
+                stop_reason = event["messageStop"].get("stopReason")
         if text.strip():
+            if placeholder is not None:
+                placeholder.markdown(text)
             # A truncated reply is still shown — cutting it would be worse mid-session —
             # but it is flagged in the log so the coder knows the turn is incomplete
             # rather than reading the cut-off as the AI trailing away.
-            if resp.get("stopReason") == "max_tokens":
+            if stop_reason == "max_tokens":
                 log_event("response_truncated", max_tokens=MAX_TOKENS, chars=len(text))
             return text
     # never append an empty assistant turn — Converse rejects it on the next call
@@ -419,8 +442,9 @@ if regen_clicked:
     t0 = time.time()
     dropped = ss.messages.pop()  # drop last assistant message from history
     try:
-        with st.spinner(T["thinking"]):
-            new_text = call_model(ss.messages)
+        # streams over the old reply in place
+        slot = st.empty()
+        new_text = call_model(ss.messages, placeholder=slot)
     except Exception as exc:
         ss.messages.append(dropped)  # put it back: the old reply still stands
         log_event("model_error", where="regenerate", error=repr(exc))
@@ -433,32 +457,32 @@ if regen_clicked:
         st.rerun()
 
 # --- pending reply: the user's message is already on screen (rendered by the
-# history loop above), so now show a thinking indicator in the assistant's
-# position and fetch the reply. Splitting send from fetch across two renders is
-# what makes the UI behave like a real chat client: without it the whole turn
-# is computed before anything paints, and the participant stares at an
-# unchanged screen for 8-15s and then sees two messages appear at once.
+# history loop above), so now stream the reply into the assistant's bubble.
+# Splitting send from fetch across two renders is what makes the UI behave
+# like a real chat client; streaming (post-P01) is what makes the wait feel
+# like generation instead of a hang.
 if ss.awaiting_reply:
     with st.chat_message("assistant"):
-        with st.spinner(T["thinking"]):
-            try:
-                ai_text = call_model(ss.messages)
-            except Exception as exc:
-                # Throttling, an expired key, a dropped connection. Without this
-                # the traceback lands on the participant's screen AND the user
-                # turn stays in history with no assistant reply after it, which
-                # makes every subsequent Converse call fail too. Roll the turn
-                # back so the participant can simply send again.
-                rolled_back = ss.display[-1][1]
-                ss.messages.pop()
-                ss.display.pop()
-                ss.turn_count -= 1
-                ss.last_user_ts = None
-                ss.awaiting_reply = False
-                ss.pending_retry = rolled_back
-                log_event("model_error", where="user_turn", error=repr(exc),
-                          rolled_back_text=rolled_back)
-                st.rerun()
+        placeholder = st.empty()
+        placeholder.markdown(T["thinking"])
+        try:
+            ai_text = call_model(ss.messages, placeholder=placeholder)
+        except Exception as exc:
+            # Throttling, an expired key, a dropped connection. Without this
+            # the traceback lands on the participant's screen AND the user
+            # turn stays in history with no assistant reply after it, which
+            # makes every subsequent Converse call fail too. Roll the turn
+            # back so the participant can simply send again.
+            rolled_back = ss.display[-1][1]
+            ss.messages.pop()
+            ss.display.pop()
+            ss.turn_count -= 1
+            ss.last_user_ts = None
+            ss.awaiting_reply = False
+            ss.pending_retry = rolled_back
+            log_event("model_error", where="user_turn", error=repr(exc),
+                      rolled_back_text=rolled_back)
+            st.rerun()
     ss.messages.append({"role": "assistant", "content": [{"text": ai_text}]})
     ss.display.append(("assistant", ai_text))
     log_event("ai_turn", text=ai_text,
