@@ -273,10 +273,24 @@ def call_gemini(model_id: str, system: str, turns: list) -> str:
     cfg = {"max_output_tokens": MAX_TOKENS}
     if system.strip():
         cfg["system_instruction"] = system
-    resp = client.models.generate_content(
-        model=model_id, contents=contents,
-        config=types.GenerateContentConfig(**cfg))
-    return resp.text or ""
+    # AI Studio free tier rate-limits per minute; the 429 carries a retry
+    # delay. Honor it (up to 3 waits) instead of failing the whole cell.
+    import re as _re
+    import time as _time
+    last = None
+    for _ in range(4):
+        try:
+            resp = client.models.generate_content(
+                model=model_id, contents=contents,
+                config=types.GenerateContentConfig(**cfg))
+            return resp.text or ""
+        except Exception as exc:
+            last = exc
+            if "RESOURCE_EXHAUSTED" not in str(exc):
+                raise
+            m = _re.search(r"retry in ([0-9.]+)s", str(exc))
+            _time.sleep(float(m.group(1)) + 2 if m else 30)
+    raise last
 
 
 BACKENDS = {"bedrock": call_bedrock, "mantle": call_mantle,
