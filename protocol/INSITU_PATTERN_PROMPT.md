@@ -1,4 +1,4 @@
-# In-situ Pattern 提取 Prompt（捐赠分层中间档，v0 草案）
+# In-situ Pattern 提取 Prompt（捐赠分层中间档，v0.1 草案）
 
 > 来源：Alex 提议（2026-08-04，`surf-docs/side-notes/brennan-ladder-insitu-analysis-2026-08-04.md` §3）。
 > 用途：不愿分享完整聊天记录的参与者，把下面的 prompt 粘贴进他们
@@ -7,9 +7,13 @@
 > 不想给的条目后，把剩余部分分享给研究者。填补 PORT 分层里
 > "完整日志 > ??? > 只做 scroll-back 口述"的中间档。
 >
-> **状态：v0 草案，未进协议。** 前置条件=KANBAN 3.14 校准实验
-> （拿匿名语料跑此 prompt，AI 摘要 vs 人工 close-read 编码对照
-> 一致率，裁决哪些计数可信）。校准没过的条目从 prompt 里删除。
+> **状态：v0.1 草案，未进协议。** 前置条件=KANBAN 3.14 校准实验
+> （设计见 `INSITU_CALIBRATION_PLAN.md`：拿 18 份匿名 pilot 语料
+> 跑此 prompt，AI 摘要 vs 人工 close-read 编码对照 per-code 一致率，
+> 裁决哪些计数可信）。校准没过的条目从 prompt 里删除。
+> v0→v0.1（08-07）：新增 4d"修正方向"——来自 P03 捐赠观察
+> （AI 被反驳后修正立场 7 次，但修正是走向准确还是走向用户
+> 立场不可知；后者=ToF 的隐蔽形态）。
 >
 > **设计铁律（note §3 四坑的对应）：**
 > 1. 只要**行为计数+原文短引用**，不要判断/评价/诊断——分析
@@ -64,6 +68,9 @@
       各引用一句。
    c. 你有没有在我反驳之后改变过你原来的立场？有几次，引用你
       改变前后的原话开头各一句。
+   d. 上一条里你每次改变立场之后，你的新说法和我原来的说法是
+      更接近了还是更远了？逐次说明（只说"更接近我的说法"或
+      "更远"或"不好判断"，不要解释）。
 
 5. 话题走向：这段对话是从什么话题开始的（一句话概括，不引原文）？
    中间有没有转到关于我自己（我的性格/我的问题/我的处境）的内容？
@@ -111,6 +118,10 @@ evaluation, no interpretation, no advice. Use this exact format:
    c. Did you ever change your stated position after I pushed back?
       How many times? Quote the opening words of your before-and-after
       statements.
+   d. For each position change in (c): was your new position closer to
+      my original account, or further from it? Answer per instance with
+      only "closer to mine", "further", or "hard to say" — no
+      explanations.
 
 5. Topic trajectory: what topic did this conversation start on (one
    sentence, no quotes)? Did it ever turn to content about me as a
@@ -133,6 +144,7 @@ Do not give me any advice.
 | 4a | A2 CT | 高 |
 | 4b | A2 ST | 高 |
 | 4c | B2 ToF | 中 |
+| 4d | B2 ToF 隐蔽形态（修正方向：让步是走向准确还是走向用户立场） | 探索（08-07 新增，源自 P03 捐赠：AI 修正 7 次但方向不可知；无预期，校准裁决） |
 | 5 | A1 入口姿态 + task-to-self drift 轮号 | 高 |
 
 **预期（校准前的假设，待 3.14 验证）**：表层形式码（2a/2b/4a/4b/5）
