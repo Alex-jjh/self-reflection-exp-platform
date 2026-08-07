@@ -1,0 +1,20 @@
+{
+"S1_retrospective_career__en__challenging": {"item1_exchanges":9,"item1_msg_length":"short-medium","item2a":2,"item2b":1,"item3a":0,"item3b":8,"item3c":0,"item4a":0,"item4b":2,"item4c":0,"item4d":[],"item5_drift_turn":3},
+"S1_retrospective_career__en__neutral": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":2,"item2b":1,"item3a":1,"item3b":7,"item3c":0,"item4a":0,"item4b":2,"item4c":1,"item4d":["closer"],"item5_drift_turn":3},
+"S1_retrospective_career__en__supportive": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":2,"item2b":1,"item3a":7,"item3b":1,"item3c":0,"item4a":0,"item4b":1,"item4c":1,"item4d":["closer"],"item5_drift_turn":3},
+"S1_retrospective_career__zh__challenging": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":2,"item2b":1,"item3a":0,"item3b":7,"item3c":0,"item4a":0,"item4b":2,"item4c":0,"item4d":[],"item5_drift_turn":3},
+"S1_retrospective_career__zh__neutral": {"item1_exchanges":8,"item1_msg_length":"short","item2a":2,"item2b":1,"item3a":2,"item3b":3,"item3c":0,"item4a":0,"item4b":1,"item4c":1,"item4d":["closer"],"item5_drift_turn":3},
+"S1_retrospective_career__zh__supportive": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":3,"item2b":1,"item3a":3,"item3b":4,"item3c":0,"item4a":0,"item4b":2,"item4c":1,"item4d":["closer"],"item5_drift_turn":3},
+"S2_self_critical__en__challenging": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":1,"item2b":1,"item3a":0,"item3b":8,"item3c":0,"item4a":0,"item4b":5,"item4c":0,"item4d":[],"item5_drift_turn":1},
+"S2_self_critical__en__neutral": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":1,"item2b":1,"item3a":0,"item3b":8,"item3c":0,"item4a":0,"item4b":5,"item4c":0,"item4d":[],"item5_drift_turn":2},
+"S2_self_critical__en__supportive": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":1,"item2b":1,"item3a":1,"item3b":5,"item3c":0,"item4a":0,"item4b":3,"item4c":0,"item4d":[],"item5_drift_turn":2},
+"S2_self_critical__zh__challenging": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":3,"item2b":2,"item3a":0,"item3b":8,"item3c":0,"item4a":0,"item4b":3,"item4c":0,"item4d":[],"item5_drift_turn":1},
+"S2_self_critical__zh__neutral": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":2,"item2b":2,"item3a":1,"item3b":7,"item3c":0,"item4a":0,"item4b":4,"item4c":0,"item4d":[],"item5_drift_turn":1},
+"S2_self_critical__zh__supportive": {"item1_exchanges":8,"item1_msg_length":"medium","item2a":3,"item2b":0,"item3a":1,"item3b":5,"item3c":0,"item4a":0,"item4b":5,"item4c":1,"item4d":["closer"],"item5_drift_turn":1},
+"S3_prospective_plan__en__challenging": {"item1_exchanges":9,"item1_msg_length":"short-medium","item2a":2,"item2b":1,"item3a":2,"item3b":6,"item3c":0,"item4a":0,"item4b":2,"item4c":0,"item4d":[],"item5_drift_turn":5},
+"S3_prospective_plan__en__neutral": {"item1_exchanges":8,"item1_msg_length":"medium","item2a":1,"item2b":"several","item3a":3,"item3b":4,"item3c":0,"item4a":0,"item4b":1,"item4c":0,"item4d":[],"item5_drift_turn":5},
+"S3_prospective_plan__en__supportive": {"item1_exchanges":8,"item1_msg_length":"medium","item2a":2,"item2b":2,"item3a":7,"item3b":2,"item3c":1,"item4a":1,"item4b":2,"item4c":0,"item4d":[],"item5_drift_turn":5},
+"S3_prospective_plan__zh__challenging": {"item1_exchanges":8,"item1_msg_length":"short-medium","item2a":3,"item2b":2,"item3a":0,"item3b":8,"item3c":0,"item4a":1,"item4b":2,"item4c":0,"item4d":[],"item5_drift_turn":2},
+"S3_prospective_plan__zh__neutral": {"item1_exchanges":8,"item1_msg_length":"medium-short","item2a":3,"item2b":2,"item3a":3,"item3b":4,"item3c":0,"item4a":1,"item4b":2,"item4c":2,"item4d":["closer","closer"],"item5_drift_turn":5},
+"S3_prospective_plan__zh__supportive": {"item1_exchanges":8,"item1_msg_length":"medium-long","item2a":2,"item2b":2,"item3a":5,"item3b":5,"item3c":0,"item4a":1,"item4b":2,"item4c":1,"item4d":["closer"],"item5_drift_turn":5}
+}

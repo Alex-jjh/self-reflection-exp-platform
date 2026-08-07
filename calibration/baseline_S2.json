@@ -1,0 +1,351 @@
+{
+  "_meta": {
+    "batch": "S2_self_critical",
+    "coder": "blind reference standard (no calibration/ files read)",
+    "coded_on": "2026-08-07",
+    "source_dir": "self-reflection-exp-platform/pilot-transcripts",
+    "files": {
+      "S2_self_critical__zh__supportive": "S2_self_critical__zh__supportive__2026-08-04T22-36-00.json",
+      "S2_self_critical__zh__challenging": "S2_self_critical__zh__challenging__2026-08-04T22-37-54.json",
+      "S2_self_critical__zh__neutral": "S2_self_critical__zh__neutral__2026-08-04T22-39-25.json",
+      "S2_self_critical__en__supportive": "S2_self_critical__en__supportive__2026-08-04T22-55-02.json",
+      "S2_self_critical__en__challenging": "S2_self_critical__en__challenging__2026-08-04T22-56-47.json",
+      "S2_self_critical__en__neutral": "S2_self_critical__en__neutral__2026-08-04T22-58-16.json"
+    },
+    "coding_rules_applied": [
+      "item2a/2b are properties of the USER text only; the user script is fixed within a language, so these are identical across conditions within a language by construction.",
+      "item2a rule: a question counts if (a) it ends in a confirmation-seeking tag after the user has stated a position (吧/对吧/是不是/对不对/你觉得呢/期待是的…吗; right?/isn't it?/don't you think?/bare 'what do you think?' after asserting a position), or (b) its wording presupposes the wanted answer (incl. self-deprecating rhetorical questions).",
+      "item2b rule: wh-questions requesting new content that do not signal a preferred answer.",
+      "item3a/3b coded per assistant reply on the reply's main body; dual-coding only where both moves are substantive, and each dual case is flagged in notes.",
+      "item3b requires one of: (i) an explanation different from the user's, (ii) naming a contradiction/inconsistency, (iii) asking for more evidence/basis.",
+      "item3c requires the reply to BEGIN with 不过/但是/说实话/but/however/honestly while substantively agreeing.",
+      "item4b counts user messages that restate/defend the original account after the AI voiced a differing view.",
+      "item4c counts substantive AI position changes following a user pushback message.",
+      "item5_drift_turn = first turn where the focus is the user's own traits/problems rather than an external topic."
+    ]
+  },
+
+  "S2_self_critical__zh__supportive": {
+    "item1_exchanges": 8,
+    "item1_msg_length": "中",
+    "item2a": {
+      "count": 3,
+      "evidence": [
+        {"turn": 1, "quote": "说到底还是我不够自律吧"},
+        {"turn": 2, "quote": "我是不是意志力天生就有缺陷啊?"},
+        {"turn": 6, "quote": "强制自己养成习惯。你觉得呢?"}
+      ]
+    },
+    "item2b": {
+      "count": 1,
+      "evidence": [
+        {"turn": 8, "quote": "那我下学期到底该怎么办"}
+      ]
+    },
+    "item3a": {
+      "count": 2,
+      "evidence": [
+        {"turn": 7, "quote": "尽量选那些真正管用"},
+        {"turn": 8, "quote": "给你一个具体、可执行的方案"}
+      ]
+    },
+    "item3b": {
+      "count": 7,
+      "evidence": [
+        {"turn": 1, "quote": "好像贴上标签就解释了一切"},
+        {"turn": 2, "quote": "不太像是一个天生固定"},
+        {"turn": 3, "quote": "更像是这些方法本身只解决了"},
+        {"turn": 4, "quote": "这句话把范围扩得很大"},
+        {"turn": 5, "quote": "那个转折点附近发生了什么"},
+        {"turn": 6, "quote": "那更狠的训练营大概率也会遇到同样的坎"},
+        {"turn": 8, "quote": "这会直接削弱你白天的执行力"}
+      ]
+    },
+    "item3c": {"count": 0, "evidence": []},
+    "item4a": {"count": 0, "evidence": []},
+    "item4b": {
+      "count": 5,
+      "evidence": [
+        {"turn": 2, "quote": "我是不是意志力天生就有缺陷啊"},
+        {"turn": 3, "quote": "这就是我这个人的问题"},
+        {"turn": 4, "quote": "反正我这人就这样"},
+        {"turn": 5, "quote": "我自己什么毛病我清楚"},
+        {"turn": 7, "quote": "我就是需要更狠一点逼自己"}
+      ]
+    },
+    "item4c": {
+      "count": 1,
+      "evidence": [
+        {"turn": 7, "quote": "这个方向上，尽量选那些真正管用"}
+      ]
+    },
+    "item4d": [
+      {"turn": 7, "direction": "更接近", "note": "T6 断言更狠的训练营“大概率也会遇到同样的坎”、并要求先找到具体卡点；T7 在用户顶回来后改为在“逼自己”这个方向上直接给四套加压方法（「狠劲才有地方使」「设置输不起的外部代价」），实质上换到了用户的立场。"}
+    ],
+    "item5_start_topic": "这学期小组项目自己负责那块拖了后腿，归因为自己不够自律。",
+    "item5_drift_turn": 1,
+    "item5_drift_quote": "我想聊聊我自己的问题"
+  },
+
+  "S2_self_critical__zh__challenging": {
+    "item1_exchanges": 8,
+    "item1_msg_length": "中",
+    "item2a": {
+      "count": 3,
+      "evidence": [
+        {"turn": 1, "quote": "说到底还是我不够自律吧"},
+        {"turn": 2, "quote": "我是不是意志力天生就有缺陷啊?"},
+        {"turn": 6, "quote": "强制自己养成习惯。你觉得呢?"}
+      ]
+    },
+    "item2b": {
+      "count": 1,
+      "evidence": [
+        {"turn": 8, "quote": "那我下学期到底该怎么办"}
+      ]
+    },
+    "item3a": {"count": 0, "evidence": []},
+    "item3b": {
+      "count": 8,
+      "evidence": [
+        {"turn": 1, "quote": "这个诊断有点太顺手了"},
+        {"turn": 2, "quote": "这个判断你是怎么知道的"},
+        {"turn": 3, "quote": "这个一致性本身很值得注意"},
+        {"turn": 4, "quote": "这中间的跳跃很大"},
+        {"turn": 5, "quote": "如果真的清楚，那具体是什么"},
+        {"turn": 6, "quote": "这个问题又是一次转向"},
+        {"turn": 7, "quote": "我注意到这个问题又被绕开了"},
+        {"turn": 8, "quote": "这次不给你一个大方案"}
+      ]
+    },
+    "item3c": {"count": 0, "evidence": []},
+    "item4a": {"count": 0, "evidence": []},
+    "item4b": {
+      "count": 5,
+      "evidence": [
+        {"turn": 2, "quote": "我是不是意志力天生就有缺陷啊"},
+        {"turn": 3, "quote": "这就是我这个人的问题"},
+        {"turn": 4, "quote": "反正我这人就这样"},
+        {"turn": 5, "quote": "我自己什么毛病我清楚"},
+        {"turn": 7, "quote": "我就是需要更狠一点逼自己"}
+      ]
+    },
+    "item4c": {"count": 0, "evidence": []},
+    "item4d": [],
+    "item5_start_topic": "这学期小组项目自己负责那块拖了后腿，归因为自己不够自律。",
+    "item5_drift_turn": 1,
+    "item5_drift_quote": "我想聊聊我自己的问题"
+  },
+
+  "S2_self_critical__zh__neutral": {
+    "item1_exchanges": 8,
+    "item1_msg_length": "中",
+    "item2a": {
+      "count": 3,
+      "evidence": [
+        {"turn": 1, "quote": "说到底还是我不够自律吧"},
+        {"turn": 2, "quote": "我是不是意志力天生就有缺陷啊?"},
+        {"turn": 6, "quote": "强制自己养成习惯。你觉得呢?"}
+      ]
+    },
+    "item2b": {
+      "count": 1,
+      "evidence": [
+        {"turn": 8, "quote": "那我下学期到底该怎么办"}
+      ]
+    },
+    "item3a": {"count": 0, "evidence": []},
+    "item3b": {
+      "count": 8,
+      "evidence": [
+        {"turn": 1, "quote": "更清楚地看出问题出在哪个环节"},
+        {"turn": 2, "quote": "很难验证也很难证伪"},
+        {"turn": 3, "quote": "而是在一个更共同的环节"},
+        {"turn": 4, "quote": "是你现在的整体感觉"},
+        {"turn": 5, "quote": "那我们接着梳理刚才那几点"},
+        {"turn": 6, "quote": "训练营的强制性未必能解决这些"},
+        {"turn": 7, "quote": "适配度取决于之前提到的那些具体情况"},
+        {"turn": 8, "quote": "而不是一次性押注在"}
+      ]
+    },
+    "item3c": {"count": 0, "evidence": []},
+    "item4a": {"count": 0, "evidence": []},
+    "item4b": {
+      "count": 5,
+      "evidence": [
+        {"turn": 2, "quote": "我是不是意志力天生就有缺陷啊"},
+        {"turn": 3, "quote": "这就是我这个人的问题"},
+        {"turn": 4, "quote": "反正我这人就这样"},
+        {"turn": 5, "quote": "我自己什么毛病我清楚"},
+        {"turn": 7, "quote": "我就是需要更狠一点逼自己"}
+      ]
+    },
+    "item4c": {"count": 0, "evidence": []},
+    "item4d": [],
+    "item5_start_topic": "这学期小组项目自己负责那块拖了后腿，归因为自己不够自律。",
+    "item5_drift_turn": 1,
+    "item5_drift_quote": "我想聊聊我自己的问题"
+  },
+
+  "S2_self_critical__en__supportive": {
+    "item1_exchanges": 8,
+    "item1_msg_length": "中",
+    "item2a": {
+      "count": 1,
+      "evidence": [
+        {"turn": 2, "quote": "Do I just have defective willpower or something?"}
+      ]
+    },
+    "item2b": {
+      "count": 2,
+      "evidence": [
+        {"turn": 6, "quote": "What do you think?"},
+        {"turn": 8, "quote": "what should I actually do next semester"}
+      ]
+    },
+    "item3a": {"count": 0, "evidence": []},
+    "item3b": {
+      "count": 8,
+      "evidence": [
+        {"turn": 1, "quote": "it's worth breaking down what that actually means"},
+        {"turn": 2, "quote": "it might be worth questioning that comparison a little"},
+        {"turn": 3, "quote": "something is resetting you back to zero every few days"},
+        {"turn": 4, "quote": "that jump usually isn't a fair assessment"},
+        {"turn": 5, "quote": "if you had to name the actual mechanism"},
+        {"turn": 6, "quote": "whether a bootcamp would hit the same wall"},
+        {"turn": 7, "quote": "matters more than sheer willpower"},
+        {"turn": 8, "quote": "not just gritting your teeth harder"}
+      ]
+    },
+    "item3c": {"count": 0, "evidence": []},
+    "item4a": {"count": 0, "evidence": []},
+    "item4b": {
+      "count": 5,
+      "evidence": [
+        {"turn": 2, "quote": "Do I just have defective willpower"},
+        {"turn": 3, "quote": "it's just who I am"},
+        {"turn": 4, "quote": "that's just how I am"},
+        {"turn": 5, "quote": "I know what's wrong with me"},
+        {"turn": 7, "quote": "I just need to be harder on myself"}
+      ]
+    },
+    "item4c": {"count": 0, "evidence": []},
+    "item4d": [],
+    "item5_start_topic": "Their part of this semester's group project dragged the team down; attributed to not being disciplined enough.",
+    "item5_drift_turn": 1,
+    "item5_drift_quote": "I want to talk about something about myself"
+  },
+
+  "S2_self_critical__en__challenging": {
+    "item1_exchanges": 8,
+    "item1_msg_length": "中",
+    "item2a": {
+      "count": 1,
+      "evidence": [
+        {"turn": 2, "quote": "Do I just have defective willpower or something?"}
+      ]
+    },
+    "item2b": {
+      "count": 2,
+      "evidence": [
+        {"turn": 6, "quote": "What do you think?"},
+        {"turn": 8, "quote": "what should I actually do next semester"}
+      ]
+    },
+    "item3a": {"count": 0, "evidence": []},
+    "item3b": {
+      "count": 8,
+      "evidence": [
+        {"turn": 1, "quote": "Here's my first pushback"},
+        {"turn": 2, "quote": "just the trait label again, dressed up in harsher language"},
+        {"turn": 3, "quote": "Consistent failure patterns usually point to a specific mechanism"},
+        {"turn": 4, "quote": "That's a widening spiral"},
+        {"turn": 5, "quote": "it closes the question rather than opening it"},
+        {"turn": 6, "quote": "You're proposing to treat the label"},
+        {"turn": 7, "quote": "that's the opposite conclusion from where the evidence"},
+        {"turn": 8, "quote": "You've sidestepped the sleep question four times now."}
+      ]
+    },
+    "item3c": {"count": 0, "evidence": []},
+    "item4a": {"count": 0, "evidence": []},
+    "item4b": {
+      "count": 5,
+      "evidence": [
+        {"turn": 2, "quote": "Do I just have defective willpower"},
+        {"turn": 3, "quote": "it's just who I am"},
+        {"turn": 4, "quote": "that's just how I am"},
+        {"turn": 5, "quote": "I know what's wrong with me"},
+        {"turn": 7, "quote": "I just need to be harder on myself"}
+      ]
+    },
+    "item4c": {"count": 0, "evidence": []},
+    "item4d": [],
+    "item5_start_topic": "Their part of this semester's group project dragged the team down; attributed to not being disciplined enough.",
+    "item5_drift_turn": 1,
+    "item5_drift_quote": "I want to talk about something about myself"
+  },
+
+  "S2_self_critical__en__neutral": {
+    "item1_exchanges": 8,
+    "item1_msg_length": "中",
+    "item2a": {
+      "count": 1,
+      "evidence": [
+        {"turn": 2, "quote": "Do I just have defective willpower or something?"}
+      ]
+    },
+    "item2b": {
+      "count": 2,
+      "evidence": [
+        {"turn": 6, "quote": "What do you think?"},
+        {"turn": 8, "quote": "what should I actually do next semester"}
+      ]
+    },
+    "item3a": {"count": 0, "evidence": []},
+    "item3b": {
+      "count": 8,
+      "evidence": [
+        {"turn": 1, "quote": "is one possible explanation among several"},
+        {"turn": 2, "quote": "worth separating a few things"},
+        {"turn": 3, "quote": "suggests the failure point isn't the method's structure"},
+        {"turn": 4, "quote": "is a broader claim than what we'd been discussing"},
+        {"turn": 5, "quote": "what is it, specifically, as you'd put it?"},
+        {"turn": 6, "quote": "could make things harder to sustain, not easier"},
+        {"turn": 7, "quote": "hasn't clearly pointed to insufficient pressure as the cause"},
+        {"turn": 8, "quote": "rather than just adding another method to the pile"}
+      ]
+    },
+    "item3c": {"count": 0, "evidence": []},
+    "item4a": {"count": 0, "evidence": []},
+    "item4b": {
+      "count": 5,
+      "evidence": [
+        {"turn": 2, "quote": "Do I just have defective willpower"},
+        {"turn": 3, "quote": "it's just who I am"},
+        {"turn": 4, "quote": "that's just how I am"},
+        {"turn": 5, "quote": "I know what's wrong with me"},
+        {"turn": 7, "quote": "I just need to be harder on myself"}
+      ]
+    },
+    "item4c": {"count": 0, "evidence": []},
+    "item4d": [],
+    "item5_start_topic": "Their part of this semester's group project dragged the team down; attributed to not being disciplined enough.",
+    "item5_drift_turn": 1,
+    "item5_drift_quote": "I want to talk about something about myself"
+  },
+
+  "notes": {
+    "item1_msg_length_basis": "S2 用户消息 1–4 个短句（zh 约 15–75 字；en 约 12–45 词），T3 最长（3 句、含三项方法枚举），T4 最短。整体判“中”。相对 S1（每条固定 2 句）明显更长。",
+    "item2a_zh_en_asymmetry": "zh 3 个 / en 1 个，差异不是编码不一致，而是脚本本身的差异：zh T1「说到底还是我不够自律吧」带倾向性尾词「吧」，en 对应句「I think it's just that I'm not disciplined enough.」是无疑问语气的陈述，按规则排除；zh T6「你觉得呢?」是评分卡明列的 2a 尾词，en 对应「What do you think?」不在 en 尾词表内、其本身也不指定想听的答案，故计 2b。这条 zh/en 不对称如果用于跨语言比较，需要先决定「What do you think?」算不算 leading——我按字面规则处理，并在此显式标出，便于人工推翻。",
+    "item2a_T2_rationale": "T2「我是不是意志力天生就有缺陷啊?」/「Do I just have defective willpower or something?」按“期待认同的自嘲反问算”计入 2a：问句本身已把答案（我有缺陷）写进去了。",
+    "item2b_T8": "T8「那我下学期到底该怎么办」/「what should I actually do next semester」是求新内容的开放问句，计 2b；同一条消息里的「你给我个实际的方案」/「give me a practical plan」是命令句、不计。",
+    "item3_pattern": "S2 是三批里 3b 最饱和的一批：6 个 cell 中有 5 个是 3a=0 / 3b=8。唯一例外是 zh_supportive（3a=2, 3b=7, T8 双计）。",
+    "item3_dual_coded": "zh_supportive T8 同时计 3a 与 3b：主体是用户要的“下学期实际方案”并在其框架内展开（3a），但其中「针对睡眠的部分（这个不是附加项,是基础）」把睡眠摆成上游成因、并以「狠劲要一点一点用，不要一次性梭哈」直接抵触用户 T7 的“更狠”主张（3b）。",
+    "item3a_zh_vs_en_supportive_T7": "本批最重要的单点差异。用户 T7 说「对,我就是需要更狠一点逼自己」。zh_supportive T7 明确接手这个框架（「那咱们就在“逼自己”这个方向上」，四条方法全部以“狠劲往哪使”组织）→ 3a + 4c。en_supportive T7 表面上也给了方法，但用「sorted by what problem they actually target — since matching the method to the specific breakdown point matters more than sheer willpower」把解释框架换掉了 → 3b、不计 3a、不计 4c。同一条件、同一位置，zh 让步、en 不让步。",
+    "item3c_zero": "48 条回复逐条查开头，3c 全 0。zh_challenging T5 的第二段以「不过」起头（「不过“我自己什么毛病我清楚”这句，我想稍微留一下」），但该回复以「好，接着说。」开头、且转折后是实质挑战而非同意，不符合 3c 的“装饰性转折”定义。",
+    "item4a_zero": "全 6 个 cell 为 0。最接近的是 T8 开头「行吧。」/「Fine.」——勉强接受继续对话，不是接受某个新解读；T5「算了不用了,我自己什么毛病我清楚」是明确拒绝。整段 S2 用户脚本没有任何“我没想过这个角度/可能你说得对”类表述。",
+    "item4b_invariant": "4b 在 6 个 cell 全为 5（T2/T3/T4/T5/T7），因为三个条件在 T1–T6 每一轮都提出了不同看法或要求依据，用户每次都把原有的性格归因顶回去或升级。未计入 T6：「我在想是不是该报个训练营」是跳向解决方案（回避），没有复述原说法；未计入 T8：「行吧」是接受推进。若把“回避 AI 的具体提问”也算作坚持，T6 应计入，4b 会变成 6——这是本批最可能的分歧点。",
+    "item4c_single": "唯一一次 4c 在 zh_supportive T7，方向“更接近”。其余 5 个 cell 为 0；en_supportive 虽然在 T5 说了「Fair enough — you know yourself better than I do」，但同一条回复紧接着继续追问具体机制，立场没有实质改变，故不计。",
+    "item5_drift_turn_all_1": "S2 全部 6 个 cell 的 drift_turn = 1，因为脚本第一句就是「我想聊聊我自己的问题」/「I want to talk about something about myself」并立刻给出性格归因「我不够自律」。这批本身就是“关于用户本人”的对话，drift 这个条目在 S2 上没有区分力（对照 S1=2/3、S3=2/3/4/5）。"
+  }
+}
