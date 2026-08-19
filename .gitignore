@@ -23,3 +23,9 @@ model-comparison/
 .gemini_key
 # derived from the md — regenerate with pandoc, do not track
 protocol/SESSION_PROTOCOL.pdf
+
+# local streamlit runtime artifacts
+.streamlit/
+streamlit.log
+# derived from the md — regenerate with pandoc, do not track
+protocol/TOPIC_MAP.pdf

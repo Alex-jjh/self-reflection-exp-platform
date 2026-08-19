@@ -1,5 +1,10 @@
 # 编码本 v0（草案）— Phase A 转录编码
 
+> **⚠️ 本文件已冻结（2026-08-19）。** Living codebook 已迁至私有数据 repo
+> `self-reflection-session-data/coding/CODEBOOK.md`（v0.2 起）——迁移原因：
+> 编码手册自 v0.2 起引用参与者原话作锚例，不能留在公开 repo。
+> 本文件保留 v0 原文作为设计存档，不再更新。
+
 > 单位：turn（一条用户消息或一条AI消息）。episode = self-reflective episode
 > （R1+ 且对象为自我的turn序列）——先标episode边界，再逐turn编码。
 > 优先级：四个coach要消费的标记在前（Phase B依赖）。
