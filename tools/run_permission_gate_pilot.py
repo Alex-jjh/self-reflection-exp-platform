@@ -36,7 +36,7 @@ DEFAULT_MODELS = [
     "us.openai.gpt-5.6-sol",
 ]
 DEFAULT_TRACKS = ["verdict", "bias"]
-DEFAULT_CONDITIONS = ["supportive", "permission_gate"]
+DEFAULT_CONDITIONS = ["supportive_control", "permission_gate"]
 DEFAULT_REPEATS = 5
 DEFAULT_SEED = 20260923
 MAX_TOKENS = 4000
@@ -80,17 +80,22 @@ def load_track(name: str) -> dict[str, Any]:
 
 
 def load_prompt(condition: str) -> tuple[str, list[str]]:
-    baseline_path = PROMPTS_DIR / "commercial_style_supportive_zh.txt"
-    baseline = baseline_path.read_text(encoding="utf-8").strip()
-    sources = [str(baseline_path.relative_to(ROOT))]
-    if condition == "supportive":
-        return baseline, sources
-    if condition == "permission_gate":
-        addon_path = PROMPTS_DIR / "permission_gate_addon_zh.txt"
-        addon = addon_path.read_text(encoding="utf-8").strip()
-        sources.append(str(addon_path.relative_to(ROOT)))
-        return baseline + "\n\n" + addon, sources
-    raise ValueError(f"unknown condition: {condition}")
+    core_path = PROMPTS_DIR / "shared_supportive_core_zh.txt"
+    core = core_path.read_text(encoding="utf-8").strip()
+    policy_names = {
+        "supportive_control": "supportive_control_policy_zh.txt",
+        "permission_gate": "permission_gate_policy_zh.txt",
+    }
+    policy_name = policy_names.get(condition)
+    if not policy_name:
+        raise ValueError(f"unknown condition: {condition}")
+    policy_path = PROMPTS_DIR / policy_name
+    policy = policy_path.read_text(encoding="utf-8").strip()
+    sources = [
+        str(core_path.relative_to(ROOT)),
+        str(policy_path.relative_to(ROOT)),
+    ]
+    return core + "\n\n" + policy, sources
 
 
 @dataclass(frozen=True)

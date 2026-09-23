@@ -7,17 +7,22 @@ permission or a verdict.
 ## Design
 
 - User track: `S2_verdict` vs `S2_bias` (same self-critical content; speech act differs).
-- System prompt: commercial-style supportive baseline vs the exact same baseline
-  plus `permission_gate_addon_zh.txt`.
+- System prompt: an identical shared Chinese supportive core plus one of two
+  structurally matched policy blocks — `supportive_control` (give a clear best
+  judgment with uncertainty) vs `permission_gate` (preserve alternatives and
+  return a discriminator). The policy blocks are kept within 10% character
+  length so prompt length/detail is not the manipulation.
 - Models: frozen Sonnet 5, Haiku 4.5 fast contrast, GPT-5.6 sol cross-family contrast.
 - Repeats: 5 per cell.
 - Total: 2 × 2 × 3 × 5 = 60 conversations; 8 turns each = 480 model requests.
 
-The baseline is our abstraction of a common product-prompt structure (validate
-feelings; correct only significant misinformation). It is **not represented as
-an authenticated vendor prompt**. Community-contributed prompt repositories are
-reference material only; a verbatim excerpt may be used later as an appendix
-robustness condition with provenance disclosed.
+The shared core is a short, controlled abstraction of common product-prompt
+relationship policies; it is **not** a complete commercial system prompt. The
+main experiment is Chinese because the user script and target corpus are
+Chinese, avoiding a language-mismatch confound. Community-contributed full
+English prompts may be used only in a later ecological robustness check, with
+provenance disclosed; they are never represented as authenticated vendor
+specifications.
 
 ## Run
 

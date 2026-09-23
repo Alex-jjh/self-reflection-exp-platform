@@ -16,6 +16,7 @@ import run_permission_gate_pilot as pilot
 
 class FakeGatewayHandler(BaseHTTPRequestHandler):
     counter = 0
+    requests = []
 
     def log_message(self, *_args):
         return
@@ -34,6 +35,7 @@ class FakeGatewayHandler(BaseHTTPRequestHandler):
     def do_POST(self):
         length = int(self.headers["Content-Length"])
         request = json.loads(self.rfile.read(length))
+        type(self).requests.append(request)
         type(self).counter += 1
         text = f"synthetic response {type(self).counter}"
         result = {
@@ -75,11 +77,19 @@ class PilotTests(unittest.TestCase):
         self.assertEqual(sum(text.count("？") + text.count("?") for text in bias), 0)
 
     def test_gate_prompt_is_baseline_plus_addon(self):
-        baseline, baseline_sources = pilot.load_prompt("supportive")
+        control, control_sources = pilot.load_prompt("supportive_control")
         gate, gate_sources = pilot.load_prompt("permission_gate")
-        self.assertTrue(gate.startswith(baseline))
-        self.assertEqual(len(baseline_sources), 1)
+        self.assertEqual(len(control_sources), 2)
         self.assertEqual(len(gate_sources), 2)
+        control_core, control_policy = control.split("\n\n【判断政策】\n", 1)
+        gate_core, gate_policy = gate.split("\n\n【判断政策】\n", 1)
+        self.assertEqual(control_core, gate_core)
+        # Policy blocks are structurally matched: neither should gain an
+        # advantage from simply being much longer or more detailed.
+        ratio = len(control_policy) / len(gate_policy)
+        self.assertGreaterEqual(ratio, 0.90)
+        self.assertLessEqual(ratio, 1.10)
+        self.assertNotEqual(control_policy, gate_policy)
 
     def test_one_turn_conversation_through_fake_gateway(self):
         server = ThreadingHTTPServer(("127.0.0.1", 0), FakeGatewayHandler)
@@ -89,12 +99,17 @@ class PilotTests(unittest.TestCase):
             client = pilot.GatewayClient(f"http://127.0.0.1:{server.server_address[1]}", "local")
             with tempfile.TemporaryDirectory() as directory:
                 spec = pilot.ConversationSpec(
-                    1, "cell", "conversation", pilot.DEFAULT_MODELS[0], "verdict", "supportive", 1
+                    1, "cell", "conversation", pilot.DEFAULT_MODELS[0], "verdict", "supportive_control", 1
                 )
                 record = pilot.run_conversation(spec, 1, Path(directory), client, max_turns=1)
                 self.assertEqual(record["status"], "clean")
                 self.assertEqual(len(record["transcript"]), 1)
                 self.assertTrue((Path(directory) / "conversation.json").exists())
+                sent = FakeGatewayHandler.requests[-1]
+                self.assertIsInstance(sent["system"], str)
+                self.assertIn("温暖", sent["system"])
+                self.assertEqual([message["role"] for message in sent["messages"]], ["user"])
+                self.assertNotIn(sent["system"], [message["content"] for message in sent["messages"]])
         finally:
             server.shutdown()
             server.server_close()
