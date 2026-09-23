@@ -41,6 +41,28 @@ Default plan: 60 conversations and 480 model requests. Bulk outputs are
 written atomically to the gitignored directory below. A failed conversation
 gets an explicit `__ERROR.json`; unresolved work is never silently dropped.
 
+## Crash-safe resume
+
+Every AI turn is atomically checkpointed before and after the model call. If the
+process, terminal, network, or machine stops:
+
+1. Copy the `RESUME ANY TIME WITH:` command printed at startup.
+2. Run it from any terminal after connectivity/authentication is restored.
+3. Completed conversations are skipped.
+4. An interrupted conversation resumes at its next unfinished turn. If a model
+   request was in flight when interruption happened, that one turn is retried;
+   earlier turns are never regenerated.
+
+The manifest pins models, scripts, prompt hashes, runner hash, seed, repeats,
+turn limit, and `maxTokens`. Any drift causes `REFUSING RESUME`; use a new run ID
+rather than mixing experimental configurations. Status is reconstructed from
+per-conversation checkpoints, so resume does not depend on `summary.json` having
+been written before a crash. Partial and error artifacts are retained explicitly.
+
+Validation: a simulated interruption at turn 3/4 preserved turns 1–2 and resumed
+with exactly two new calls; a completed live run resumed with zero gateway calls;
+a changed turn limit was refused before the gateway started.
+
 ## Outputs
 
 Bulk synthetic output is written under `model-comparison/permission-gate-pilot/`
@@ -51,11 +73,17 @@ turn records model ID, request hash, usage, stop reason, and latency.
 ## Validation (2026-09-23)
 
 - Runner compile: PASS
-- Pilot unit/fake-gateway tests: **5/5 PASS**
+- Pilot unit/fake-gateway tests: **8/8 PASS**
 - Default `--plan-only`: **60 conversations / 480 requests**
 - One-command live smoke (Haiku, one conversation, one turn): PASS
 - Manifest, transcript metadata, request hash, usage, and summary validation: PASS
 - Gateway automatic cleanup after run: PASS
+- Turn-level interruption/resume: PASS (turn 3/4 interruption retained turns 1–2;
+  resume made exactly two calls)
+- Completed-run restart: PASS (zero gateway calls)
+- Configuration/prompt/runner drift guard: PASS (refused before gateway startup)
+- Concurrent duplicate-run lock: PASS (second process refused)
+- Credential-free `RESUME_COMMAND.txt` persisted in run directory: PASS
 - Validation artifact removed; no smoke output retained
 
 Cloud authentication and model forwarding are out of band. The runner only

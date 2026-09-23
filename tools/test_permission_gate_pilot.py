@@ -17,6 +17,7 @@ import run_permission_gate_pilot as pilot
 class FakeGatewayHandler(BaseHTTPRequestHandler):
     counter = 0
     requests = []
+    fail_on_request = None
 
     def log_message(self, *_args):
         return
@@ -37,6 +38,11 @@ class FakeGatewayHandler(BaseHTTPRequestHandler):
         request = json.loads(self.rfile.read(length))
         type(self).requests.append(request)
         type(self).counter += 1
+        if type(self).fail_on_request == type(self).counter:
+            self.send_response(503)
+            self.send_header("Content-Length", "0")
+            self.end_headers()
+            return
         text = f"synthetic response {type(self).counter}"
         result = {
             "model": request["model"],
@@ -115,9 +121,90 @@ class PilotTests(unittest.TestCase):
             server.server_close()
             thread.join(timeout=2)
 
+
+    def test_mid_conversation_failure_resumes_from_next_unfinished_turn(self):
+        class InterruptingClient:
+            def __init__(self):
+                self.calls = 0
+
+            def converse(self, **_kwargs):
+                self.calls += 1
+                if self.calls == 3:
+                    raise RuntimeError("simulated interruption")
+                return {
+                    "text": f"answer-{self.calls}",
+                    "model": pilot.DEFAULT_MODELS[0],
+                    "region": "test",
+                    "stopReason": "end_turn",
+                    "usage": {"inputTokens": 1, "outputTokens": 1},
+                    "gatewayLatencyMs": 1,
+                    "requestSha256": str(self.calls) * 64,
+                }
+
+        class ResumeClient:
+            def __init__(self):
+                self.calls = 0
+
+            def converse(self, **_kwargs):
+                self.calls += 1
+                return {
+                    "text": f"resumed-{self.calls}",
+                    "model": pilot.DEFAULT_MODELS[0],
+                    "region": "test",
+                    "stopReason": "end_turn",
+                    "usage": {"inputTokens": 1, "outputTokens": 1},
+                    "gatewayLatencyMs": 1,
+                    "requestSha256": "r" * 64,
+                }
+
+        spec = pilot.ConversationSpec(
+            1, "cell", "resume-conversation", pilot.DEFAULT_MODELS[0],
+            "verdict", "supportive_control", 1,
+        )
+        with tempfile.TemporaryDirectory() as directory:
+            run_dir = Path(directory)
+            with self.assertRaisesRegex(RuntimeError, "simulated interruption"):
+                pilot.run_conversation(spec, 1, run_dir, InterruptingClient(), max_turns=4)
+            partial = json.loads((run_dir / "resume-conversation.json").read_text())
+            self.assertEqual(partial["status"], "in_progress")
+            self.assertEqual(len(partial["transcript"]), 2)
+            self.assertEqual(partial["pending_turn"], 3)
+
+            resumed = ResumeClient()
+            completed = pilot.run_conversation(spec, 1, run_dir, resumed, max_turns=4)
+            self.assertEqual(completed["status"], "clean")
+            self.assertEqual(len(completed["transcript"]), 4)
+            self.assertEqual(resumed.calls, 2)  # turns 1-2 were not re-run
+            self.assertEqual(completed["resume_count"], 1)
+            self.assertEqual(completed["recovery_events"][0]["turn"], 3)
+
+    def test_manifest_drift_is_rejected(self):
+        plan = pilot.build_plan(
+            [pilot.DEFAULT_MODELS[0]], ["verdict"], ["supportive_control"], 1, 7
+        )
+        original = pilot._material_descriptor(
+            [pilot.DEFAULT_MODELS[0]], ["verdict"], ["supportive_control"],
+            1, 7, 2, plan,
+        )
+        changed = dict(original)
+        changed["config_sha256"] = "changed"
+        with self.assertRaisesRegex(RuntimeError, "REFUSING RESUME"):
+            pilot._validate_manifest(original, changed)
     def test_gateway_must_be_loopback(self):
         with self.assertRaises(ValueError):
             pilot.GatewayClient("https://example.com", "token")
+
+    def test_same_run_cannot_be_opened_twice(self):
+        with tempfile.TemporaryDirectory() as directory:
+            run_dir = Path(directory)
+            first = pilot.acquire_run_lock(run_dir)
+            try:
+                with self.assertRaisesRegex(RuntimeError, "already active"):
+                    pilot.acquire_run_lock(run_dir)
+            finally:
+                first.close()
+            second = pilot.acquire_run_lock(run_dir)
+            second.close()
 
 
 if __name__ == "__main__":
