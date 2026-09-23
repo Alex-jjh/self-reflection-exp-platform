@@ -78,8 +78,11 @@ turn records model ID, request hash, usage, stop reason, and latency.
 - One-command live smoke (Haiku, one conversation, one turn): PASS
 - Manifest, transcript metadata, request hash, usage, and summary validation: PASS
 - Gateway automatic cleanup after run: PASS
-- Turn-level interruption/resume: PASS (turn 3/4 interruption retained turns 1–2;
+- Turn-level interruption/resume: PASS (turn 3/4 simulated failure retained turns 1–2;
   resume made exactly two calls)
+- **Live SIGTERM interruption/resume:** PASS (turn 1 retained with identical request
+  hash; in-flight turn 2 marked and retried; turns 2–4 completed; runner and gateway
+  process groups fully stopped on signal)
 - Completed-run restart: PASS (zero gateway calls)
 - Configuration/prompt/runner drift guard: PASS (refused before gateway startup)
 - Concurrent duplicate-run lock: PASS (second process refused)
