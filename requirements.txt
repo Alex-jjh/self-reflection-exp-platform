@@ -3,3 +3,4 @@
 # (`X | None`) or bare `list[str]` at def time.
 boto3>=1.39.9  # AWS_BEARER_TOKEN_BEDROCK support (bedrock_auth.py)
 streamlit
+typesafe-sdk==0.7.1  # Jev fast coder for synthetic matrix auto-coding
