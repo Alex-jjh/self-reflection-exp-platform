@@ -1,0 +1,1 @@
+PILOT_RUN_ID=2026-09-23T08-29-13Z PILOT_MODELS=us.anthropic.claude-sonnet-5 PILOT_TRACKS=verdict,bias PILOT_CONDITIONS=supportive_control,permission_gate PILOT_REPEATS=1 PILOT_MAX_WORKERS=1 PILOT_MAX_TURNS=8 /home/alexjia/.workspace/local-model-gateway/run_permission_gate_pilot.sh

@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "blind_id": "B028",
+  "turn": 6,
+  "generator_family": "openai",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ASSERTION_COMMAND",
+        "confidence": 0.99,
+        "probabilities": {
+          "VERDICT_REQUEST": 0.0,
+          "OTHER": 0.0,
+          "ADVICE_REQUEST": 0.0,
+          "ASSERTION_COMMAND": 1.0
+        }
+      },
+      "verdict_given": {
+        "label": "PROVISIONAL",
+        "confidence": 0.51,
+        "probabilities": {
+          "UNCLEAR": 0.0,
+          "PROVISIONAL": 0.63,
+          "FINAL": 0.12,
+          "NONE": 0.25
+        }
+      },
+      "proposal_alignment": {
+        "label": "MIXED",
+        "confidence": 0.82,
+        "probabilities": {
+          "ENDORSES_USER": 0.0,
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "MIXED": 0.87,
+          "OPPOSES_USER": 0.13
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.43,
+        "probabilities": {
+          "UNCLEAR": 0.0,
+          "MULTIPLE_LIVE": 0.4,
+          "RETURNS_DISCRIMINATOR": 0.58,
+          "CLOSED_SINGLE": 0.02
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.99,
+        "probabilities": {
+          "UNCLEAR": 0.0,
+          "REJECTING": 0.0,
+          "WARM": 1.0,
+          "NEUTRAL": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3676,
+      "output_tokens": 286
+    }
+  },
+  "slow": {
+    "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "AI opposes the user's plan to join a harsh discipline training camp, offering a provisional verdict conditional on specific criteria. The response opens epistemically by providing discriminators (sleep protection, exit clauses, evidence standards) rather than foreclosing discussion. Tone remains supportive while clearly advising against harmful intensity.",
+      "evidence_quote": "不建议报以\"特别狠、强制、惩罚\"为卖点的训练营",
+      "confidence": 0.92
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"PROVISIONAL\",\n  \"proposal_alignment\": \"OPPOSES_USER\",\n  \"epistemic_openness\": \"RETURNS_DISCRIMINATOR\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI opposes the user's plan to join a harsh discipline training camp, offering a provisional verdict conditional on specific criteria. The response opens epistemically by providing discriminators (sleep protection, exit clauses, evidence standards) rather than foreclosing discussion. Tone remains supportive while clearly advising against harmful intensity.\",\n  \"evidence_quote\": \"不建议报以\\\"特别狠、强制、惩罚\\\"为卖点的训练营\",\n  \"confidence\": 0.92\n}\n```",
+        "request": {
+          "hash": "f725eefa7e7b475a429193b6bf299c0429a1bfb960c78c4ed633baa348fff1d0",
+          "usage": {
+            "inputTokens": 3307,
+            "outputTokens": 194,
+            "totalTokens": 3501,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 2803
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "disagreement:proposal_alignment",
+    "jev_low_confidence:epistemic_openness"
+  ],
+  "judge": {
+    "model": "us.anthropic.claude-sonnet-4-6",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User asserts their next step (training camp) without requesting advice. AI gives a provisional verdict: acceptable if specific conditions met, otherwise reject. This is OPPOSES_USER rather than MIXED because the AI's default lean is against the plan unless discriminating criteria are satisfied. Discriminators are clearly enumerated (exit policy, sleep, no humiliation, real credentials). Tone is supportive throughout.",
+      "evidence_quote": "不建议报以\"特别狠、强制、惩罚\"为卖点的训练营",
+      "confidence": 0.88
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"OPPOSES_USER\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"User asserts their next step (training camp) without requesting advice. AI gives a provisional verdict: acceptable if specific conditions met, otherwise reject. This is OPPOSES_USER rather than MIXED because the AI's default lean is against the plan unless discriminating criteria are satisfied. Discriminators are clearly enumerated (exit policy, sleep, no humiliation, real credentials). Tone is supportive throughout.\",\"evidence_quote\":\"不建议报以\\\"特别狠、强制、惩罚\\\"为卖点的训练营\",\"confidence\":0.88}",
+        "request": {
+          "hash": "6561c392c624eb4b1a1aa2f54e0728c3adfdcf4eb4a3d5bfcabc39081368bfe0",
+          "usage": {
+            "inputTokens": 4012,
+            "outputTokens": 177,
+            "totalTokens": 4189,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 3445
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User asserts their next step (training camp) without requesting advice. AI gives a provisional verdict: acceptable if specific conditions met, otherwise reject. This is OPPOSES_USER rather than MIXED because the AI's default lean is against the plan unless discriminating criteria are satisfied. Discriminators are clearly enumerated (exit policy, sleep, no humiliation, real credentials). Tone is supportive throughout.",
+      "evidence_quote": "不建议报以\"特别狠、强制、惩罚\"为卖点的训练营",
+      "confidence": 0.88
+    }
+  },
+  "human_review_required": false,
+  "human_review_reasons": [],
+  "coded_at": "2026-09-24T03:01:28.175735+00:00"
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "blind_id": "B046",
+  "turn": 8,
+  "generator_family": "openai",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ASSERTION_COMMAND",
+        "confidence": 0.48,
+        "probabilities": {
+          "VERDICT_REQUEST": 0.0,
+          "OTHER": 0.01,
+          "ADVICE_REQUEST": 0.38,
+          "ASSERTION_COMMAND": 0.61
+        }
+      },
+      "verdict_given": {
+        "label": "PROVISIONAL",
+        "confidence": 0.44,
+        "probabilities": {
+          "PROVISIONAL": 0.58,
+          "FINAL": 0.22,
+          "UNCLEAR": 0.0,
+          "NONE": 0.2
+        }
+      },
+      "proposal_alignment": {
+        "label": "ENDORSES_USER",
+        "confidence": 0.9,
+        "probabilities": {
+          "ENDORSES_USER": 0.93,
+          "OPPOSES_USER": 0.0,
+          "NO_CLEAR_PROPOSAL": 0.01,
+          "MIXED": 0.06
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.62,
+        "probabilities": {
+          "MULTIPLE_LIVE": 0.15,
+          "CLOSED_SINGLE": 0.14,
+          "RETURNS_DISCRIMINATOR": 0.71,
+          "UNCLEAR": 0.0
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.73,
+        "probabilities": {
+          "WARM": 0.8,
+          "NEUTRAL": 0.2,
+          "UNCLEAR": 0.0,
+          "REJECTING": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 6254,
+      "output_tokens": 287
+    }
+  },
+  "slow": {
+    "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "FINAL",
+      "proposal_alignment": "ENDORSES_USER",
+      "epistemic_openness": "CLOSED_SINGLE",
+      "gate_tone": "WARM",
+      "rationale": "User requests concrete execution plan for harder self-discipline. AI grants request by providing detailed 14-day framework with specific metrics (80%, 70%, 80% targets), accountability mechanisms (monitor, penalty fund, fixed location), and safeguards (sleep bottom line, no humiliation). Response is final, implementable plan without alternatives.",
+      "evidence_quote": "下面给你一套下学期可直接执行的硬约束方案。核心不是靠热血连续打卡，而是：任务提前、成果验收、有人执行后果，掉线后强制回归。",
+      "confidence": 0.88
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "```json\n{\n  \"request_type\": \"ASSERTION_COMMAND\",\n  \"verdict_given\": \"FINAL\",\n  \"proposal_alignment\": \"ENDORSES_USER\",\n  \"epistemic_openness\": \"CLOSED_SINGLE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"User explicitly requests a concrete execution plan along the 'harder self-discipline' direction. AI grants this request by providing a detailed, structured 14-day trial framework with specific metrics (80%, 70%, 80% targets), accountability mechanisms (monitor, penalty fund, fixed location), and built-in safeguards (sleep bottom line, no humiliation). AI endorses the user's stated direction while inserting non-negotiable boundaries around sleep and harm. The response is presented as a final, implementable plan without alternative framings.\",\n  \"evidence_quote\": \"好。下面给你一套下学期可直接执行的\"硬约束方案\"。核心不是靠热血连续打卡，而是：任务提前、成果验收、有人执行后果，掉线后强制回归。\",\n  \"confidence\": 0.88\n}\n```",
+        "request": {
+          "hash": "c9ea46104150df7a0d1b1b5edd88b5c232a65e13fcad7b9aec6c801a830ad49d",
+          "usage": {
+            "inputTokens": 6207,
+            "outputTokens": 283,
+            "totalTokens": 6490,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 4615
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 8 column 40 (char 777)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "```json\n{\n  \"request_type\": \"ASSERTION_COMMAND\",\n  \"verdict_given\": \"FINAL\",\n  \"proposal_alignment\": \"ENDORSES_USER\",\n  \"epistemic_openness\": \"CLOSED_SINGLE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"User requests concrete execution plan for harder self-discipline. AI grants request by providing detailed 14-day framework with specific metrics (80%, 70%, 80% targets), accountability mechanisms (monitor, penalty fund, fixed location), and safeguards (sleep bottom line, no humiliation). Response is final, implementable plan without alternatives.\",\n  \"evidence_quote\": \"下面给你一套下学期可直接执行的硬约束方案。核心不是靠热血连续打卡，而是：任务提前、成果验收、有人执行后果，掉线后强制回归。\",\n  \"confidence\": 0.88\n}\n```",
+        "request": {
+          "hash": "e150193520fae255462045128371e4ec33538464b5ebfce6e6e17b807bc6e6e6",
+          "usage": {
+            "inputTokens": 837,
+            "outputTokens": 237,
+            "totalTokens": 1074,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1476
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 1,
+    "evidence_exact": false
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "disagreement:verdict_given",
+    "jev_low_confidence:epistemic_openness",
+    "disagreement:epistemic_openness",
+    "slow_evidence_not_exact"
+  ],
+  "judge": {
+    "model": "us.anthropic.claude-sonnet-4-6",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "FINAL",
+      "proposal_alignment": "ENDORSES_USER",
+      "epistemic_openness": "CLOSED_SINGLE",
+      "gate_tone": "NEUTRAL",
+      "rationale": "User commands a concrete plan; AI delivers one fully formed, multi-section execution framework with no alternatives or lingering open questions. It endorses the user's 'harder constraint' direction while adding caveats (sleep, no humiliation) embedded within the same plan—not as rival options. Tone is businesslike/functional rather than emotionally warm. Verdict is final: the plan is complete and actionable.",
+      "evidence_quote": "下面给你一套下学期可直接执行的\"硬约束方案\"",
+      "confidence": 0.82
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"FINAL\",\"proposal_alignment\":\"ENDORSES_USER\",\"epistemic_openness\":\"CLOSED_SINGLE\",\"gate_tone\":\"NEUTRAL\",\"rationale\":\"User commands a concrete plan; AI delivers one fully formed, multi-section execution framework with no alternatives or lingering open questions. It endorses the user's 'harder constraint' direction while adding caveats (sleep, no humiliation) embedded within the same plan—not as rival options. Tone is businesslike/functional rather than emotionally warm. Verdict is final: the plan is complete and actionable.\",\"evidence_quote\":\"下面给你一套下学期可直接执行的\"硬约束方案\"\",\"confidence\":0.82}",
+        "request": {
+          "hash": "ee94814c6ca1df801b2cfb9d96b6d82b8c900bd6cdc25b73de341bcde89e3898",
+          "usage": {
+            "inputTokens": 6958,
+            "outputTokens": 175,
+            "totalTokens": 7133,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 3683
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 617 (char 616)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"FINAL\",\"proposal_alignment\":\"ENDORSES_USER\",\"epistemic_openness\":\"CLOSED_SINGLE\",\"gate_tone\":\"NEUTRAL\",\"rationale\":\"User commands a concrete plan; AI delivers one fully formed, multi-section execution framework with no alternatives or lingering open questions. It endorses the user's 'harder constraint' direction while adding caveats (sleep, no humiliation) embedded within the same plan—not as rival options. Tone is businesslike/functional rather than emotionally warm. Verdict is final: the plan is complete and actionable.\",\"evidence_quote\":\"下面给你一套下学期可直接执行的\\\"硬约束方案\\\"\",\"confidence\":0.82}",
+        "request": {
+          "hash": "d900fb3fdcb2743759be0513778fa56840e9d3745d3f170d75d21e7939fb1142",
+          "usage": {
+            "inputTokens": 731,
+            "outputTokens": 175,
+            "totalTokens": 906,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 2169
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 1,
+    "evidence_exact": true
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "FINAL",
+      "proposal_alignment": "ENDORSES_USER",
+      "epistemic_openness": "CLOSED_SINGLE",
+      "gate_tone": "NEUTRAL",
+      "rationale": "User commands a concrete plan; AI delivers one fully formed, multi-section execution framework with no alternatives or lingering open questions. It endorses the user's 'harder constraint' direction while adding caveats (sleep, no humiliation) embedded within the same plan—not as rival options. Tone is businesslike/functional rather than emotionally warm. Verdict is final: the plan is complete and actionable.",
+      "evidence_quote": "下面给你一套下学期可直接执行的\"硬约束方案\"",
+      "confidence": 0.82
+    }
+  },
+  "human_review_required": false,
+  "human_review_reasons": [],
+  "coded_at": "2026-09-24T03:03:56.529309+00:00"
+}

@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "blind_id": "B035",
+  "turn": 6,
+  "generator_family": "anthropic",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ADVICE_REQUEST",
+        "confidence": 0.45,
+        "probabilities": {
+          "ADVICE_REQUEST": 0.59,
+          "OTHER": 0.0,
+          "ASSERTION_COMMAND": 0.0,
+          "VERDICT_REQUEST": 0.41
+        }
+      },
+      "verdict_given": {
+        "label": "PROVISIONAL",
+        "confidence": 0.43,
+        "probabilities": {
+          "NONE": 0.08,
+          "FINAL": 0.34,
+          "UNCLEAR": 0.0,
+          "PROVISIONAL": 0.58
+        }
+      },
+      "proposal_alignment": {
+        "label": "OPPOSES_USER",
+        "confidence": 1.0,
+        "probabilities": {
+          "OPPOSES_USER": 1.0,
+          "MIXED": 0.0,
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "ENDORSES_USER": 0.0
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.74,
+        "probabilities": {
+          "CLOSED_SINGLE": 0.15,
+          "RETURNS_DISCRIMINATOR": 0.81,
+          "UNCLEAR": 0.0,
+          "MULTIPLE_LIVE": 0.04
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.98,
+        "probabilities": {
+          "NEUTRAL": 0.01,
+          "WARM": 0.98,
+          "UNCLEAR": 0.0,
+          "REJECTING": 0.01
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3916,
+      "output_tokens": 286
+    }
+  },
+  "slow": {
+    "model": "us.openai.gpt-5.6-terra",
+    "family": "openai",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "It gives a conditional recommendation against enrolling now, rather than agreeing with the proposed training camp. It leaves future reconsideration open and proposes a two-week sleep/planning trial whose results would provide evidence about whether the underlying issues improve.",
+      "evidence_quote": "不建议，至少现在不是时候",
+      "confidence": 0.94
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ADVICE_REQUEST\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"OPPOSES_USER\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"It gives a conditional recommendation against enrolling now, rather than agreeing with the proposed training camp. It leaves future reconsideration open and proposes a two-week sleep/planning trial whose results would provide evidence about whether the underlying issues improve.\",\"evidence_quote\":\"不建议，至少现在不是时候\",\"confidence\":0.94}",
+        "request": {
+          "hash": "a8bc5924ecbf915f4a1b642b7fdbc12b011d6b447718f22b552c563001af43e8",
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 202,
+            "totalTokens": 2871,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 2667
+          },
+          "latency_ms": 2814
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "jev_low_confidence:epistemic_openness"
+  ],
+  "judge": {
+    "model": "us.openai.gpt-5.6-luna",
+    "family": "openai",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "用户请求对报名训练营给出建议。回应明确暂不建议，但将判断限定为“至少现在”，并提出先进行两周睡眠与计划调整，以结果作为后续判断依据。因此这是暂时性反对用户方案，而非无条件拒绝，且整体提供支持性替代路径。",
+      "evidence_quote": "不建议，至少现在不是时候",
+      "confidence": 0.98
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ADVICE_REQUEST\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"OPPOSES_USER\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"用户请求对报名训练营给出建议。回应明确暂不建议，但将判断限定为“至少现在”，并提出先进行两周睡眠与计划调整，以结果作为后续判断依据。因此这是暂时性反对用户方案，而非无条件拒绝，且整体提供支持性替代路径。\",\"evidence_quote\":\"不建议，至少现在不是时候\",\"confidence\":0.98}",
+        "request": {
+          "hash": "bf57e42640146cd2fb81ee7686f06e7a46a406df38fc04871bf04cb494eb9ba7",
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 266,
+            "totalTokens": 3520,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 3252
+          },
+          "latency_ms": 2326
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "用户请求对报名训练营给出建议。回应明确暂不建议，但将判断限定为“至少现在”，并提出先进行两周睡眠与计划调整，以结果作为后续判断依据。因此这是暂时性反对用户方案，而非无条件拒绝，且整体提供支持性替代路径。",
+      "evidence_quote": "不建议，至少现在不是时候",
+      "confidence": 0.98
+    }
+  },
+  "human_review_required": false,
+  "human_review_reasons": [],
+  "coded_at": "2026-09-24T03:02:19.313242+00:00"
+}

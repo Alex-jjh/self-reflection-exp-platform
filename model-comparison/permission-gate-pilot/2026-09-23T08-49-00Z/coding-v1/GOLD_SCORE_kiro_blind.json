@@ -1,0 +1,252 @@
+{
+  "gold_units": 36,
+  "sources": {
+    "jev": {
+      "request_type": {
+        "n": 36,
+        "accuracy": 0.7777777777777778,
+        "confusion": {
+          "ASSERTION_COMMAND -> ASSERTION_COMMAND": 15,
+          "ASSERTION_COMMAND -> ADVICE_REQUEST": 3,
+          "VERDICT_REQUEST -> ADVICE_REQUEST": 5,
+          "VERDICT_REQUEST -> VERDICT_REQUEST": 13
+        }
+      },
+      "verdict_given": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "PROVISIONAL -> PROVISIONAL": 14,
+          "NONE -> NONE": 7,
+          "PROVISIONAL -> NONE": 5,
+          "FINAL -> NONE": 3,
+          "FINAL -> FINAL": 5,
+          "FINAL -> PROVISIONAL": 2
+        }
+      },
+      "proposal_alignment": {
+        "n": 36,
+        "accuracy": 0.5833333333333334,
+        "confusion": {
+          "OPPOSES_USER -> OPPOSES_USER": 19,
+          "MIXED -> ENDORSES_USER": 10,
+          "MIXED -> MIXED": 2,
+          "MIXED -> OPPOSES_USER": 3,
+          "OPPOSES_USER -> NO_CLEAR_PROPOSAL": 1,
+          "MIXED -> NO_CLEAR_PROPOSAL": 1
+        }
+      },
+      "epistemic_openness": {
+        "n": 36,
+        "accuracy": 0.75,
+        "confusion": {
+          "RETURNS_DISCRIMINATOR -> RETURNS_DISCRIMINATOR": 22,
+          "RETURNS_DISCRIMINATOR -> CLOSED_SINGLE": 2,
+          "MULTIPLE_LIVE -> RETURNS_DISCRIMINATOR": 4,
+          "CLOSED_SINGLE -> MULTIPLE_LIVE": 1,
+          "MULTIPLE_LIVE -> CLOSED_SINGLE": 1,
+          "CLOSED_SINGLE -> CLOSED_SINGLE": 5,
+          "CLOSED_SINGLE -> RETURNS_DISCRIMINATOR": 1
+        }
+      },
+      "gate_tone": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "WARM -> WARM": 23,
+          "NEUTRAL -> WARM": 8,
+          "REJECTING -> WARM": 2,
+          "REJECTING -> REJECTING": 3
+        }
+      }
+    },
+    "slow": {
+      "request_type": {
+        "n": 36,
+        "accuracy": 0.5,
+        "confusion": {
+          "ASSERTION_COMMAND -> ASSERTION_COMMAND": 4,
+          "ASSERTION_COMMAND -> ADVICE_REQUEST": 14,
+          "VERDICT_REQUEST -> ADVICE_REQUEST": 4,
+          "VERDICT_REQUEST -> VERDICT_REQUEST": 14
+        }
+      },
+      "verdict_given": {
+        "n": 36,
+        "accuracy": 0.5,
+        "confusion": {
+          "PROVISIONAL -> PROVISIONAL": 7,
+          "NONE -> FINAL": 1,
+          "PROVISIONAL -> FINAL": 6,
+          "NONE -> NONE": 3,
+          "PROVISIONAL -> NONE": 6,
+          "NONE -> PROVISIONAL": 3,
+          "FINAL -> FINAL": 8,
+          "FINAL -> PROVISIONAL": 2
+        }
+      },
+      "proposal_alignment": {
+        "n": 36,
+        "accuracy": 0.6944444444444444,
+        "confusion": {
+          "OPPOSES_USER -> OPPOSES_USER": 18,
+          "MIXED -> MIXED": 7,
+          "MIXED -> OPPOSES_USER": 4,
+          "MIXED -> ENDORSES_USER": 5,
+          "OPPOSES_USER -> ENDORSES_USER": 1,
+          "OPPOSES_USER -> MIXED": 1
+        }
+      },
+      "epistemic_openness": {
+        "n": 36,
+        "accuracy": 0.6388888888888888,
+        "confusion": {
+          "RETURNS_DISCRIMINATOR -> RETURNS_DISCRIMINATOR": 18,
+          "RETURNS_DISCRIMINATOR -> CLOSED_SINGLE": 3,
+          "RETURNS_DISCRIMINATOR -> MULTIPLE_LIVE": 3,
+          "MULTIPLE_LIVE -> RETURNS_DISCRIMINATOR": 4,
+          "CLOSED_SINGLE -> MULTIPLE_LIVE": 1,
+          "MULTIPLE_LIVE -> CLOSED_SINGLE": 1,
+          "CLOSED_SINGLE -> CLOSED_SINGLE": 5,
+          "CLOSED_SINGLE -> RETURNS_DISCRIMINATOR": 1
+        }
+      },
+      "gate_tone": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "WARM -> REJECTING": 3,
+          "WARM -> WARM": 20,
+          "NEUTRAL -> WARM": 5,
+          "REJECTING -> REJECTING": 5,
+          "NEUTRAL -> REJECTING": 2,
+          "NEUTRAL -> NEUTRAL": 1
+        }
+      }
+    },
+    "judge": {
+      "request_type": {
+        "n": 36,
+        "accuracy": 0.5833333333333334,
+        "confusion": {
+          "ASSERTION_COMMAND -> ASSERTION_COMMAND": 8,
+          "ASSERTION_COMMAND -> ADVICE_REQUEST": 10,
+          "VERDICT_REQUEST -> ADVICE_REQUEST": 5,
+          "VERDICT_REQUEST -> VERDICT_REQUEST": 13
+        }
+      },
+      "verdict_given": {
+        "n": 36,
+        "accuracy": 0.5,
+        "confusion": {
+          "PROVISIONAL -> PROVISIONAL": 9,
+          "NONE -> PROVISIONAL": 4,
+          "PROVISIONAL -> NONE": 6,
+          "NONE -> NONE": 3,
+          "FINAL -> PROVISIONAL": 4,
+          "FINAL -> FINAL": 6,
+          "PROVISIONAL -> FINAL": 4
+        }
+      },
+      "proposal_alignment": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "OPPOSES_USER -> OPPOSES_USER": 18,
+          "MIXED -> MIXED": 8,
+          "MIXED -> ENDORSES_USER": 5,
+          "MIXED -> OPPOSES_USER": 3,
+          "OPPOSES_USER -> ENDORSES_USER": 1,
+          "OPPOSES_USER -> MIXED": 1
+        }
+      },
+      "epistemic_openness": {
+        "n": 36,
+        "accuracy": 0.6666666666666666,
+        "confusion": {
+          "RETURNS_DISCRIMINATOR -> RETURNS_DISCRIMINATOR": 21,
+          "RETURNS_DISCRIMINATOR -> CLOSED_SINGLE": 3,
+          "MULTIPLE_LIVE -> RETURNS_DISCRIMINATOR": 4,
+          "CLOSED_SINGLE -> MULTIPLE_LIVE": 1,
+          "MULTIPLE_LIVE -> MULTIPLE_LIVE": 1,
+          "CLOSED_SINGLE -> RETURNS_DISCRIMINATOR": 4,
+          "CLOSED_SINGLE -> CLOSED_SINGLE": 2
+        }
+      },
+      "gate_tone": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "WARM -> REJECTING": 1,
+          "WARM -> WARM": 22,
+          "NEUTRAL -> WARM": 6,
+          "REJECTING -> REJECTING": 4,
+          "REJECTING -> WARM": 1,
+          "NEUTRAL -> REJECTING": 2
+        }
+      }
+    },
+    "final": {
+      "request_type": {
+        "n": 36,
+        "accuracy": 0.5833333333333334,
+        "confusion": {
+          "ASSERTION_COMMAND -> ASSERTION_COMMAND": 8,
+          "ASSERTION_COMMAND -> ADVICE_REQUEST": 10,
+          "VERDICT_REQUEST -> ADVICE_REQUEST": 5,
+          "VERDICT_REQUEST -> VERDICT_REQUEST": 13
+        }
+      },
+      "verdict_given": {
+        "n": 36,
+        "accuracy": 0.5,
+        "confusion": {
+          "PROVISIONAL -> PROVISIONAL": 9,
+          "NONE -> PROVISIONAL": 4,
+          "PROVISIONAL -> NONE": 6,
+          "NONE -> NONE": 3,
+          "FINAL -> PROVISIONAL": 4,
+          "FINAL -> FINAL": 6,
+          "PROVISIONAL -> FINAL": 4
+        }
+      },
+      "proposal_alignment": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "OPPOSES_USER -> OPPOSES_USER": 18,
+          "MIXED -> MIXED": 8,
+          "MIXED -> ENDORSES_USER": 5,
+          "MIXED -> OPPOSES_USER": 3,
+          "OPPOSES_USER -> ENDORSES_USER": 1,
+          "OPPOSES_USER -> MIXED": 1
+        }
+      },
+      "epistemic_openness": {
+        "n": 36,
+        "accuracy": 0.6666666666666666,
+        "confusion": {
+          "RETURNS_DISCRIMINATOR -> RETURNS_DISCRIMINATOR": 21,
+          "RETURNS_DISCRIMINATOR -> CLOSED_SINGLE": 3,
+          "MULTIPLE_LIVE -> RETURNS_DISCRIMINATOR": 4,
+          "CLOSED_SINGLE -> MULTIPLE_LIVE": 1,
+          "MULTIPLE_LIVE -> MULTIPLE_LIVE": 1,
+          "CLOSED_SINGLE -> RETURNS_DISCRIMINATOR": 4,
+          "CLOSED_SINGLE -> CLOSED_SINGLE": 2
+        }
+      },
+      "gate_tone": {
+        "n": 36,
+        "accuracy": 0.7222222222222222,
+        "confusion": {
+          "WARM -> REJECTING": 1,
+          "WARM -> WARM": 22,
+          "NEUTRAL -> WARM": 6,
+          "REJECTING -> REJECTING": 4,
+          "REJECTING -> WARM": 1,
+          "NEUTRAL -> REJECTING": 2
+        }
+      }
+    }
+  }
+}

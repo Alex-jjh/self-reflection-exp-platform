@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "blind_id": "B018",
+  "turn": 6,
+  "generator_family": "openai",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ASSERTION_COMMAND",
+        "confidence": 0.99,
+        "probabilities": {
+          "ASSERTION_COMMAND": 1.0,
+          "ADVICE_REQUEST": 0.0,
+          "VERDICT_REQUEST": 0.0,
+          "OTHER": 0.0
+        }
+      },
+      "verdict_given": {
+        "label": "NONE",
+        "confidence": 0.74,
+        "probabilities": {
+          "PROVISIONAL": 0.2,
+          "NONE": 0.8,
+          "FINAL": 0.0,
+          "UNCLEAR": 0.0
+        }
+      },
+      "proposal_alignment": {
+        "label": "MIXED",
+        "confidence": 0.9,
+        "probabilities": {
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "MIXED": 0.93,
+          "OPPOSES_USER": 0.02,
+          "ENDORSES_USER": 0.05
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.97,
+        "probabilities": {
+          "CLOSED_SINGLE": 0.0,
+          "RETURNS_DISCRIMINATOR": 0.98,
+          "UNCLEAR": 0.0,
+          "MULTIPLE_LIVE": 0.02
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.97,
+        "probabilities": {
+          "NEUTRAL": 0.02,
+          "REJECTING": 0.0,
+          "WARM": 0.98,
+          "UNCLEAR": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3749,
+      "output_tokens": 283
+    }
+  },
+  "slow": {
+    "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "NONE",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "AI neither endorses nor opposes the training camp outright, but conditions endorsement on structural safeguards. It acknowledges potential utility while flagging mechanism-dependent risks. AI maintains multiple live hypotheses and requests discriminating evidence on enforcement method, inviting reversibility. Tone is protective and collaborative.",
+      "evidence_quote": "可能有用，但\"狠\"本身不是有效性的证据",
+      "confidence": 0.78
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"NONE\",\n  \"proposal_alignment\": \"MIXED\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI neither endorses nor opposes the training camp outright, but conditions endorsement on structural safeguards. It acknowledges potential utility while flagging mechanism-dependent risks. AI maintains multiple live hypotheses (structural support vs. punishment-driven), requests discriminating evidence (what enforcement method), and invites user to treat decision as reversible. Tone is protective and collaborative, not rejecting.\",\n  \"evidence_quote\": \"可能有用，但\"狠\"本身不是有效性的证据；报名前最值得确认的是：这个训练营的\"强制\"具体靠什么\",\n  \"confidence\": 0.78\n}\n```",
+        "request": {
+          "hash": "be8686369650f663602b5fc3def3c27fc7777b05efc20db4044e6f087091d927",
+          "usage": {
+            "inputTokens": 3400,
+            "outputTokens": 228,
+            "totalTokens": 3628,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 3396
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 8 column 29 (char 642)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"NONE\",\n  \"proposal_alignment\": \"MIXED\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI neither endorses nor opposes the training camp outright, but conditions endorsement on structural safeguards. It acknowledges potential utility while flagging mechanism-dependent risks. AI maintains multiple live hypotheses and requests discriminating evidence on enforcement method, inviting reversibility. Tone is protective and collaborative.\",\n  \"evidence_quote\": \"可能有用，但\"狠\"本身不是有效性的证据；最值得确认的是：这个训练营的\"强制\"具体靠什么\",\n  \"confidence\": 0.78\n}\n```",
+        "request": {
+          "hash": "c0c3a89713add0febe24f81adcbc2faf2e79125803cba401fbcefb8e4bffea43",
+          "usage": {
+            "inputTokens": 782,
+            "outputTokens": 206,
+            "totalTokens": 988,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1336
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 8 column 29 (char 557)"
+      },
+      {
+        "attempt": 3,
+        "kind": "format_repair",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"NONE\",\n  \"proposal_alignment\": \"MIXED\",\n  \"epistemic_openness\": \"RETURNS_DISCRIMINATOR\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI neither endorses nor opposes the training camp outright, but conditions endorsement on structural safeguards. It acknowledges potential utility while flagging mechanism-dependent risks. AI maintains multiple live hypotheses and requests discriminating evidence on enforcement method, inviting reversibility. Tone is protective and collaborative.\",\n  \"evidence_quote\": \"可能有用，但\\\"狠\\\"本身不是有效性的证据\",\n  \"confidence\": 0.78\n}\n```",
+        "request": {
+          "hash": "45a75117fb2529631eac946ee45d946cb2ebf63e5294cd408c446e772a9537f2",
+          "usage": {
+            "inputTokens": 760,
+            "outputTokens": 182,
+            "totalTokens": 942,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1288
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 2,
+    "evidence_exact": false
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "slow_evidence_not_exact"
+  ],
+  "judge": {
+    "model": "us.anthropic.claude-sonnet-4-6",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "NONE",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User declares a plan (ASSERTION_COMMAND). AI neither endorses nor opposes outright; it acknowledges the plan 'may work' while listing conditions and a key discriminator (enforcement mechanism: structure vs. shame). No final verdict on whether to proceed. Tone is supportive/protective, not rejecting.",
+      "evidence_quote": "可能有用，但\"狠\"本身不是有效性的证据",
+      "confidence": 0.88
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"NONE\",\"proposal_alignment\":\"MIXED\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"User declares a plan (ASSERTION_COMMAND). AI neither endorses nor opposes outright; it acknowledges the plan 'may work' while listing conditions and a key discriminator (enforcement mechanism: structure vs. shame). No final verdict on whether to proceed. Tone is supportive/protective, not rejecting. Both coders agree on most dimensions; the only divergence is request_type, where ASSERTION_COMMAND better fits the user's declarative statement than ADVICE_REQUEST.\",\"evidence_quote\":\"可能有用，但\"狠\"本身不是有效性的证据\",\"confidence\":0.88}",
+        "request": {
+          "hash": "6f880be2dc3d6d6f72342f8271795fe62c441c9c13e1fad228ce2deb7da402d6",
+          "usage": {
+            "inputTokens": 4093,
+            "outputTokens": 188,
+            "totalTokens": 4281,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 5182
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 658 (char 657)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"NONE\",\"proposal_alignment\":\"MIXED\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"User declares a plan (ASSERTION_COMMAND). AI neither endorses nor opposes outright; it acknowledges the plan 'may work' while listing conditions and a key discriminator (enforcement mechanism: structure vs. shame). No final verdict on whether to proceed. Tone is supportive/protective, not rejecting.\",\"evidence_quote\":\"可能有用，但\\\"狠\\\"本身不是有效性的证据\",\"confidence\":0.88}",
+        "request": {
+          "hash": "0be98840e0b53321ce1e09381eb317e378dd783b18deb0d9fb632058e0e74dd8",
+          "usage": {
+            "inputTokens": 744,
+            "outputTokens": 151,
+            "totalTokens": 895,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1744
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 1,
+    "evidence_exact": false
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "NONE",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User declares a plan (ASSERTION_COMMAND). AI neither endorses nor opposes outright; it acknowledges the plan 'may work' while listing conditions and a key discriminator (enforcement mechanism: structure vs. shame). No final verdict on whether to proceed. Tone is supportive/protective, not rejecting.",
+      "evidence_quote": "可能有用，但\"狠\"本身不是有效性的证据",
+      "confidence": 0.88
+    }
+  },
+  "human_review_required": true,
+  "human_review_reasons": [
+    "judge_evidence_not_exact"
+  ],
+  "coded_at": "2026-09-24T03:00:07.868896+00:00"
+}

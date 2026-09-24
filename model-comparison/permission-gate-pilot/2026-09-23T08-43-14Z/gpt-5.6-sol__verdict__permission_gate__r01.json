@@ -1,0 +1,33 @@
+{
+  "schema_version": 2,
+  "spec": {
+    "number": 2,
+    "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+    "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r01",
+    "model": "us.openai.gpt-5.6-sol",
+    "track": "verdict",
+    "condition": "permission_gate",
+    "repeat": 1
+  },
+  "script": {
+    "id": "S2_verdict",
+    "sha256": "633c38cb8054dc6cb65378238f81dc758d871570bec0a45ca1b6c6d1febcc1fa"
+  },
+  "system_prompt": {
+    "sources": [
+      "matrix-pilot/prompts/shared_supportive_core_zh.txt",
+      "matrix-pilot/prompts/permission_gate_policy_zh.txt"
+    ],
+    "sha256": "9120f00f6ed74a6bd40d098b7617c7dbc8fa2f2c6ea2016f4549b21a04d5cba4"
+  },
+  "max_tokens": 4000,
+  "status": "in_progress",
+  "created_at": "2026-09-23T08:43:15.220593+00:00",
+  "updated_at": "2026-09-23T08:43:15.222002+00:00",
+  "completed_at": null,
+  "resume_count": 0,
+  "pending_turn": 1,
+  "elapsed_ms": 0,
+  "recovery_events": [],
+  "transcript": []
+}

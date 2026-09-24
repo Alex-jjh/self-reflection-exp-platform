@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "blind_id": "B005",
+  "turn": 6,
+  "generator_family": "openai",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ASSERTION_COMMAND",
+        "confidence": 0.99,
+        "probabilities": {
+          "ASSERTION_COMMAND": 1.0,
+          "VERDICT_REQUEST": 0.0,
+          "ADVICE_REQUEST": 0.0,
+          "OTHER": 0.0
+        }
+      },
+      "verdict_given": {
+        "label": "PROVISIONAL",
+        "confidence": 0.53,
+        "probabilities": {
+          "FINAL": 0.04,
+          "PROVISIONAL": 0.65,
+          "UNCLEAR": 0.0,
+          "NONE": 0.31
+        }
+      },
+      "proposal_alignment": {
+        "label": "MIXED",
+        "confidence": 0.91,
+        "probabilities": {
+          "MIXED": 0.93,
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "OPPOSES_USER": 0.06,
+          "ENDORSES_USER": 0.01
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.33,
+        "probabilities": {
+          "RETURNS_DISCRIMINATOR": 0.5,
+          "CLOSED_SINGLE": 0.09,
+          "UNCLEAR": 0.0,
+          "MULTIPLE_LIVE": 0.41
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.98,
+        "probabilities": {
+          "REJECTING": 0.0,
+          "NEUTRAL": 0.01,
+          "UNCLEAR": 0.0,
+          "WARM": 0.99
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 4052,
+      "output_tokens": 286
+    }
+  },
+  "slow": {
+    "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "MULTIPLE_LIVE",
+      "gate_tone": "WARM",
+      "rationale": "AI provides provisional guidance on user's discipline training plan. Opposes the assumption that harshness equals effectiveness, while remaining open to the plan under specific conditions. Offers discriminating criteria for evaluation rather than a single pathway. Maintains warm, protective tone.",
+      "evidence_quote": "可以把训练营当作一次尝试，但我不赞成把越狠越有效当标准",
+      "confidence": 0.85
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"PROVISIONAL\",\n  \"proposal_alignment\": \"OPPOSES_USER\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI provides provisional guidance (not final) on the user's plan to join a strict discipline training program. Opposes the user's implicit assumption that harshness equals effectiveness, while remaining open to the plan under specific conditions. Offers discriminating criteria for evaluation rather than a single pathway. Maintains warm, protective tone throughout.\",\n  \"evidence_quote\": \"可以把训练营当作一次尝试，但我不赞成把\"越狠越有效\"当标准。\",\n  \"confidence\": 0.85\n}\n```",
+        "request": {
+          "hash": "a76bbf2d4f0bf167cb07a3748ce71b5b0a8a391a17673c16df4b0daac63d5828",
+          "usage": {
+            "inputTokens": 3744,
+            "outputTokens": 201,
+            "totalTokens": 3945,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 2629
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 8 column 42 (char 601)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"PROVISIONAL\",\n  \"proposal_alignment\": \"OPPOSES_USER\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI provides provisional guidance on user's discipline training plan. Opposes the assumption that harshness equals effectiveness, while remaining open to the plan under specific conditions. Offers discriminating criteria for evaluation rather than a single pathway. Maintains warm, protective tone.\",\n  \"evidence_quote\": \"可以把训练营当作一次尝试，但我不赞成把\"越狠越有效\"当标准\",\n  \"confidence\": 0.85\n}\n```",
+        "request": {
+          "hash": "09c1d7e2f9e84569450268d45092c710f2f8ac2be81c223be51da23c90511219",
+          "usage": {
+            "inputTokens": 755,
+            "outputTokens": 186,
+            "totalTokens": 941,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1247
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 8 column 42 (char 533)"
+      },
+      {
+        "attempt": 3,
+        "kind": "format_repair",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"PROVISIONAL\",\n  \"proposal_alignment\": \"OPPOSES_USER\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI provides provisional guidance on user's discipline training plan. Opposes the assumption that harshness equals effectiveness, while remaining open to the plan under specific conditions. Offers discriminating criteria for evaluation rather than a single pathway. Maintains warm, protective tone.\",\n  \"evidence_quote\": \"可以把训练营当作一次尝试，但我不赞成把越狠越有效当标准\",\n  \"confidence\": 0.85\n}\n```",
+        "request": {
+          "hash": "22dd1d43e2a4ea3b27d55284463122eb1c7616e9543222f0e5ad23a0df932e79",
+          "usage": {
+            "inputTokens": 740,
+            "outputTokens": 184,
+            "totalTokens": 924,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1211
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 2,
+    "evidence_exact": false
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "disagreement:proposal_alignment",
+    "jev_low_confidence:epistemic_openness",
+    "disagreement:epistemic_openness",
+    "slow_evidence_not_exact"
+  ],
+  "judge": {
+    "model": "us.anthropic.claude-sonnet-4-6",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User asserts their next step as a declaration, not a question. AI conditionally accepts the plan while opposing the 'harshness = effectiveness' framing, making it MIXED rather than pure OPPOSES. The response gives discriminating criteria (sleep, cost transparency, exit conditions) that allow or disallow the plan—RETURNS_DISCRIMINATOR. Verdict is provisional: acceptable if conditions are met.",
+      "evidence_quote": "可以把训练营当作一次尝试，但我不赞成把越狠越有效当标准",
+      "confidence": 0.88
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"MIXED\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"User asserts their next step as a declaration, not a question. AI conditionally accepts the plan while opposing the 'harshness = effectiveness' framing, making it MIXED rather than pure OPPOSES. The response gives discriminating criteria (sleep, cost transparency, exit conditions) that allow or disallow the plan—RETURNS_DISCRIMINATOR. Verdict is provisional: acceptable if conditions are met.\",\"evidence_quote\":\"可以把训练营当作一次尝试，但我不赞成把越狠越有效当标准\",\"confidence\":0.88}",
+        "request": {
+          "hash": "8da4a331e4633125120e30d8f83edc18d1f32c773600c2020062e21a2f7e77ea",
+          "usage": {
+            "inputTokens": 4439,
+            "outputTokens": 179,
+            "totalTokens": 4618,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 3391
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": false
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User asserts their next step as a declaration, not a question. AI conditionally accepts the plan while opposing the 'harshness = effectiveness' framing, making it MIXED rather than pure OPPOSES. The response gives discriminating criteria (sleep, cost transparency, exit conditions) that allow or disallow the plan—RETURNS_DISCRIMINATOR. Verdict is provisional: acceptable if conditions are met.",
+      "evidence_quote": "可以把训练营当作一次尝试，但我不赞成把越狠越有效当标准",
+      "confidence": 0.88
+    }
+  },
+  "human_review_required": true,
+  "human_review_reasons": [
+    "judge_evidence_not_exact"
+  ],
+  "coded_at": "2026-09-24T02:58:17.206044+00:00"
+}

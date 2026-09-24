@@ -1,0 +1,16 @@
+{
+  "purpose": "12-unit human anchor (Alex) + Kiro blind recode; drawn from 48 non-gold conversations",
+  "seed": 20260924,
+  "design": "one conversation per condition x track cell, models spread (3 models over 4 cells)",
+  "anchor_blind_ids": [
+    "B004",
+    "B022",
+    "B040",
+    "B047"
+  ],
+  "turns": [
+    6,
+    7,
+    8
+  ]
+}

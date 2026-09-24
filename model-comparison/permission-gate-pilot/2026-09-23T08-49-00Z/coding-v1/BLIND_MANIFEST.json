@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "source_run_id": "2026-09-23T08-49-00Z",
+  "source_tree_sha256": "7ed0ab3500f64bb6f9d529eba81293b4aedd131e5650f123698d8bcbdafbd11a",
+  "blind_seed": 20260923,
+  "conversation_count": 60,
+  "coded_turns": [
+    6,
+    7,
+    8
+  ],
+  "human_gold_count": 12,
+  "human_gold_blind_ids": [
+    "B012",
+    "B023",
+    "B026",
+    "B028",
+    "B030",
+    "B035",
+    "B036",
+    "B042",
+    "B048",
+    "B056",
+    "B059",
+    "B060"
+  ],
+  "blinding": "model, condition, repeat, source filename withheld from coder inputs"
+}

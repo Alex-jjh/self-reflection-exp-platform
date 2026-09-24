@@ -16,8 +16,10 @@ screening/items/
 refsrc
 .bedrock_key
 
-# Exploratory cross-model comparison output (commit selectively if it informs a decision)
-model-comparison/
+# Synthetic cross-model runs: tracked (no human subject; ~4 MB text JSON).
+# Only runtime locks are excluded. Quarantined/incident runs stay tracked
+# with their INCIDENT.md so the record is auditable.
+model-comparison/**/.run.lock
 .openai_key
 .xjtlu_key
 .gemini_key
@@ -29,3 +31,6 @@ protocol/SESSION_PROTOCOL.pdf
 streamlit.log
 # derived from the md — regenerate with pandoc, do not track
 protocol/TOPIC_MAP.pdf
+# Blinding key stays local until the 12-unit human anchor is coded
+# (repo is public; tracking it would unblind B004/B022/B040/B047).
+model-comparison/**/private_mapping.json

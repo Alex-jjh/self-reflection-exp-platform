@@ -1,0 +1,49 @@
+{
+  "mode": "calibration",
+  "selected_blind_ids": [
+    "B001",
+    "B003",
+    "B004"
+  ],
+  "expected_units": 9,
+  "coded_units_in_directory": 9,
+  "errors_this_attempt": [],
+  "judge_rate": 1.0,
+  "human_queue_rate": 0.3333333333333333,
+  "jev_slow_agreement_by_dimension": {
+    "request_type": 0.5555555555555556,
+    "verdict_given": 0.4444444444444444,
+    "proposal_alignment": 0.7777777777777778,
+    "epistemic_openness": 0.7777777777777778,
+    "gate_tone": 0.5555555555555556
+  },
+  "slow_parse_failure_rate": 0.0,
+  "slow_format_repair_rate": 0.1111111111111111,
+  "judge_format_repair_rate": 0.0,
+  "final_unresolved": 0,
+  "final_counts_by_dimension": {
+    "request_type": {
+      "VERDICT_REQUEST": 5,
+      "ADVICE_REQUEST": 3,
+      "ASSERTION_COMMAND": 1
+    },
+    "verdict_given": {
+      "FINAL": 4,
+      "PROVISIONAL": 5
+    },
+    "proposal_alignment": {
+      "OPPOSES_USER": 7,
+      "ENDORSES_USER": 1,
+      "MIXED": 1
+    },
+    "epistemic_openness": {
+      "RETURNS_DISCRIMINATOR": 6,
+      "CLOSED_SINGLE": 1,
+      "MULTIPLE_LIVE": 2
+    },
+    "gate_tone": {
+      "REJECTING": 1,
+      "WARM": 8
+    }
+  }
+}

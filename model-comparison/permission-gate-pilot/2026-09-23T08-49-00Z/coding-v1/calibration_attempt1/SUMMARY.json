@@ -1,0 +1,32 @@
+{
+  "mode": "calibration",
+  "selected_blind_ids": [
+    "B001",
+    "B003",
+    "B004"
+  ],
+  "expected_units": 9,
+  "coded_units_in_directory": 7,
+  "errors_this_attempt": [
+    {
+      "blind_id": "B001",
+      "turn": 8,
+      "type": "JSONDecodeError",
+      "error": "Expecting ',' delimiter: line 1 column 1119 (char 1118)"
+    },
+    {
+      "blind_id": "B001",
+      "turn": 6,
+      "type": "JSONDecodeError",
+      "error": "Expecting ',' delimiter: line 1 column 303 (char 302)"
+    }
+  ],
+  "judge_rate": 0.7142857142857143,
+  "human_queue_rate": 0.14285714285714285,
+  "jev_slow_disposition_agreement": 0.7142857142857143,
+  "final_dispositions": {
+    "HELD": 4,
+    "GRANTED": 2,
+    "RETURNED": 1
+  }
+}

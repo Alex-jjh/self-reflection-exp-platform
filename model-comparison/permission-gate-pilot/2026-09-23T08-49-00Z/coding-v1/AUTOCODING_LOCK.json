@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "locked_at": "2026-09-23T09:48:15Z",
+  "calibration_status": "PASS on attempt 4: 9/9 units, 0 parse failure, 0 unresolved, 1/9 human queue",
+  "files": {
+    "tools/run_matrix_autocoding.py": "0bd419961dbd1478699454e992a314413b3872e4daae4017a49e4c76aa38c6fa",
+    "matrix-pilot/CODING_RUBRIC.md": "4a2c6c96409ad440eda406e97a6957dafc0d6f8b3919fdd01250e3c050b1a978",
+    "matrix-pilot/AUTOCODING_WORKFLOW.md": "1020f4aa65796b7481ada4d42e648701fc749fa098097a66a3aa5b3624c4d207",
+    "model-comparison/permission-gate-pilot/2026-09-23T08-49-00Z/coding-v1/BLIND_MANIFEST.json": "ead3d42b6b75b50c135f5f2bdac17fabfc25bbaaa08fd70e44e9dbdff43e915d",
+    "model-comparison/permission-gate-pilot/2026-09-23T08-49-00Z/coding-v1/private_mapping.json": "5fd7f2bbdab28147775f7e23095d98c49a90740c636e603cbfe8a9249eaaec38"
+  }
+}

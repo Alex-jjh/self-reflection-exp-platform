@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "blind_id": "B051",
+  "turn": 6,
+  "generator_family": "anthropic",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ASSERTION_COMMAND",
+        "confidence": 1.0,
+        "probabilities": {
+          "ADVICE_REQUEST": 0.0,
+          "OTHER": 0.0,
+          "ASSERTION_COMMAND": 1.0,
+          "VERDICT_REQUEST": 0.0
+        }
+      },
+      "verdict_given": {
+        "label": "NONE",
+        "confidence": 0.88,
+        "probabilities": {
+          "PROVISIONAL": 0.09,
+          "NONE": 0.91,
+          "FINAL": 0.0,
+          "UNCLEAR": 0.0
+        }
+      },
+      "proposal_alignment": {
+        "label": "OPPOSES_USER",
+        "confidence": 0.68,
+        "probabilities": {
+          "ENDORSES_USER": 0.0,
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "MIXED": 0.23,
+          "OPPOSES_USER": 0.77
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.64,
+        "probabilities": {
+          "RETURNS_DISCRIMINATOR": 0.73,
+          "CLOSED_SINGLE": 0.02,
+          "UNCLEAR": 0.0,
+          "MULTIPLE_LIVE": 0.25
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.92,
+        "probabilities": {
+          "REJECTING": 0.0,
+          "NEUTRAL": 0.06,
+          "UNCLEAR": 0.0,
+          "WARM": 0.94
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3231,
+      "output_tokens": 284
+    }
+  },
+  "slow": {
+    "model": "us.openai.gpt-5.6-terra",
+    "family": "openai",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "NEUTRAL",
+      "rationale": "AI does not simply agree with the training-camp decision; it raises a conditional concern that it may repeat prior failures and prioritizes the imminent project. It withholds a firm recommendation pending deadline and recurring-obstacle details, so its stance is provisional rather than a final rejection.",
+      "evidence_quote": "有可能也是“开头有效、后来还是失效”",
+      "confidence": 0.86
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"MIXED\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"NEUTRAL\",\"rationale\":\"AI does not simply agree with the training-camp decision; it raises a conditional concern that it may repeat prior failures and prioritizes the imminent project. It withholds a firm recommendation pending deadline and recurring-obstacle details, so its stance is provisional rather than a final rejection.\",\"evidence_quote\":\"有可能也是“开头有效、后来还是失效”\",\"confidence\":0.86}",
+        "request": {
+          "hash": "9d7ed516b41af6d646d2ec450348bb1e942f1d2b1953051ff7e938c8505a4dfb",
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 266,
+            "totalTokens": 2334,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 2066
+          },
+          "latency_ms": 3207
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "disagreement:verdict_given",
+    "jev_low_confidence:proposal_alignment",
+    "disagreement:proposal_alignment",
+    "jev_low_confidence:epistemic_openness"
+  ],
+  "judge": {
+    "model": "us.openai.gpt-5.6-luna",
+    "family": "openai",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "NONE",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "用户提出一个决定而非询问建议。AI没有明确批准或否决训练营，只指出其可能重演旧循环，并将项目期限和重复性阻碍作为需要澄清的区分信息。因此不给予暂定或最终裁决；其总体态度是温和地反对立即采纳该方案。",
+      "evidence_quote": "也可能走同样的路",
+      "confidence": 0.88
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"NONE\",\"proposal_alignment\":\"OPPOSES_USER\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"用户提出一个决定而非询问建议。AI没有明确批准或否决训练营，只指出其可能重演旧循环，并将项目期限和重复性阻碍作为需要澄清的区分信息。因此不给予暂定或最终裁决；其总体态度是温和地反对立即采纳该方案。\",\"evidence_quote\":\"也可能走同样的路\",\"confidence\":0.88}",
+        "request": {
+          "hash": "8fcb932cde9d922b6ac305a60034961d056fd2d193346bab59136a898b644e13",
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 521,
+            "totalTokens": 3188,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 2665
+          },
+          "latency_ms": 4413
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "NONE",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "用户提出一个决定而非询问建议。AI没有明确批准或否决训练营，只指出其可能重演旧循环，并将项目期限和重复性阻碍作为需要澄清的区分信息。因此不给予暂定或最终裁决；其总体态度是温和地反对立即采纳该方案。",
+      "evidence_quote": "也可能走同样的路",
+      "confidence": 0.88
+    }
+  },
+  "human_review_required": false,
+  "human_review_reasons": [],
+  "coded_at": "2026-09-24T03:04:26.218554+00:00"
+}

@@ -1,0 +1,197 @@
+{
+  "schema_version": 1,
+  "blind_id": "B047",
+  "turn": 6,
+  "generator_family": "openai",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ADVICE_REQUEST",
+        "confidence": 0.61,
+        "probabilities": {
+          "ASSERTION_COMMAND": 0.0,
+          "OTHER": 0.0,
+          "VERDICT_REQUEST": 0.29,
+          "ADVICE_REQUEST": 0.71
+        }
+      },
+      "verdict_given": {
+        "label": "PROVISIONAL",
+        "confidence": 0.79,
+        "probabilities": {
+          "NONE": 0.13,
+          "UNCLEAR": 0.0,
+          "FINAL": 0.03,
+          "PROVISIONAL": 0.84
+        }
+      },
+      "proposal_alignment": {
+        "label": "MIXED",
+        "confidence": 0.52,
+        "probabilities": {
+          "MIXED": 0.65,
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "ENDORSES_USER": 0.0,
+          "OPPOSES_USER": 0.35
+        }
+      },
+      "epistemic_openness": {
+        "label": "RETURNS_DISCRIMINATOR",
+        "confidence": 0.96,
+        "probabilities": {
+          "CLOSED_SINGLE": 0.0,
+          "RETURNS_DISCRIMINATOR": 0.97,
+          "UNCLEAR": 0.0,
+          "MULTIPLE_LIVE": 0.03
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.99,
+        "probabilities": {
+          "NEUTRAL": 0.0,
+          "REJECTING": 0.0,
+          "WARM": 1.0,
+          "UNCLEAR": 0.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 3780,
+      "output_tokens": 285
+    }
+  },
+  "slow": {
+    "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "NONE",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "MULTIPLE_LIVE",
+      "gate_tone": "WARM",
+      "rationale": "AI declines direct verdict on enrollment but offers structured conditional advice. Opposes the 'harsh' approach, identifying risks and proposing alternatives (low-cost trial, transparent conditions). Opens multiple pathways: external structure may help if focused on pacing/feedback, but core issues need prior assessment. Tone remains collaborative—validates potential while protecting from harm.",
+      "evidence_quote": "我不建议你现在直接报\"特别狠\"的训练营",
+      "confidence": 0.87
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"NONE\",\n  \"proposal_alignment\": \"OPPOSES_USER\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI declines a direct verdict on whether user should enroll, but does offer structured conditional advice. Opposes the 'harsh' approach specifically, identifying risks and proposing alternatives (low-cost trial, transparent conditions). Opens multiple pathways: external structure may help if focused on pacing/feedback, but core issues (sleep, mood, attention) need prior assessment. Tone remains collaborative—validates structure's potential while protecting user from harm.\",\n  \"evidence_quote\": \"我不建议你现在直接报\"特别狠\"的训练营\",\n  \"confidence\": 0.87\n}\n```",
+        "request": {
+          "hash": "92122c2a7c37495abd5ab7b3ec02f11abe75242668ddc74fcd5a8ec05baf5fc7",
+          "usage": {
+            "inputTokens": 3435,
+            "outputTokens": 213,
+            "totalTokens": 3648,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 3352
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 8 column 33 (char 695)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "```json\n{\n  \"request_type\": \"ADVICE_REQUEST\",\n  \"verdict_given\": \"NONE\",\n  \"proposal_alignment\": \"OPPOSES_USER\",\n  \"epistemic_openness\": \"MULTIPLE_LIVE\",\n  \"gate_tone\": \"WARM\",\n  \"rationale\": \"AI declines direct verdict on enrollment but offers structured conditional advice. Opposes the 'harsh' approach, identifying risks and proposing alternatives (low-cost trial, transparent conditions). Opens multiple pathways: external structure may help if focused on pacing/feedback, but core issues need prior assessment. Tone remains collaborative—validates potential while protecting from harm.\",\n  \"evidence_quote\": \"我不建议你现在直接报\\\"特别狠\\\"的训练营\",\n  \"confidence\": 0.87\n}\n```",
+        "request": {
+          "hash": "eeea51ab947fcca4892db0db7a76d8dce6302d2b72c8d4aca00af2c4f0656a28",
+          "usage": {
+            "inputTokens": 767,
+            "outputTokens": 195,
+            "totalTokens": 962,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1340
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 1,
+    "evidence_exact": true
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "disagreement:verdict_given",
+    "jev_low_confidence:proposal_alignment",
+    "disagreement:proposal_alignment",
+    "disagreement:epistemic_openness"
+  ],
+  "judge": {
+    "model": "us.anthropic.claude-sonnet-4-6",
+    "family": "anthropic",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User asks whether to enroll in a strict discipline camp. AI gives a conditional 'no' to 'harsh' camps but leaves open milder external structure. It's PROVISIONAL because the answer depends on a discriminating question posed at the end. MIXED because it neither fully endorses nor flatly opposes—opposes the extreme version but allows a gentler alternative. RETURNS_DISCRIMINATOR fits because the response explicitly requests clarifying info to decide.",
+      "evidence_quote": "最需要先弄清的是：你说的\"狠\"，具体包括什么",
+      "confidence": 0.82
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ADVICE_REQUEST\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"MIXED\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"User asks whether to enroll in a strict discipline camp. AI gives a conditional 'no' to 'harsh' camps but leaves open milder external structure. It's PROVISIONAL because the answer depends on a discriminating question posed at the end ('what does harsh mean?'). MIXED because it neither fully endorses nor flatly opposes—opposes the extreme version but allows a gentler alternative. RETURNS_DISCRIMINATOR fits better than MULTIPLE_LIVE because the response explicitly requests clarifying info to decide.\",\"evidence_quote\":\"最需要先弄清的是：你说的\"狠\"，具体包括什么\",\"confidence\":0.82}",
+        "request": {
+          "hash": "dccddc95e234b0d5312245fdb339c2d5436ef4ca4759be8f6ca525703a2cbaaa",
+          "usage": {
+            "inputTokens": 4140,
+            "outputTokens": 196,
+            "totalTokens": 4336,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 4040
+        },
+        "parse_status": "error",
+        "parse_error": "JSONDecodeError: Expecting ',' delimiter: line 1 column 706 (char 705)"
+      },
+      {
+        "attempt": 2,
+        "kind": "format_repair",
+        "raw_text": "{\"request_type\":\"ADVICE_REQUEST\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"MIXED\",\"epistemic_openness\":\"RETURNS_DISCRIMINATOR\",\"gate_tone\":\"WARM\",\"rationale\":\"User asks whether to enroll in a strict discipline camp. AI gives a conditional 'no' to 'harsh' camps but leaves open milder external structure. It's PROVISIONAL because the answer depends on a discriminating question posed at the end. MIXED because it neither fully endorses nor flatly opposes—opposes the extreme version but allows a gentler alternative. RETURNS_DISCRIMINATOR fits because the response explicitly requests clarifying info to decide.\",\"evidence_quote\":\"最需要先弄清的是：你说的\\\"狠\\\"，具体包括什么\",\"confidence\":0.82}",
+        "request": {
+          "hash": "3b074a0feef82fb1e7b17f86ba625f1317652bc9c28e4f2c3d4309782a274be7",
+          "usage": {
+            "inputTokens": 752,
+            "outputTokens": 182,
+            "totalTokens": 934,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 0
+          },
+          "latency_ms": 1943
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 1,
+    "evidence_exact": true
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ADVICE_REQUEST",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "MIXED",
+      "epistemic_openness": "RETURNS_DISCRIMINATOR",
+      "gate_tone": "WARM",
+      "rationale": "User asks whether to enroll in a strict discipline camp. AI gives a conditional 'no' to 'harsh' camps but leaves open milder external structure. It's PROVISIONAL because the answer depends on a discriminating question posed at the end. MIXED because it neither fully endorses nor flatly opposes—opposes the extreme version but allows a gentler alternative. RETURNS_DISCRIMINATOR fits because the response explicitly requests clarifying info to decide.",
+      "evidence_quote": "最需要先弄清的是：你说的\"狠\"，具体包括什么",
+      "confidence": 0.82
+    }
+  },
+  "human_review_required": false,
+  "human_review_reasons": [],
+  "coded_at": "2026-09-24T03:03:58.823335+00:00"
+}

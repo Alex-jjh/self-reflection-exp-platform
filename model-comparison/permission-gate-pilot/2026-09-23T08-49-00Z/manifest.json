@@ -1,0 +1,595 @@
+{
+  "schema_version": 2,
+  "models": [
+    "us.anthropic.claude-sonnet-5",
+    "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+    "us.openai.gpt-5.6-sol"
+  ],
+  "tracks": [
+    "verdict",
+    "bias"
+  ],
+  "conditions": [
+    "supportive_control",
+    "permission_gate"
+  ],
+  "repeats": 5,
+  "seed": 20260923,
+  "max_turns": 8,
+  "max_tokens": 4000,
+  "tracks_material": {
+    "verdict": {
+      "id": "S2_verdict",
+      "sha256": "633c38cb8054dc6cb65378238f81dc758d871570bec0a45ca1b6c6d1febcc1fa",
+      "turns": 8
+    },
+    "bias": {
+      "id": "S2_bias",
+      "sha256": "033962ccdfaf4b8d8fc6be6739b0a47dfa601c9784f9db7d37178fc7aa440794",
+      "turns": 8
+    }
+  },
+  "prompts_material": {
+    "supportive_control": {
+      "sources": [
+        "matrix-pilot/prompts/shared_supportive_core_zh.txt",
+        "matrix-pilot/prompts/supportive_control_policy_zh.txt"
+      ],
+      "sha256": "bf755f752985afc41c762531b4ef0973f099fcc3bd0240e6f55bd35c9dbdfe3a"
+    },
+    "permission_gate": {
+      "sources": [
+        "matrix-pilot/prompts/shared_supportive_core_zh.txt",
+        "matrix-pilot/prompts/permission_gate_policy_zh.txt"
+      ],
+      "sha256": "9120f00f6ed74a6bd40d098b7617c7dbc8fa2f2c6ea2016f4549b21a04d5cba4"
+    }
+  },
+  "plan": [
+    {
+      "number": 1,
+      "cell_id": "gpt-5.6-sol__bias__supportive_control",
+      "conversation_id": "gpt-5.6-sol__bias__supportive_control__r05",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 5
+    },
+    {
+      "number": 2,
+      "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+      "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r01",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 1
+    },
+    {
+      "number": 3,
+      "cell_id": "claude-sonnet-5__verdict__permission_gate",
+      "conversation_id": "claude-sonnet-5__verdict__permission_gate__r02",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 2
+    },
+    {
+      "number": 4,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate__r04",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 4
+    },
+    {
+      "number": 5,
+      "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+      "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r05",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 5
+    },
+    {
+      "number": 6,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control__r05",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 5
+    },
+    {
+      "number": 7,
+      "cell_id": "gpt-5.6-sol__bias__permission_gate",
+      "conversation_id": "gpt-5.6-sol__bias__permission_gate__r05",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 5
+    },
+    {
+      "number": 8,
+      "cell_id": "claude-sonnet-5__bias__permission_gate",
+      "conversation_id": "claude-sonnet-5__bias__permission_gate__r03",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 3
+    },
+    {
+      "number": 9,
+      "cell_id": "claude-sonnet-5__bias__supportive_control",
+      "conversation_id": "claude-sonnet-5__bias__supportive_control__r02",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 2
+    },
+    {
+      "number": 10,
+      "cell_id": "gpt-5.6-sol__bias__supportive_control",
+      "conversation_id": "gpt-5.6-sol__bias__supportive_control__r04",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 4
+    },
+    {
+      "number": 11,
+      "cell_id": "claude-sonnet-5__verdict__permission_gate",
+      "conversation_id": "claude-sonnet-5__verdict__permission_gate__r03",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 3
+    },
+    {
+      "number": 12,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate__r03",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 3
+    },
+    {
+      "number": 13,
+      "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+      "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r04",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 4
+    },
+    {
+      "number": 14,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate__r04",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 4
+    },
+    {
+      "number": 15,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control__r03",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 3
+    },
+    {
+      "number": 16,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate__r01",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 1
+    },
+    {
+      "number": 17,
+      "cell_id": "gpt-5.6-sol__verdict__supportive_control",
+      "conversation_id": "gpt-5.6-sol__verdict__supportive_control__r03",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 3
+    },
+    {
+      "number": 18,
+      "cell_id": "gpt-5.6-sol__verdict__supportive_control",
+      "conversation_id": "gpt-5.6-sol__verdict__supportive_control__r05",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 5
+    },
+    {
+      "number": 19,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate__r05",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 5
+    },
+    {
+      "number": 20,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control__r01",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 1
+    },
+    {
+      "number": 21,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control__r01",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 1
+    },
+    {
+      "number": 22,
+      "cell_id": "claude-sonnet-5__verdict__permission_gate",
+      "conversation_id": "claude-sonnet-5__verdict__permission_gate__r05",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 5
+    },
+    {
+      "number": 23,
+      "cell_id": "gpt-5.6-sol__verdict__supportive_control",
+      "conversation_id": "gpt-5.6-sol__verdict__supportive_control__r01",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 1
+    },
+    {
+      "number": 24,
+      "cell_id": "claude-sonnet-5__verdict__permission_gate",
+      "conversation_id": "claude-sonnet-5__verdict__permission_gate__r04",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 4
+    },
+    {
+      "number": 25,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate__r02",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 2
+    },
+    {
+      "number": 26,
+      "cell_id": "claude-sonnet-5__verdict__supportive_control",
+      "conversation_id": "claude-sonnet-5__verdict__supportive_control__r05",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 5
+    },
+    {
+      "number": 27,
+      "cell_id": "claude-sonnet-5__bias__permission_gate",
+      "conversation_id": "claude-sonnet-5__bias__permission_gate__r05",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 5
+    },
+    {
+      "number": 28,
+      "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+      "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r02",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 2
+    },
+    {
+      "number": 29,
+      "cell_id": "gpt-5.6-sol__bias__permission_gate",
+      "conversation_id": "gpt-5.6-sol__bias__permission_gate__r03",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 3
+    },
+    {
+      "number": 30,
+      "cell_id": "claude-sonnet-5__bias__supportive_control",
+      "conversation_id": "claude-sonnet-5__bias__supportive_control__r01",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 1
+    },
+    {
+      "number": 31,
+      "cell_id": "claude-sonnet-5__bias__permission_gate",
+      "conversation_id": "claude-sonnet-5__bias__permission_gate__r02",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 2
+    },
+    {
+      "number": 32,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control__r05",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 5
+    },
+    {
+      "number": 33,
+      "cell_id": "claude-sonnet-5__bias__supportive_control",
+      "conversation_id": "claude-sonnet-5__bias__supportive_control__r03",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 3
+    },
+    {
+      "number": 34,
+      "cell_id": "claude-sonnet-5__verdict__supportive_control",
+      "conversation_id": "claude-sonnet-5__verdict__supportive_control__r01",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 1
+    },
+    {
+      "number": 35,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate__r05",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 5
+    },
+    {
+      "number": 36,
+      "cell_id": "gpt-5.6-sol__bias__permission_gate",
+      "conversation_id": "gpt-5.6-sol__bias__permission_gate__r02",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 2
+    },
+    {
+      "number": 37,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate__r01",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 1
+    },
+    {
+      "number": 38,
+      "cell_id": "gpt-5.6-sol__bias__permission_gate",
+      "conversation_id": "gpt-5.6-sol__bias__permission_gate__r01",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 1
+    },
+    {
+      "number": 39,
+      "cell_id": "claude-sonnet-5__bias__supportive_control",
+      "conversation_id": "claude-sonnet-5__bias__supportive_control__r05",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 5
+    },
+    {
+      "number": 40,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control__r02",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 2
+    },
+    {
+      "number": 41,
+      "cell_id": "gpt-5.6-sol__verdict__supportive_control",
+      "conversation_id": "gpt-5.6-sol__verdict__supportive_control__r04",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 4
+    },
+    {
+      "number": 42,
+      "cell_id": "claude-sonnet-5__verdict__permission_gate",
+      "conversation_id": "claude-sonnet-5__verdict__permission_gate__r01",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 1
+    },
+    {
+      "number": 43,
+      "cell_id": "gpt-5.6-sol__bias__supportive_control",
+      "conversation_id": "gpt-5.6-sol__bias__supportive_control__r03",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 3
+    },
+    {
+      "number": 44,
+      "cell_id": "claude-sonnet-5__verdict__supportive_control",
+      "conversation_id": "claude-sonnet-5__verdict__supportive_control__r04",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 4
+    },
+    {
+      "number": 45,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__permission_gate__r03",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 3
+    },
+    {
+      "number": 46,
+      "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+      "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r03",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 3
+    },
+    {
+      "number": 47,
+      "cell_id": "gpt-5.6-sol__bias__supportive_control",
+      "conversation_id": "gpt-5.6-sol__bias__supportive_control__r02",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 2
+    },
+    {
+      "number": 48,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control__r04",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 4
+    },
+    {
+      "number": 49,
+      "cell_id": "claude-sonnet-5__verdict__supportive_control",
+      "conversation_id": "claude-sonnet-5__verdict__supportive_control__r03",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 3
+    },
+    {
+      "number": 50,
+      "cell_id": "gpt-5.6-sol__verdict__supportive_control",
+      "conversation_id": "gpt-5.6-sol__verdict__supportive_control__r02",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 2
+    },
+    {
+      "number": 51,
+      "cell_id": "claude-sonnet-5__verdict__supportive_control",
+      "conversation_id": "claude-sonnet-5__verdict__supportive_control__r02",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 2
+    },
+    {
+      "number": 52,
+      "cell_id": "claude-sonnet-5__bias__supportive_control",
+      "conversation_id": "claude-sonnet-5__bias__supportive_control__r04",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 4
+    },
+    {
+      "number": 53,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__bias__supportive_control__r02",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 2
+    },
+    {
+      "number": 54,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__permission_gate__r02",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "permission_gate",
+      "repeat": 2
+    },
+    {
+      "number": 55,
+      "cell_id": "gpt-5.6-sol__bias__permission_gate",
+      "conversation_id": "gpt-5.6-sol__bias__permission_gate__r04",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 4
+    },
+    {
+      "number": 56,
+      "cell_id": "gpt-5.6-sol__bias__supportive_control",
+      "conversation_id": "gpt-5.6-sol__bias__supportive_control__r01",
+      "model": "us.openai.gpt-5.6-sol",
+      "track": "bias",
+      "condition": "supportive_control",
+      "repeat": 1
+    },
+    {
+      "number": 57,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control__r04",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 4
+    },
+    {
+      "number": 58,
+      "cell_id": "claude-sonnet-5__bias__permission_gate",
+      "conversation_id": "claude-sonnet-5__bias__permission_gate__r04",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 4
+    },
+    {
+      "number": 59,
+      "cell_id": "claude-sonnet-5__bias__permission_gate",
+      "conversation_id": "claude-sonnet-5__bias__permission_gate__r01",
+      "model": "us.anthropic.claude-sonnet-5",
+      "track": "bias",
+      "condition": "permission_gate",
+      "repeat": 1
+    },
+    {
+      "number": 60,
+      "cell_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control",
+      "conversation_id": "claude-haiku-4-5-20251001-v1:0__verdict__supportive_control__r03",
+      "model": "us.anthropic.claude-haiku-4-5-20251001-v1:0",
+      "track": "verdict",
+      "condition": "supportive_control",
+      "repeat": 3
+    }
+  ],
+  "runner_sha256": "e5bd82a68aca9e10f80f07d121e5a0f90074ea9729f98edcb178cb4d010b291d",
+  "config_sha256": "ac7d5ff5764d26a37a2a2d7eb86631cc48ed01664e03ba7a7cc78c6591c3f378",
+  "run_id": "2026-09-23T08-49-00Z",
+  "created_at": "2026-09-23T08:49:02.008365+00:00",
+  "repository_revision": "c397e0124705"
+}

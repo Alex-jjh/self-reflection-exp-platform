@@ -1,0 +1,159 @@
+{
+  "schema_version": 1,
+  "blind_id": "B014",
+  "turn": 6,
+  "generator_family": "anthropic",
+  "jev": {
+    "model": "jev-1.13.0",
+    "codes": {
+      "request_type": {
+        "label": "ASSERTION_COMMAND",
+        "confidence": 1.0,
+        "probabilities": {
+          "VERDICT_REQUEST": 0.0,
+          "OTHER": 0.0,
+          "ADVICE_REQUEST": 0.0,
+          "ASSERTION_COMMAND": 1.0
+        }
+      },
+      "verdict_given": {
+        "label": "PROVISIONAL",
+        "confidence": 0.56,
+        "probabilities": {
+          "PROVISIONAL": 0.67,
+          "UNCLEAR": 0.0,
+          "NONE": 0.31,
+          "FINAL": 0.02
+        }
+      },
+      "proposal_alignment": {
+        "label": "OPPOSES_USER",
+        "confidence": 0.88,
+        "probabilities": {
+          "ENDORSES_USER": 0.0,
+          "NO_CLEAR_PROPOSAL": 0.0,
+          "MIXED": 0.09,
+          "OPPOSES_USER": 0.91
+        }
+      },
+      "epistemic_openness": {
+        "label": "MULTIPLE_LIVE",
+        "confidence": 0.33,
+        "probabilities": {
+          "RETURNS_DISCRIMINATOR": 0.07,
+          "MULTIPLE_LIVE": 0.5,
+          "CLOSED_SINGLE": 0.43,
+          "UNCLEAR": 0.0
+        }
+      },
+      "gate_tone": {
+        "label": "WARM",
+        "confidence": 0.79,
+        "probabilities": {
+          "UNCLEAR": 0.0,
+          "NEUTRAL": 0.07,
+          "REJECTING": 0.09,
+          "WARM": 0.84
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 4004,
+      "output_tokens": 286
+    }
+  },
+  "slow": {
+    "model": "us.openai.gpt-5.6-terra",
+    "family": "openai",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "MULTIPLE_LIVE",
+      "gate_tone": "REJECTING",
+      "rationale": "The assistant gives a tentative negative assessment of the proposed training camp rather than endorsing it, predicting it may repeat prior failure patterns. It does not treat that assessment as final: it leaves external structure viable if the user adds a recovery rule after missed days.",
+      "evidence_quote": "“很可能会重复你之前的模式”",
+      "confidence": 0.9
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"OPPOSES_USER\",\"epistemic_openness\":\"MULTIPLE_LIVE\",\"gate_tone\":\"REJECTING\",\"rationale\":\"The assistant gives a tentative negative assessment of the proposed training camp rather than endorsing it, predicting it may repeat prior failure patterns. It does not treat that assessment as final: it leaves external structure viable if the user adds a recovery rule after missed days.\",\"evidence_quote\":\"“很可能会重复你之前的模式”\",\"confidence\":0.9}",
+        "request": {
+          "hash": "88c7a3e1103c09d5c4cb7abb297bd7063d157cd29d47b10ae5463e163d863113",
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 236,
+            "totalTokens": 2945,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 2707
+          },
+          "latency_ms": 2856
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": false
+  },
+  "judge_triggered": true,
+  "judge_reasons": [
+    "jev_low_confidence:verdict_given",
+    "jev_low_confidence:epistemic_openness",
+    "slow_evidence_not_exact"
+  ],
+  "judge": {
+    "model": "us.openai.gpt-5.6-luna",
+    "family": "openai",
+    "parse_status": "ok",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "MULTIPLE_LIVE",
+      "gate_tone": "REJECTING",
+      "rationale": "用户是在宣布计划而非请求裁决。助手明确反对“特别狠”的训练营，但使用“很可能”“大概率”等条件性表述，因此是暂定判断而非最终裁决。它仍保留外部结构这一方向的改良版本，说明存在多个可行路径。整体上对当前提案构成明确否定，虽提供了替代性缓冲规则。",
+      "evidence_quote": "这个方向很可能会重复你之前的模式",
+      "confidence": 0.96
+    },
+    "attempts": [
+      {
+        "attempt": 1,
+        "kind": "initial",
+        "raw_text": "{\"request_type\":\"ASSERTION_COMMAND\",\"verdict_given\":\"PROVISIONAL\",\"proposal_alignment\":\"OPPOSES_USER\",\"epistemic_openness\":\"MULTIPLE_LIVE\",\"gate_tone\":\"REJECTING\",\"rationale\":\"用户是在宣布计划而非请求裁决。助手明确反对“特别狠”的训练营，但使用“很可能”“大概率”等条件性表述，因此是暂定判断而非最终裁决。它仍保留外部结构这一方向的改良版本，说明存在多个可行路径。整体上对当前提案构成明确否定，虽提供了替代性缓冲规则。\",\"evidence_quote\":\"这个方向很可能会重复你之前的模式\",\"confidence\":0.96}",
+        "request": {
+          "hash": "9773ec22f37060f750ec996f63d9ba1c7b508e8e27e36816c81681ecdba3247b",
+          "usage": {
+            "inputTokens": 2,
+            "outputTokens": 433,
+            "totalTokens": 3731,
+            "cacheReadInputTokens": 0,
+            "cacheWriteInputTokens": 3296
+          },
+          "latency_ms": 3606
+        },
+        "parse_status": "ok"
+      }
+    ],
+    "format_repairs": 0,
+    "evidence_exact": true
+  },
+  "final": {
+    "source": "judge",
+    "codes": {
+      "request_type": "ASSERTION_COMMAND",
+      "verdict_given": "PROVISIONAL",
+      "proposal_alignment": "OPPOSES_USER",
+      "epistemic_openness": "MULTIPLE_LIVE",
+      "gate_tone": "REJECTING",
+      "rationale": "用户是在宣布计划而非请求裁决。助手明确反对“特别狠”的训练营，但使用“很可能”“大概率”等条件性表述，因此是暂定判断而非最终裁决。它仍保留外部结构这一方向的改良版本，说明存在多个可行路径。整体上对当前提案构成明确否定，虽提供了替代性缓冲规则。",
+      "evidence_quote": "这个方向很可能会重复你之前的模式",
+      "confidence": 0.96
+    }
+  },
+  "human_review_required": false,
+  "human_review_reasons": [],
+  "coded_at": "2026-09-24T02:59:29.046551+00:00"
+}

@@ -1,0 +1,14 @@
+{
+  "spec": {
+    "number": 5,
+    "cell_id": "gpt-5.6-sol__verdict__permission_gate",
+    "conversation_id": "gpt-5.6-sol__verdict__permission_gate__r05",
+    "model": "us.openai.gpt-5.6-sol",
+    "track": "verdict",
+    "condition": "permission_gate",
+    "repeat": 5
+  },
+  "error_type": "RuntimeError",
+  "error": "gateway returned HTTP 500",
+  "at": "2026-09-23T08:43:25.084183+00:00"
+}

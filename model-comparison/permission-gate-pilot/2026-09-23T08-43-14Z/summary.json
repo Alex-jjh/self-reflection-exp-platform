@@ -1,0 +1,6 @@
+{
+  "complete": false,
+  "abandoned_after_incident": true,
+  "incident": "INCIDENT.md",
+  "reason": "gateway GPT-5.6 binary response serialization; fixed; restart with new run ID"
+}
