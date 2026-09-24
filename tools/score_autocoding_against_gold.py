@@ -31,8 +31,8 @@ def label(record, source, dim):
 
 
 def main():
-    ap=argparse.ArgumentParser(); ap.add_argument("--analysis-dir",type=Path,default=DEFAULT); ap.add_argument("--codes-dir",default="autocodes"); args=ap.parse_args()
-    gold=load_gold(args.analysis_dir/"human_gold_template.csv")
+    ap=argparse.ArgumentParser(); ap.add_argument("--analysis-dir",type=Path,default=DEFAULT); ap.add_argument("--codes-dir",default="autocodes"); ap.add_argument("--gold",default="human_gold_template.csv",help="gold CSV name inside analysis dir"); args=ap.parse_args()
+    gold=load_gold(args.analysis_dir/args.gold)
     if not gold: raise SystemExit("No complete human-gold rows. Fill the blinded template first.")
     records={}
     for p in (args.analysis_dir/args.codes_dir).glob("B*__t*.json"):
