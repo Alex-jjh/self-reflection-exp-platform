@@ -1,5 +1,7 @@
 # Self-Reflection Experiment Platform
 
+> **Summary:** The session instrument (chat shell, conditions, frozen scripts, protocol), the synthetic prompt-matrix experiment and its data, and the tools that run them.
+
 Session instrument for the SURF 2026 co-deception formative study
 (Phase A) and the synthetic prompt-matrix experiment (`matrix-pilot/`).
 Research context, status and decisions live in the research repo
@@ -10,13 +12,20 @@ instrument specification is archived there at `archive/superseded/INSTRUMENT_SPE
 
 | Path | What |
 |---|---|
-| `app.py` | The chat shell (Streamlit): 3 Latin-square conditions over Bedrock, embedded probe, **Regenerate button with full logging** (narrative-shopping sensor), task menu, facilitator sidebar, post-episode ratings. |
-| `conditions/` | System prompts + shared probe, per language (`zh/` v2 post-pilot-round-1, `en/` mirror — every tested constraint transfers 1:1). Session language = the language the participant normally uses with AI for personal topics. |
-| `frozen-scripts/` | Three 8-turn scripted user scenarios per language (`zh/`, `en/`) for prompt validation (S1 retrospective / S2 self-critical / S3 prospective plan). EN scripts map zh markers (对吧 → tag questions; 让你见笑了 → politeness self-deprecation) with coding caveats noted inline. |
-| `tools/frozen_pilot.py` | Replays frozen scripts against conditions via Bedrock; the pre-launch gate. |
-| `pilot-transcripts/` | Pilot outputs (gitignored) + `REVIEW.md` (tracked): round-1 verdicts. |
-| `screening/QUESTIONNAIRE.md` | Screening questionnaire draft (zh) for 问卷星 — eligibility + GIH-6/Dweck-3/NCS-18/CSW-academic. |
-| `sessions/` | Live session JSONL logs (gitignored — participant data). |
+| `app.py` | The chat shell (Streamlit): three Latin-square conditions over Bedrock, embedded probe, logged Regenerate button, task menu, facilitator sidebar, post-episode ratings. |
+| `bedrock_auth.py` | Credential loading for Bedrock (key file or default AWS chain). |
+| `conditions/` | System prompts and the shared probe, per language (`zh/`, `en/`). Session language is the one the participant normally uses with AI for personal topics. |
+| `frozen-scripts/` | Three 8-turn scripted user scenarios per language (S1 retrospective, S2 self-critical, S3 prospective plan) for prompt validation. |
+| `pilot-transcripts/` | Frozen-script pilot outputs and `REVIEW.md` (round-1 verdicts). |
+| `calibration/` | In-situ self-summary calibration: per-transcript summaries, `CALIBRATION_REPORT.md`, disagreement worksheet, quote check. |
+| `protocol/` | Session protocol, consent outline, participant brief, in-situ prompt and calibration plan, topic map. |
+| `consent/` | Consent materials. |
+| `screening/` | Screening questionnaire (zh, for Wenjuanxing) and item-retrieval guides; licensed scale items are not tracked. |
+| `matrix-pilot/` | Synthetic prompt-matrix experiment: prompts, user scripts, coding rubric, auto-coding workflow, blind adjudication, unblinded read. See its README. |
+| `model-comparison/` | Raw data of the matrix runs: conversations, manifests, blind coding package, auto-codes. The blinding key stays local. |
+| `tools/` | Runners: `frozen_pilot.py` (pre-launch gate), `insitu_calibration.py`, matrix runner and auto-coder, blind-coding preparation and scoring, workbook builder, with tests. |
+| `refsrc/` | Cloned public system-prompt corpora (git-ignored). |
+| `sessions/` | Live session logs (git-ignored; participant data lives in the private repo). |
 
 ## Run
 
@@ -30,7 +39,7 @@ python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
 .venv/bin/streamlit run app.py
 ```
 
-## Log streams (per INSTRUMENT_SPEC R4)
+## Log streams
 
 JSONL events: `session_start`, `episode_start`, `user_turn` (text, chars,
 inter-turn latency), `ai_turn` (text, response latency), `regenerate`

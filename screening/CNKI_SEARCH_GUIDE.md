@@ -12,7 +12,7 @@
 
 ## A. ✅ 已取件（07-27）→ 转为岔路裁决 + 一个可选检索
 
-**结果**：刘 2007 原文到手（`papers/scales/liu2007-NFCC-zh.pdf`），但表 1
+**结果**：刘 2007 原文到手（`library/papers/scales/liu2007-NFCC-zh.pdf`），但表 1
 只印 EFA 保留的 21 条（42 条全文未印）。6 条已替换进问卷，9 条保留翻译
 初稿。**详情与 A/B 岔路见 ITEM_RETRIEVAL_GUIDE ①（待你裁决）。**
 

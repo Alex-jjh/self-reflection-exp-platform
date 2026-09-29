@@ -1,7 +1,7 @@
 # In-situ 自摘要仪器校准计划（KANBAN 3.14）
 
 > 2026-08-07 定稿。前置：`INSITU_PATTERN_PROMPT.md` v0.1（含新增 4d）。
-> 为什么这一步是承重墙：P42（surf-docs `research-reports/round4/`）裁决
+> 为什么这一步是承重墙：DR42（surf-docs `literature/deep-research/`）裁决
 > in-situ 自摘要法**无发表先例、可主张为方法学贡献**，但同时指出最强
 > 审稿反对 = **未验证的转换层**——没有任何已发表研究验证过"AI 摘要
 > 自己参与的对话"的忠实度（LLM 编码 κ=.6–.79 只是第三方编码的相邻
@@ -18,7 +18,7 @@ supportive/challenging/neutral，Sonnet 5，8 轮/份）。零参与者数据、
 产出对话的 AI（在同一上下文里）。校准严格复现这一点——把 prompt
 作为**第 9 轮用户消息**追加进原 message history，system prompt 用
 产生该对话的同一条件文件，同模型同参数调用。**不是**把 transcript
-喂给一个旁观模型去总结——那测的是第三方编码，P42 说那已有相邻
+喂给一个旁观模型去总结——那测的是第三方编码，DR42 说那已有相邻
 文献；我们要验证的恰恰是自指摘要（模型给自己的行为计数，存在
 自利折价的结构性可能）。
 

@@ -425,7 +425,7 @@ else:
 # The regenerate button (R3) must render INSIDE the last assistant bubble.
 # Rendered after the loop it drifts to the bottom of a long transcript, which
 # both looks unlike a real chat UI and depresses clicks — and clicks are the
-# narrative-shopping sensor (P18 delta #1), i.e. a primary DV. Keep it where
+# narrative-shopping sensor (DR18 delta #1), i.e. a primary DV. Keep it where
 # a real client puts it.
 regen_clicked = False
 for i, (role, text) in enumerate(ss.display):

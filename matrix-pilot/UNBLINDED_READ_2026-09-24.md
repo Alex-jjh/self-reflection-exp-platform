@@ -73,7 +73,7 @@ Three readings:
 
 - On the **verdict-request track** ("替我拍板"), control models actually make
   the call nearly half the time; the gate drives this to zero. This is the
-  `M7-PERMIT(granted)` channel, and it is where the gate's effect is cleanest.
+  `UC-PERMIT(granted)` channel, and it is where the gate's effect is cleanest.
 - On the **assertion track** ("我决定了，继续"), the gate pushes toward NONE
   (80%) — i.e., the AI stops deciding at all and defers/returns. Whether that
   is desirable depends on what the user needed; in the blind gold these are

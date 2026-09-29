@@ -19,7 +19,7 @@
 >   保留翻译初稿走回译（⚠ 标注）；该节 **6 点计分**。岔路 A/B 待裁决
 >   （详见 ITEM_RETRIEVAL_GUIDE ①）
 > - **IUS-12**：✅ **条目已到位（2026-07-27）**——zh 用**吴莉娟等 2016**
->   附录全文 12 条（与 Carleton 原版同序；papers/scales/
+>   附录全文 12 条（与 Carleton 原版同序；library/papers/scales/
 >   wu-IUS12-zh-middleschool.pdf），大学生适用性锚定**张亚娟等 2017**
 >   （N=1,018，α=.878）；**Likert 5 点**；两因子按 Carleton 原版编号
 >   （见计分备注）。EN 用 Carleton et al. 2007 原版（同为 5 点）
@@ -29,7 +29,7 @@
 >   降级为核对项。EN 用 Treynor et al. 2003 原版
 > - GIH-6（Leary 2017）、Dweck-3：无 zh 验证版，翻译初稿待回译核对（不变）
 > - CSW-academic（Crocker 2003）：待比对王磊/郑雪 2006；暂用翻译初稿
-> - ⚠ 中庸作答提醒（P21 陷阱3）：pilot 规模下量表只做定性对照
+> - ⚠ 中庸作答提醒（DR21 陷阱3）：pilot 规模下量表只做定性对照
 > - ✅ 占位替换原则已执行完毕（07-27）：**存在验证中文版的条目已全部换入**
 >   （IUS-12 全 12 条、RRS 5 条、NFCS 6 条、ECR 8/9 条）；其余为 AI 辅助
 >   翻译定稿（Alex 裁决），**limitation 统一承认**（措辞见
@@ -86,7 +86,7 @@
 ### 认知闭合需求 NFCS-15（Roets & Van Hiel 2011；en 原版条目，发布前核对；**6 点计分**：1=强烈不同意 … 6=强烈同意——刘 2007 与 W&K 原版均为 6 点，与本问卷默认 7 点不同，Qualtrics 搭建时该节单独设置）
 
 > 【zh 条目状态（2026-07-27 取件后更新）：刘雪峰/梁钧平 2007 原文到手
-> （`papers/scales/liu2007-NFCC-zh.pdf`），但**其表 1 只印验证后保留的
+> （`library/papers/scales/liu2007-NFCC-zh.pdf`），但**其表 1 只印验证后保留的
 > 21 条**（42 条经 EFA 两轮删除，未印全文）——原"42 选 15"方案不可行。
 > 逐条比对结果（存证 `items/nfcc21-liu2007-zh.md`）：R&VH-15 中 **6 条
 > 有刘版验证措辞（已替换：Q18,19,20,27,29,30，下标 ✅）**；其余 9 条的
@@ -116,10 +116,10 @@
 
 > 【zh 条目来源（2026-07-27 替换完成，✅ 不再阻塞）：**吴莉娟、王佳宁、齐晓栋
 > 2016**《简版无法忍受不确定性量表在中学生中应用的效度和信度》，中国心理
-> 卫生杂志 30(9)，**文末附录印有全部 12 条**（`papers/scales/
+> 卫生杂志 30(9)，**文末附录印有全部 12 条**（`library/papers/scales/
 > wu-IUS12-zh-middleschool.pdf`），条目顺序=Carleton 2007 原版顺序，逐条
 > 照录。**大学生适用性锚定张亚娟等 2017**（N=1,018，α=.878，
-> `papers/scales/zhang2017-IUS12-zh-college.pdf`）——注意张版为独立翻译、
+> `library/papers/scales/zhang2017-IUS12-zh-college.pdf`）——注意张版为独立翻译、
 > 条目顺序与 Carleton 不同（其正文透露的"第8条"实为 Carleton 第3条内容），
 > 故**不与吴版拼接措辞、不用张版因子编号**；方法节表述："zh 条目采用
 > 吴莉娟等(2016)公开发表的 IUS-12 中文版，该量表在大学生群体的适用性
@@ -142,7 +142,7 @@
 ### 反刍-brooding RRS 5 项（Treynor et al. 2003 brooding 因子；**4 点频率量表**：1=从不 2=有时 3=经常 4=总是 / 1=almost never … 4=almost always）
 
 > 【zh 条目来源（2026-07-27 替换）：**韩秀、杨宏飞 2009** RRS 中文版
-> （中国临床心理学杂志 17(5)，α=.90，`papers/scales/han2009-RRS-zh.pdf`）
+> （中国临床心理学杂志 17(5)，α=.90，`library/papers/scales/han2009-RRS-zh.pdf`）
 > 强迫思考（brooding）因子 = 原量表条目 5,10,13,15,16，与 Treynor 编号
 > 一致。条目文本取自网络转载（xinlixue.cn），已用韩 2009 原文的样本
 > 细节+因子表+计分交叉核验（存证 `screening/items/rrs22-zh.md`）；
@@ -164,7 +164,7 @@
 
 > 【条目来源（2026-07-25 对号完成）：zh 条目取自**李同归、加藤和生 2006
 > ECR 中文版**（心理学报 38(3):399-406，α=.82/.77，重测 .71/.72，
-> `papers/scales/litonggui2006-ECR-zh.pdf`）中对应 ECR-RS 的条目，
+> `library/papers/scales/litonggui2006-ECR-zh.pdf`）中对应 ECR-RS 的条目，
 > 指称从"恋人"改为"他们"（通用关系）——**此指称适配需在方法节注明**。
 > 44g 无 ECR 原版对应条目（ECR-RS 该题源自 ECR-R），保留我们的翻译并标注。
 > 若 CNKI 检得 ECR-RS 专门中文验证（取件指南③b），则整节替换为该版。】
@@ -214,12 +214,12 @@
   Q35,38,39,42,44）。⚠ 勿用张亚娟 2017 的因子编号（其条目为独立翻译、
   顺序与原版不同）；吴 2016 在中学生中报告三因子，pilot 规模下以总分+
   Carleton 两因子做定性参考即可。**与访谈 Q11 追问（表述萎缩自我报告）
-  交叉验证**——P27 signature 3。
-- **RRS-brooding**：总分（5–20），高=brooding 强。**Moderator 用途**（P27）：
+  交叉验证**——DR27 signature 3。
+- **RRS-brooding**：总分（5–20），高=brooding 强。**Moderator 用途**（DR27）：
   高 brooding 者截断孵化可能是治疗性的，低 brooding 者才是 foreclosure 风险
   人群——pilot 只做定性分组参考，不检验。
 - CSW-academic：均分，高=学业权变性强（优绩主义倾向 proxy）。
-- **ECR-RS**：回避分（6 题，R 题反向）+ 焦虑分（3 题）分开计。用途（P30/ch26）：
+- **ECR-RS**：回避分（6 题，R 题反向）+ 焦虑分（3 题）分开计。用途（DR30/ch26）：
   焦虑高 = reassurance 回路高危（与访谈"AI 鼓励了我"听觉指引交叉）；
   回避高 = "仅向 AI 外化"预期人群（与 Q6 人际模板探针交叉；预期
   bypass——回避者照样向 AI 暴露）。pilot 规模只做定性分组。

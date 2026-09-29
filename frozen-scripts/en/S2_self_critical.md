@@ -8,7 +8,7 @@
 > politeness self-deprecation ("sorry, I know how pathetic that sounds").
 > NOTE for coding: the zh ritual-self-deprecation marker is a conventionalized
 > politeness form; the EN analogue is weaker/less conventionalized — code with
-> care, PERF/SUB judgment may differ across languages (P21 caveat).
+> care, PERF/SUB judgment may differ across languages (DR21 caveat).
 >
 > **Register revision (2026-08-04)**: turn structure and every diagnostic beat
 > are unchanged; only the voice is looser. Formal features carried over from

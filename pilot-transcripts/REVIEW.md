@@ -46,7 +46,7 @@ challenging v1.
 - This is the condition doing exactly what the study needs it to do.
 - Ritual self-deprecation (U4 "让你见笑了"): supportive comforted then
   gently probed (fine); challenging asked "真实的描述还是习惯性的说法" —
-  which is literally our P21 coding question asked BY the AI. Note: this
+  which is literally our DR21 coding question asked BY the AI. Note: this
   means challenging may surface data the coder needs; nice property.
 
 ## Actions before freeze → v1-frozen
@@ -99,7 +99,7 @@ sounds"). Spot-check against the same diagnostic turns:
 - **Ritual self-deprecation (S2 U4): ✅** challenging challenges the
   generalization jump and rejects the "pathetic" register — good; NOTE the
   EN politeness marker is weaker than 让你见笑了, cross-language A-code
-  comparison must stay stratified (P21 caveat, now in SESSION_PROTOCOL §0).
+  comparison must stay stratified (DR21 caveat, now in SESSION_PROTOCOL §0).
 
 Open: Alex read-through of the 9 EN transcripts (same gate as zh), then
 zh+en freeze together.
