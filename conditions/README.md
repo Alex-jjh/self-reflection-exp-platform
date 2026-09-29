@@ -1,7 +1,7 @@
 # Condition System Prompts (v0 — pending frozen-script pilot)
 
 Three conditions for the Phase-A simulated reflection episodes, per
-`surf-docs/INSTRUMENT_SPEC.md` R1–R2. Session language: Chinese.
+`INSTRUMENT_SPEC.md` R1–R2 (research repo, `archive/superseded/`). Session language: Chinese.
 
 Design constraints (from the research docs — do not violate when editing):
 

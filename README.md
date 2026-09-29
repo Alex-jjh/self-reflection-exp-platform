@@ -1,9 +1,10 @@
 # Self-Reflection Experiment Platform
 
 Session instrument for the SURF 2026 co-deception formative study
-(Phase A). Spec: `INSTRUMENT_SPEC.md` in the
-[surf-docs repo](../surf-docs/INSTRUMENT_SPEC.md); research context:
-SURF_SIX_PAGER / SURF_PROPOSAL_V4 there.
+(Phase A) and the synthetic prompt-matrix experiment (`matrix-pilot/`).
+Research context, status and decisions live in the research repo
+(`surf-work-reflection-research`: `STATUS.md`, `DECISIONS.md`). The original
+instrument specification is archived there at `archive/superseded/INSTRUMENT_SPEC.md`.
 
 ## Layout
 
@@ -50,7 +51,5 @@ regenerate events are first-class.
 
 ## Status
 
-Lives in the surf-docs repo's `KANBAN.md` (single board for both repos) —
-see Slice 1 (path to first participant) and the platform-side backlog there.
-One deliberate non-feature worth restating: the tail-probe module
-(multi-agent episode) is intentionally unbuilt until the main flow is stable.
+Lives in the research repo's `STATUS.md` (one status file for all repositories).
+The tail-probe module (multi-agent episode) is intentionally not built.
