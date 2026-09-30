@@ -3,8 +3,19 @@
 > **Summary:** The synthetic matrix (SYN), a no-participant experiment in which three models answer the same scripted self-critical user under a supportive control prompt or a permission-gate prompt: 60 conversations, 480 model turns, 180 coded units (AI turns 6–8). This file lists its materials and data, how to run and code it, what the coder of the human anchor must not open first, and what its results can support now.
 
 SYN tests whether an AI response failure caused by an injected self-narrative
-differs from a failure caused by a request for permission or a verdict. All data
-is synthetic; no participant is involved.
+differs from a failure caused by a request for permission or a verdict, and
+compares a supportive control policy with a permission-gate policy on both. All
+data is synthetic; no participant is involved.
+
+What to read first:
+
+- To code the human anchor: Before coding the human anchor, first. It names
+  the only two files to code from and what not to open until your codes are
+  saved.
+- To understand the experiment: Design and Files, then What the results can
+  support now.
+- To run or rerun collection or auto-coding: Run, Crash-safe resume and Coding,
+  then `AUTOCODING_WORKFLOW.md`.
 
 **Names.** `SYN` is the experiment's ID in the research repo (`ARCHITECTURE.md`,
 Identifiers). "Permission-gate pilot" is the name of its runs, used in folder and
@@ -13,20 +24,26 @@ tool names (`model-comparison/permission-gate-pilot/`,
 three name the same experiment. The cross-model frozen-script replay
 (`tools/cross_model_pilot.py`, `tools/model_compare.py`, `tools/matrix_index.py`)
 is a separate, earlier exploration of the session conditions and is not SYN. The
-terms *human anchor*, *AI reference* and *Claude* are defined in the research
-repo's `ARCHITECTURE.md` (Terms).
+terms *human anchor*, *AI reference*, *Claude* and *Jev* are defined in the
+research repo's `ARCHITECTURE.md` (Terms); D-nnn are its decisions
+(`DECISIONS.md`).
 
 ## Design
 
 - User track: `S2_verdict` vs `S2_bias` (same self-critical content; speech act
-  differs). The reports call them the verdict-request track and the
+  differs). In `S2_verdict` the user asks for a verdict or permission; in
+  `S2_bias` the same content is stated as settled, and the user tells the AI to
+  continue within it (turn 8 asks for a concrete plan) without asking it to
+  certify the view. The reports call them the verdict-request track and the
   injected-bias (assertion) track.
 - System prompt: an identical shared Chinese supportive core plus one of two
   structurally matched policy blocks — `supportive_control` (give a clear best
   judgment with uncertainty) vs `permission_gate` (preserve alternatives and
   return a discriminator). The policy blocks are kept within 10% character
   length so prompt length/detail is not the manipulation.
-- Models: frozen Sonnet 5, Haiku 4.5 fast contrast, GPT-5.6 sol cross-family contrast.
+- Models: Claude Sonnet 5 (the study baseline, the model frozen for the lab
+  sessions), Claude Haiku 4.5 (a fast contrast within the same family) and
+  GPT-5.6 sol (a contrast from another provider family).
 - Repeats: 5 per cell.
 - Total: 2 × 2 × 3 × 5 = 60 conversations; 8 turns each = 480 model requests.
 - Coded units: the AI responses at turns 6–8 of every conversation, 180 units,
@@ -64,9 +81,13 @@ specifications.
 Records are dated and are not edited except for factual corrections.
 
 The data are in `model-comparison/permission-gate-pilot/`;
-`model-comparison/README.md` lists the runs. Below, `coding-v1/` means
+`model-comparison/README.md` lists the runs. The *frozen run* is
+`2026-09-23T08-49-00Z/`, the 60-conversation run that all SYN analyses use (its
+checksums are in `FROZEN_ANALYSIS_INPUT.json`). Below, `coding-v1/` means
 `model-comparison/permission-gate-pilot/2026-09-23T08-49-00Z/coding-v1/`, the
-coding folder of the frozen run; its `README.md` lists the coding files.
+coding folder of the frozen run; its `README.md` lists the coding files. The
+*locked run* is the 180-unit auto-coding run in `coding-v1/autocodes/`, whose
+inputs are fixed by the hashes in `coding-v1/AUTOCODING_LOCK.json`.
 
 **What is tracked.** Everything under `model-comparison/` is tracked in this
 public repository (research repo D-020), including the raw transcripts, whose
@@ -88,7 +109,9 @@ family-routed auto-coder, not from a separate Claude recode (D-025).
 
 Code only from `coding-v1/ANCHOR_WORKBOOK.html` (open it in a browser; it shows
 the blind text only) and `CODING_RUBRIC.md` v2.1. Until the anchor codes are
-saved, do not open:
+saved, do not open anything that names the model, track or condition of a
+conversation, or reports machine codes, AI-reference codes or results by
+condition. The files known to do so are:
 
 - anything in `model-comparison/permission-gate-pilot/` outside
   `2026-09-23T08-49-00Z/coding-v1/` (transcript names state model and condition);
@@ -101,20 +124,31 @@ saved, do not open:
   `coding-v1/ai_reference_claude_blind.csv`,
   `coding-v1/SCORE_vs_ai_reference_claude.json`), `UNBLINDED_READ_2026-09-24.md`
   and `PROBE_READTHROUGH_2026-09-23.md` (the four-cell probe, read by condition);
-- the research-repo documents that report SYN results by condition:
-  `concepts/findings.md` (F-01, F-09 to F-12), the SYN parts of
-  `concepts/evidence.md` and `concepts/measurement.md`, the finding list in
-  `plan/research-plan.md`, the 2026-09-29 rows of `CHANGELOG.md` on F-01 and
-  F-09 to F-12, `records/notes/junior-selfselection-discussion-2026-09-25.md`
-  and the 09-25 row of `archive/superseded/KANBAN.md`;
+- the research-repo documents that report SYN results by condition or
+  AI-reference codes: `concepts/findings.md` (F-01, F-09 to F-12), the SYN
+  parts of `concepts/evidence.md` and `concepts/measurement.md`, the three
+  SYN-only candidate mechanisms in `concepts/mechanisms.md`
+  (`mech:closure-by-substitution`, `mech:state-dismissal`,
+  `mech:comply-rewrite`), `plan/research-plan.md` §3 (finding list), §6(c) and
+  §8, `plan/design-map.md` (FT01 and the spec-level implication), the
+  **Phase B primary outcome** entry of `STATUS.md` (Decisions pending), the 2026-09-29 rows of `CHANGELOG.md` on F-01 and F-09 to F-12,
+  `records/notes/junior-selfselection-discussion-2026-09-25.md`,
+  `records/experiments/matrix-pilot-collection-complete-2026-09-23.md` (it
+  summarises the four-cell probe) and the 09-25 row of
+  `archive/superseded/KANBAN.md`;
+- in the private codebook (session-data `coding/codebook/`), families X and
+  SYN, which name generator models or quote AI-reference codes; code from `CODING_RUBRIC.md` instead;
 - the messages of platform commits c397e01 (the probe) and 6a0b3c7, which
   summarise per-condition results.
 
 The workbook's "Download completed CSV" button saves `human_anchor_alex.csv` to the
 browser's download folder, with the adjudicator column set to "Alex". Move it to
 `coding-v1/human_anchor_alex.csv`. Scoring uses
-`tools/score_autocoding_against_gold.py`; the order of the steps, and the
-criterion to fix before scoring, are in the research repo's `STATUS.md`.
+`tools/score_autocoding_against_gold.py`; the commands for machine-coding the
+anchor units and scoring them against the CSV are in `AUTOCODING_WORKFLOW.md`
+(Reruns and locks, example). The order of the steps, and the criterion to fix
+before scoring, are in the research repo's `STATUS.md` (Next actions; Decisions
+pending).
 
 ## What the results can support now
 
@@ -123,20 +157,22 @@ and adjudicated (research repo D-019). The one AI reader is the AI reference,
 coded by Claude, the project's AI research assistant. Claude's provider family is
 Anthropic, and two of the three generators are Anthropic models (Claude Sonnet 5,
 Claude Haiku 4.5), so for their units the AI reference breaks the workflow's
-rule that a generator's provider family never codes its own output (D-016). This is reported as a
-limitation (D-025). Whether 12 human-coded units plus the 36-unit AI reference
+rule that a generator's provider family never codes its own output (D-016).
+This is reported as a limitation (D-025). Whether 12 human-coded units plus the 36-unit AI reference
 are enough for W1 is an open question for Brennan (research repo `STATUS.md`,
 Decisions pending).
 
-Two limits of the locked 180-unit auto-coding run
-(`coding-v1/AUTOCODING_LOCK.json`):
+Two limits of the locked run. (The auto-coder uses Jev as a fast path; a
+generative *slow coder* from a provider family other than the generator's; a
+third-model *judge* on the load-bearing dimensions; and a *human queue* for
+units they leave unresolved: `AUTOCODING_WORKFLOW.md`, Coders and Escalation.)
 
 - The generative coders (slow coder and judge) received the label names but not
   the rubric's definitions: the system prompt built by `coding_system()` in the
   locked version of `tools/run_matrix_autocoding.py` lists only the allowed
   values. Jev received a one-line criterion per label.
-- 23 of the 180 units (12.8%) went to the human queue. There is no record that
-  they have been reviewed.
+- 23 of the 180 units (12.8%) went to the human queue. There is no record that they
+  have been reviewed; how they are handled is a pending decision (research repo `STATUS.md`, Decisions pending).
 
 ## Run
 
@@ -171,7 +207,10 @@ contract, as the runners use it (`tools/run_permission_gate_pilot.py`,
 - Two launch scripts in the gateway folder start the gateway and a runner
   together and stop both on exit: `run_permission_gate_pilot.sh` (collection)
   and `run_matrix_autocoding.sh` (auto-coding). The auto-coder also needs
-  `TYPESAFE_API_KEY` for Jev, supplied out of band.
+  `TYPESAFE_API_KEY` for Jev, supplied out of band. The auto-coding launcher
+  passes extra arguments to the runner and defaults to calibration mode, so give
+  `--codes-dir` explicitly (`AUTOCODING_WORKFLOW.md`, Reruns and locks). The
+  gateway's own `README.md` gives its set-up and launch commands.
 
 Plan without making model calls:
 
@@ -188,7 +227,8 @@ explicit `__ERROR.json`; unresolved work is never silently dropped.
 Every AI turn is atomically checkpointed before and after the model call. If the
 process, terminal, network, or machine stops:
 
-1. Copy the `RESUME ANY TIME WITH:` command printed at startup.
+1. Copy the `RESUME ANY TIME WITH:` command printed at startup (it is also
+   saved, without credentials, as `RESUME_COMMAND.txt` in the run folder).
 2. Run it from any terminal after connectivity/authentication is restored.
 3. Completed conversations are skipped.
 4. An interrupted conversation resumes at its next unfinished turn. If a model

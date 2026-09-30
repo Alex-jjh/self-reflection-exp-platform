@@ -11,9 +11,9 @@ co-investigator; files in `../consent/`). This study runs under that approval
 as one study activity. The questions below are the body's section "未决问题"
 (open questions). They concern the approval under which the L1 sessions have
 already run, not only Phase B, and Brennan has to answer them. There is no
-record that they have been put to him yet. They are in the research repo's
-letter draft `records/drafts/brennan-letter-2026-09-29.md`, and the research
-repo's `STATUS.md` (Decisions pending) tracks them.
+record that they have been put to him yet. The research repo's `STATUS.md` tracks
+them (Decisions pending, **Ethics questions**) and puts them on the agenda of
+the next meeting with Brennan (**Meet Brennan**).
 
 1. **Session length.** The information sheet says a session typically takes
    45–90 minutes; a session in this study takes 90–120 minutes
@@ -38,7 +38,7 @@ repo's `STATUS.md` (Decisions pending) tracks them.
    scroll-back step happens on the participant's own phone, which is not in the
    meeting recording. Brennan only needs to be told. (Body: open question 2.)
 
-The same letter raises two related points that this outline does not cover:
+The same STATUS entry covers two related points that this outline does not:
 TypeSafe's Jev classifier received L1 episode text, and Claude processes the
 donor corpus D01 (research repo D-024).
 

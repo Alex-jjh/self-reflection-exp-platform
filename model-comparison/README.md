@@ -18,4 +18,5 @@ coding the human anchor) before opening anything here.
 
 `tools/cross_model_pilot.py`, `tools/model_compare.py` and `tools/matrix_index.py`
 (the cross-model frozen-script replay, which is not SYN) also write into
-`model-comparison/`. None of their output is in this folder.
+`model-comparison/`. Their only output here is `CROSS_MODEL_INDEX.md`, the index
+that `tools/matrix_index.py` rebuilds; it currently lists no cells.
