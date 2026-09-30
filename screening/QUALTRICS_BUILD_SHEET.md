@@ -1,5 +1,7 @@
 # Qualtrics 逐题录入稿 — 给 computer-use agent 的施工文档
 
+> **Summary:** Item-by-item Qualtrics build sheet (2026-07-30) derived from `QUESTIONNAIRE.md`. Record of an abandoned route: the questionnaire runs on Wenjuanxing (research repo D-004), so this sheet is not used.
+
 > **唯一事实来源：`screening/QUESTIONNAIRE.md`（v1 定稿）。** 本稿是它的
 > 无歧义施工版：题干已剥掉所有科研标注、逐题给出类型/刻度/双语文本/逻辑。
 > 若本稿与 QUESTIONNAIRE.md 冲突，以 QUESTIONNAIRE.md 为准并回报。

@@ -10,7 +10,8 @@
 - Same script hash within track; matched prompt hashes distinct as designed.
 - Gateway shut down after run.
 - Raw synthetic transcripts: gitignored run directory
-  `model-comparison/permission-gate-pilot/2026-09-23T08-29-13Z/`.
+  `model-comparison/permission-gate-pilot/2026-09-23T08-29-13Z/` (tracked since
+  platform commit c47a356, 2026-09-24, research repo D-020).
 
 ## Blind read, then reveal
 

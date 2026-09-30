@@ -1,7 +1,13 @@
-# Condition System Prompts (v0 — pending frozen-script pilot)
+# Condition system prompts (Phase A)
+
+> **Summary:** The three condition system prompts (supportive, challenging, neutral) and the shared probe of the Phase A lab sessions, in Chinese and English, and the design constraints any edit must keep. Status: used in the seven L1 sessions, which are complete (research repo D-006).
 
 Three conditions for the Phase-A simulated reflection episodes, per
-`INSTRUMENT_SPEC.md` R1–R2 (research repo, `archive/superseded/`). Session language: Chinese.
+`INSTRUMENT_SPEC.md` R1–R2 (research repo, `archive/superseded/`). Session
+language: the one the participant normally uses with AI for personal topics
+(`zh/` or `en/`). The prompt files were last changed in commit d439c60
+(2026-08-05), which added two clauses to the challenging prompt after the P01
+session; git history has every change.
 
 Design constraints (from the research docs — do not violate when editing):
 
@@ -31,6 +37,7 @@ Design constraints (from the research docs — do not violate when editing):
 Files: `supportive.txt`, `challenging.txt`, `neutral.txt`, `probe.txt`
 (the shared probe instruction appended to all three).
 
-Pilot gate: run all three against `frozen-scripts/*.md` via
-`tools/frozen_pilot.py`, code outputs with the specimen taxonomy, revise,
-freeze as v1 before any live participant.
+Pre-launch check: `tools/frozen_pilot.py` runs all three against
+`frozen-scripts/*.md`; the outputs are checked with the specimen taxonomy. The
+transcripts are in `pilot-transcripts/`, and the round-1 verdicts in
+`pilot-transcripts/REVIEW.md`.

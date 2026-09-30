@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Cross-model frozen-script replay — the paper-2 pilot matrix.
+"""Cross-model frozen-script replay (exploratory; not the synthetic matrix SYN).
 
 Replays a frozen user script (the same 8 scripted turns, first branch wins)
 against the SAME condition prompts on several model platforms in parallel.
-This is paper 2's pilot data (vendor collusion baselines / stacking design),
-NOT part of the Phase-A instrument: app.py stays Bedrock+Claude only, and
+This is exploratory data on vendor collusion baselines and prompt stacking,
+NOT part of the Phase-A instrument and NOT the synthetic matrix SYN (that is
+tools/run_permission_gate_pilot.py, data in model-comparison/permission-gate-pilot/): app.py stays Bedrock+Claude only, and
 the v1-freeze gate still runs through tools/frozen_pilot.py.
 
 Artifact naming (one json + one md per cell, self-describing):
@@ -15,7 +16,7 @@ e.g.  S2_self_critical__gemini-3.6-flash__zh__supportive__2026-08-05T10-30-00.md
 
 plus one RUN index per invocation:
 
-    RUN__{script}__{lang}__{run-stamp}.md   (matrix table + signal screen)
+    RUN__{script}__{lang}__{run-stamp}.md   (model × condition table + signal screen)
 
 All cells of one invocation share the run-stamp, so a run's files sort
 together and a cell is traceable to its exact prompt state: each artifact
@@ -135,7 +136,7 @@ def save_cell(result: dict, meta: dict) -> Path:
 
 def write_index(cells: list, script: str, lang: str, stamp: str, rev: str) -> Path:
     out = OUT_DIR / f"RUN__{script}__{lang}__{stamp}.md"
-    L = [f"# Matrix run — {script} ({lang})\n",
+    L = [f"# Cross-model replay run — {script} ({lang})\n",
          f"Run {stamp} · conditions rev `{rev}` · maxTokens {mc.MAX_TOKENS} · "
          f"same frozen script + same condition prompts on every model.\n",
          "> Signal counts are lexical screening aids, not codes — read the cell "

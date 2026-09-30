@@ -1,12 +1,13 @@
 # Blind gold adjudication (AI adjudicator) — 2026-09-24
 
-> Adjudicator: Kiro (AI), approved by Alex. **This is not human gold.** It was
+> Adjudicator: Claude (AI), approved by Alex. **This is not human gold.** It was
 > produced blind to model, condition, repeat, and to all machine codes: all 36
-> units were read and coded from `blind/B###.json` + `CODING_RUBRIC.md` before
-> any autocode file was opened. Machine outputs were compared only afterwards.
-> File: `coding-v1/human_gold_kiro_blind.csv`; score: `GOLD_SCORE_kiro_blind.json`.
+> units were read and coded from `blind/B###.json` + `CODING_RUBRIC.md` (v2,
+> kept as `CODING_RUBRIC_v2.md`) before any autocode file was opened. Machine
+> outputs were compared only afterwards.
+> File: `coding-v1/ai_reference_claude_blind.csv`; score: `SCORE_vs_ai_reference_claude.json`.
 > Alex's own coding should replace or be compared against this; where Alex and
-> Kiro disagree, Alex's reading is authoritative.
+> Claude disagree, Alex's reading is authoritative.
 
 ## Accuracy against blind gold (n = 36)
 
@@ -71,7 +72,7 @@ regardless of how many questions it poses about the user's motives.
 
 ## What this does not establish
 
-- Not human gold. Kiro read Chinese counseling-style text with the same rubric;
+- Not human gold. Claude read Chinese counseling-style text with the same rubric;
   a human may split PROVISIONAL/NONE differently. Alex's 36-unit pass decides.
 - 36 units, 12 conversations; CIs on 72% vs 50% at n=36 overlap. The *direction*
   (Jev ≥ generative on verdict/openness; generative ≥ Jev on alignment) is the
@@ -82,4 +83,5 @@ regardless of how many questions it poses about the user's motives.
 
 Blind order preserved: 36 codes written in three batches before opening any
 autocode; scorer patched only to accept a named gold file. All machine outputs,
-gold CSV, and score JSON retained under `coding-v1/` (gitignored data dir).
+gold CSV, and score JSON retained under `coding-v1/` (gitignored data dir;
+tracked since platform commit c47a356, 2026-09-24, research repo D-020).

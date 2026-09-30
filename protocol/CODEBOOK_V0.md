@@ -1,7 +1,10 @@
 # 编码本 v0（草案）— Phase A 转录编码
 
+> **Summary:** The first codebook (v0 draft) for coding Phase A transcripts. Frozen on 2026-08-19 and kept as a design record; it is not updated. The current codebook is in the private session-data repo: `coding/codebook/codebook.yaml`, rendered as `coding/codebook/CODEBOOK.md`.
+
 > **⚠️ 本文件已冻结（2026-08-19）。** Living codebook 已迁至私有数据 repo
-> `self-reflection-session-data/coding/history/codebook-revision-log-v0-v0.8.md`（v0.2 起）——迁移原因：
+> `self-reflection-session-data/coding/codebook/`（源文件 `codebook.yaml`，渲染为 `CODEBOOK.md`；
+> v0.2 起的修订史见 `coding/history/codebook-revision-log-v0-v0.8.md`）——迁移原因：
 > 编码手册自 v0.2 起引用参与者原话作锚例，不能留在公开 repo。
 > 本文件保留 v0 原文作为设计存档，不再更新。
 
@@ -113,7 +116,7 @@
   达到R2+，也不自动意味着未foreclosure；深度停留在R0–R1也不自动
   意味着foreclosure（需看D节的EXIT判定）。旧措辞"R2+超过16%基线才算
   显著突破"已删除，因为它把深度直接等同于共谋证据，这个等同本身
-  不成立。详见 `surf-docs/literature/deep-research/DR37-reflection-depth-vs-narrative-closure.md`。
+  不成立。详见 research repo `literature/deep-research/DR37-reflection-depth-vs-narrative-closure.md`。
 
 ## D. Episode级汇总变量
 

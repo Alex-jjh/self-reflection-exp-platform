@@ -2,7 +2,8 @@
 """In-situ prompt v1 real-world test (3.14 extension arm).
 
 Runs the v1 pattern-extraction prompt against REAL long conversations
-from the private corpus (Conversation/, gitignored, never committed),
+from the private corpus (default `../Conversation/` next to this repository,
+or --corpus-dir; kept outside all repositories and never committed),
 appending it as the next user turn inside the original message history
 so the summarizing model is the family that produced the conversation
 (Gemini summarizing Gemini) — the same self-referential structure the
@@ -10,12 +11,13 @@ calibration reproduced for Claude. Covers the two calibration limits:
 real long dialogues (23-64 user turns vs 8-turn scripts) and a second
 model family.
 
-PRIVACY: output goes to Conversation/insitu-test/ (outside all repos).
+PRIVACY: output goes to <corpus-dir>/insitu-test/ (outside all repos).
 Nothing from the corpus is written into any git-tracked path.
 
 Usage:
     python tools/insitu_realworld_test.py            # C7 + C8
     python tools/insitu_realworld_test.py --file <path.json>
+    python tools/insitu_realworld_test.py --corpus-dir <private corpus dir>
 """
 
 from __future__ import annotations
@@ -39,10 +41,10 @@ MAX_TOKENS = 30000  # long conversations need generous reasoning + output room
 # default = the corpus conversations that already have a human close-read
 # coding file (CODING_*.md) to compare against; matched by stem, so no
 # conversation titles are hardcoded here
-def default_files() -> list:
+def default_files(conv_dir: Path = CONV_DIR) -> list:
     out = []
-    coded_stems = [p.stem for p in CONV_DIR.glob("CODING_*.md")]
-    for j in sorted(CONV_DIR.glob("Gemini-*.json")):
+    coded_stems = [p.stem for p in conv_dir.glob("CODING_*.md")]
+    for j in sorted(conv_dir.glob("Gemini-*.json")):
         topic = j.stem.split("-", 1)[1].rsplit("-2026", 1)[0]
         if any(topic[:6] in c for c in coded_stems):
             out.append(j)
@@ -110,11 +112,19 @@ def verify_quotes_local(summary: str, turns: list, prompt: str) -> dict:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--file", action="append", help="conversation json path")
+    ap.add_argument("--corpus-dir", type=Path, default=CONV_DIR,
+                    help="private corpus directory; outputs go to its insitu-test/")
     args = ap.parse_args()
-    files = [Path(f) for f in args.file] if args.file else default_files()
+    if not args.corpus_dir.is_dir():
+        raise SystemExit(
+            f"corpus directory not found: {args.corpus_dir}. The private corpus is kept "
+            "outside all repositories and is not part of a checkout; pass --corpus-dir."
+        )
+    out_dir = args.corpus_dir / "insitu-test"
+    files = [Path(f) for f in args.file] if args.file else default_files(args.corpus_dir)
 
     prompts = load_insitu_prompts()
-    OUT_DIR.mkdir(exist_ok=True)
+    out_dir.mkdir(exist_ok=True)
 
     for path in files:
         turns = load_conversation(path)
@@ -123,7 +133,7 @@ def main():
         summary = call_gemini_history(turns, prompts["zh"])
         check = verify_quotes_local(summary, turns, prompts["zh"])
         stamp = datetime.datetime.now().isoformat(timespec="seconds").replace(":", "-")
-        out = OUT_DIR / f"{path.stem}__insitu-v1__{GEMINI_MODEL}__{stamp}.md"
+        out = out_dir / f"{path.stem}__insitu-v1__{GEMINI_MODEL}__{stamp}.md"
         out.write_text(
             f"# in-situ v1 real-world test — {path.stem}\n"
             f"model: {GEMINI_MODEL} (self-summary, in-context) · prompt v1 zh · {stamp}\n"

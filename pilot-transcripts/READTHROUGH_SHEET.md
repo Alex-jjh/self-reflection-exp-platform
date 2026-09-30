@@ -26,7 +26,7 @@
 AI 回复里第一个问句的典型位置——**前**（回复前1/3，澄清姿态：先问
 后立论）/ **尾**（回复后1/3，叙事已建成、末尾拎一个小问题）/ **无**。
 跨模型实测：Claude 首问在 21-28% 处、Gemini 在 92%-无问句，形状穿透
-prompt 存活（详见 surf-docs side-note 产品层 §1c）。此处记录用于验证
+prompt 存活（详见 research repo `records/notes/product-layer-supportive-and-stacking-2026-08-04.md` §1c）。此处记录用于验证
 **三条件间形状是否恒定**——恒定则形状是模型属性、条件操纵的是立场
 （对设计有利）；有差则本身是发现。
 

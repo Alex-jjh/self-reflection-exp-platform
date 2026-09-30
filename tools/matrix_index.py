@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
-"""Rebuild the canonical matrix index from all cell artifacts on disk.
+"""Rebuild the canonical cross-model replay index from all cell artifacts on disk.
+
+Indexes the output of tools/cross_model_pilot.py only; the synthetic matrix SYN
+(model-comparison/permission-gate-pilot/) is a different experiment.
 
 Cell artifacts ({script}__{model}__{lang}__{condition}__{stamp}.json) can come
 from different invocations — a full run, a next-day quota top-up, a single-cell
 re-run after a fix. Per-invocation RUN__ files fragment across stamps, so this
 scans every cell JSON and writes ONE canonical index:
 
-    model-comparison/MATRIX.md
+    model-comparison/CROSS_MODEL_INDEX.md
 
 For each (script, model, lang, condition) key, the newest stamp wins; stale
 duplicates are listed at the bottom so they can be pruned deliberately rather
@@ -57,7 +60,7 @@ def main():
     for (script, model, lang, cond), d in cells.items():
         by_matrix[(script, lang)].append(d)
 
-    L = ["# Cross-model pilot — canonical matrix index\n",
+    L = ["# Cross-model replay — canonical index\n",
          "Rebuilt by `tools/matrix_index.py` from every cell artifact on disk; "
          "newest stamp wins per cell. Per-invocation `RUN__*.md` files are "
          "superseded by this file.\n",
@@ -91,12 +94,12 @@ def main():
         for s in sorted(stale):
             L.append(f"- `{s}`")
 
-    out = OUT_DIR / "MATRIX.md"
+    out = OUT_DIR / "CROSS_MODEL_INDEX.md"
     out.write_text("\n".join(L), encoding="utf-8")
     total = len(cells)
     errs = sum(1 for d in cells.values() if d.get("error") or not d.get("transcript"))
-    print(f"MATRIX.md: {total} cells ({total-errs} clean, {errs} error) "
-          f"across {len(by_matrix)} script×lang matrices; {len(stale)} stale duplicates")
+    print(f"CROSS_MODEL_INDEX.md: {total} cells ({total-errs} clean, {errs} error) "
+          f"across {len(by_matrix)} script×lang tables; {len(stale)} stale duplicates")
 
 
 if __name__ == "__main__":

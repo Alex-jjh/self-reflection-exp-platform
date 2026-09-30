@@ -1,5 +1,7 @@
 # 话题集：什么样的话题在研究域内（主持人话题筛选参考）
 
+> **Summary:** Facilitator reference for judging whether a topic is inside the study's domain: four tests (no external ground truth, identity-relevant, open to more than one account, something at stake), in-domain examples in five classes, and boundary cases.
+
 > 2026-08-14，从 N=5 field 经验 + proposal 判据提炼（Alex 与 agent 讨论落档）。
 > 用途：阶段 3 话题提示的设计参考 + 主持人对参与者自带话题的快速判断。
 > 呼应 `cross-session-readthrough-2026-08-08.md`（session-data repo）可操作项 2
@@ -16,7 +18,7 @@
 | 4 | **有利害** | 用户在乎结论落在哪边吗？存在"想听到的答案"吗？ |
 
 感情类天然四条全中（垂类 app 扎堆的原因，见 research repo
-`side-notes/vertical-divination-apps-cece-2026-08-14.md`），但 B/C/E 类
+`records/notes/vertical-divination-apps-cece-2026-08-14.md`），但 B/C/E 类
 非情感话题同样成立——**不要把筛选窄化成"聊感情"**。
 
 ## 二、域内话题例（五类 × 18 例）

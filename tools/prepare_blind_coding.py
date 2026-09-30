@@ -91,7 +91,11 @@ def prepare(run_dir: Path, analysis_dir: Path, seed: int) -> dict[str, Any]:
         key = (spec["model"], spec["track"], spec["condition"])
         cell_candidates.setdefault(key, []).append(blind_id)
 
-    # One blinded conversation per 3×2×2 cell for a 20% human-gold subset.
+    # One blinded conversation per 3×2×2 cell: a 20% reference subset. In coding-v1
+    # these 12 conversations (36 units at turns 6-8) are the AI reference set, coded
+    # blind by Claude; the human anchor is a separate set (coding-v1/ANCHOR_SET.json).
+    # Key and file names keep "human_gold" because the locked BLIND_MANIFEST.json and
+    # the existing coding-v1 files use them.
     chooser = random.Random(seed + 1)
     gold_ids = sorted(chooser.choice(ids) for _, ids in sorted(cell_candidates.items()))
     mapping_by_id = {item["blind_id"]: item for item in mapping}

@@ -1,5 +1,7 @@
 # 筛选问卷（v1 草案）— Qualtrics 双语搭建规格
 
+> **Summary:** The screening questionnaire, in Chinese and English: eligibility and basic information (B1), the scale package (B2) and RQ1 baseline items (B3), with scoring notes. Status: the questionnaire was built on Wenjuanxing as one bilingual form and put online (research repo D-004; `archive/superseded/KANBAN.md`, section 平台侧遗留, platform leftovers). The Qualtrics platform instructions in this file (the platform line below and the Qualtrics block checklist) are not used.
+
 > 用途：session 前数天发放。筛资格 + 个体差异变量。约 12–14 分钟。
 > 平台：**Qualtrics 单份问卷，内置 zh/en 语言切换**（Survey Options →
 > Translations；被试自选语言，`Q_Language` 字段自动记录，作为 session

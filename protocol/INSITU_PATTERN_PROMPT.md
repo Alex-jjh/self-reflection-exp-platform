@@ -1,6 +1,8 @@
 # In-situ Pattern 提取 Prompt（捐赠分层中间档，v1.1）
 
-> 来源：Alex 提议（2026-08-04，`surf-docs/side-notes/brennan-ladder-insitu-analysis-2026-08-04.md` §3）。
+> **Summary:** The in-situ self-summary prompt, v1.1. A participant pastes it into their own AI conversation; the AI returns behaviour counts with short quotes, which the participant checks and prunes before sharing. Status: in the protocol as the middle tier of donation (research repo D-005); self-reported "AI disagreed" counts are used only as a lower bound. Calibration: `calibration/CALIBRATION_REPORT.md`.
+
+> 来源：Alex 提议（2026-08-04，research repo `records/meetings/brennan-ladder-insitu-analysis-2026-08-04.md` §3）。
 > 用途：不愿分享完整聊天记录的参与者，把下面的 prompt 粘贴进他们
 > **自己的 AI 对话框**（在想分享的那段对话的末尾），AI 在原上下文里
 > 产出一份只含行为计数+短引文的摘要；参与者通读摘要、删除任何

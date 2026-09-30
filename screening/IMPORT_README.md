@@ -1,5 +1,7 @@
 # 问卷平台导入 — 现状、踩坑记录与决策
 
+> **Summary:** Record (2026-07-31) of the attempts to import the questionnaire into Qualtrics and the plan to move to LimeSurvey, with the role of each build file in this folder. The route described here was not taken: the questionnaire runs on Wenjuanxing (research repo D-004, 2026-08-03).
+
 > 状态截至 2026-07-31。**结论:Qualtrics 免费账号无法自动化建问卷;转向学校 LimeSurvey（待确认版本+导入权限）。**
 
 ## TL;DR

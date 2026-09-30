@@ -1,5 +1,54 @@
 # 签署包清单（v1 — 2026-08-04 对齐 Brennan 官方伦理文件后重写）
 
+> **Summary:** What a participant signs (the official information sheet and consent form, two study-specific confirmations, a debrief confirmation), how the old v0 wording maps onto the official documents, and the open ethics questions for Brennan. The body is in Chinese; the open questions are summarised in English below.
+
+## Open ethics questions for Brennan (English summary)
+
+The official documents are the umbrella study's Participant Information Sheet
+and Informed Consent Form (both V1, 2026-06-09; project "Context-Aware
+AI-Assisted Personal Reflection"; XJTLU ethics approval; Alex is a listed
+co-investigator; files in `../consent/`). This study runs under that approval
+as one study activity. The questions below are the body's section "未决问题"
+(open questions). They concern the approval under which the L1 sessions have
+already run, not only Phase B, and Brennan has to answer them. There is no
+record that they have been put to him yet. They are in the research repo's
+letter draft `records/drafts/brennan-letter-2026-09-29.md`, and the research
+repo's `STATUS.md` (Decisions pending) tracks them.
+
+1. **Session length.** The information sheet says a session typically takes
+   45–90 minutes; a session in this study takes 90–120 minutes
+   (`SESSION_PROTOCOL.md`). Does "typically" cover this,
+   or should the protocol be shortened or a V2 of the sheet issued? (Body: open
+   question 1.)
+2. **Donation coverage.** The sheet covers prototype interaction logs and
+   compares data sharing to exporting a media history (its YouTube clause). Does
+   the donation of chat logs from participants' own AI accounts need an
+   additional ethics tier or an amendment? The same question applies to the
+   in-situ summary prompt (`INSITU_PATTERN_PROMPT.md`), which participants run
+   on their own AI. This bears on data already collected: participant donations
+   and in-situ summaries (L2). (Body: open question 3, and item 3 of the
+   checklist.)
+3. **AI service providers.** The sheet discloses cross-border transfer (§8) and
+   lists OpenAI, Qwen and DeepSeek "or similar services"; the study uses AWS
+   Bedrock (Anthropic models, US-region endpoint). Is that covered, and should a
+   V2 of the sheet name "AWS Bedrock (Anthropic)"? The body proposes a recorded
+   verbal confirmation. (Body: open question 4, and the table row 第三方 AI 服务,
+   third-party AI services.)
+4. **Scroll-back recording: resolved.** Alex decided on 2026-08-04 that the
+   scroll-back step happens on the participant's own phone, which is not in the
+   meeting recording. Brennan only needs to be told. (Body: open question 2.)
+
+The same letter raises two related points that this outline does not cover:
+TypeSafe's Jev classifier received L1 episode text, and Claude processes the
+donor corpus D01 (research repo D-024).
+
+Terms used in the body: 口径 means agreed wording, i.e. how something is phrased
+to participants; *incomplete disclosure* is the study's disclosure approach (the
+topic is described truthfully, and the style manipulation and hypotheses are
+revealed at the debrief).
+
+---
+
 > **官方文件已到位**（`../consent/`）：Participant Information Sheet +
 > Informed Consent Form（均 V1, 2026-06-09，伞形项目 "Context-Aware
 > AI-Assisted Personal Reflection"，XJTLU 伦理已批，Alex 为列名

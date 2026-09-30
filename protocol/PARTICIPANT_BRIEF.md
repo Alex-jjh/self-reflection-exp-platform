@@ -1,5 +1,7 @@
 # 参与者预告 Brief（session 前随信息单一起发）
 
+> **Summary:** The short preview sent to a participant with the official information sheet before a lab session (Chinese text to send, English mirror), and the rules for what it must not reveal. Status: used for the L1 sessions, which are complete (research repo D-006).
+
 > **用途**：筛选通过后、约定 session 时间时，与官方 Participant
 > Information Sheet 一起发给参与者的简短说明。目的：让参与者知道
 > 会被问哪类问题、需要提前准备什么（基本不需要），降低到场焦虑。

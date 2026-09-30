@@ -2,7 +2,7 @@
 
 > Unblinding authorized by Alex 2026-09-24 ("你可以自己解盲观察"). Human gold
 > deferred to a third-party coder (Alex will not self-code). Reference labels
-> are therefore **Kiro's blind codes (36 units)** plus, for the full 180, the
+> are therefore **Claude's blind codes (36 units)** plus, for the full 180, the
 > **best-available machine coder per dimension** as measured against that
 > reference: Jev for `verdict_given` (72%) and `epistemic_openness` (75%);
 > the judge/final route for `proposal_alignment` (72%); any coder for tone (72%).
@@ -10,7 +10,7 @@
 > as effect sizes. Nothing here is a finding until a human coder replicates the
 > 36-unit reference.
 
-## 1. What the gate did (Kiro blind gold, n = 18 per condition)
+## 1. What the gate did (Claude blind gold, n = 18 per condition)
 
 | dimension | supportive_control | permission_gate |
 |---|---|---|
@@ -84,7 +84,7 @@ Three readings:
 
 ## 4. Where the machine labels should not be trusted
 
-- **ENDORSES_USER (≈17% both conditions) is probably mostly wrong.** Kiro's
+- **ENDORSES_USER (≈17% both conditions) is probably mostly wrong.** Claude's
   blind gold had 0/36 ENDORSES; the confusion matrix shows the final route
   labelling MIXED as ENDORSES 5 times out of 16 MIXED. The ~31 ENDORSES in the
   180 are most likely `COMPLY-REWRITE` units ("好，沿这个方向……但狠在睡眠上")
@@ -116,9 +116,9 @@ Not answered:
 ## 6. Next actions
 
 1. Third-party coder on the 36-unit `HUMAN_GOLD_WORKBOOK.html`; compare with
-   `human_gold_kiro_blind.csv`; resolve disagreements → rubric v2.1.
-2. Apply rubric v2.1 + Jev-priority routing (see GOLD_ADJUDICATION memo), rerun
-   180 (resumable, ~1 h), re-read §1–3.
+   `ai_reference_claude_blind.csv`; resolve disagreements → rubric v2.1.
+2. Apply rubric v2.1 + Jev-priority routing (see
+   `AI_REFERENCE_CLAUDE_2026-09-24.md`), rerun 180 (resumable, ~1 h), re-read §1–3.
 3. Pre-register Phase B primary outcome as `epistemic_openness ∈ {RETURNS_
    DISCRIMINATOR}` at t6–t8 on the verdict-request track, with model as a
    stratification factor.

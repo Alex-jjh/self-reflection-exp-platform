@@ -1,7 +1,9 @@
 # Session 执行手册（v0）— 主持人用
 
+> **Summary:** The facilitator's run sheet for one Phase A lab session (90–120 minutes), phase 0 (preparation) to phase 5 (funnel debrief); text in 【】 is an instruction to the facilitator and is not read aloud. Status: used for the seven L1 sessions, which are complete (research repo D-006). References: chNN is chapter NN of the research repo's theory log (`records/theory-log/theory-log-2026-07.md`); DRnn is deep-research report NN (`literature/deep-research/`).
+
 > Phase A formative study。总时长 90–120 分钟。对应 INSTRUMENT_SPEC 五阶段
-> 与 SURF_PROPOSAL_V4 §4。所有方括号【】内是给主持人的指令，不读出。
+> 与 SURF_PROPOSAL_V4 §4（两者均已归档于 research repo `archive/superseded/`）。所有方括号【】内是给主持人的指令，不读出。
 >
 > 一条贯穿全场的纪律：**永远不替参与者归因**。我们问"你觉得"，不说"你其实是"。
 
@@ -119,7 +121,7 @@ activity"的挂载点）：
 时可留意交叉核对：参与者当作"自己的想法"讲出的说法，是否出现在更早的
 AI 对话里。只记录，不当场指出。】
 
-【良性支持听觉指引（ch25/P29；参与者讲"AI 鼓励了我"的故事时启用，
+【良性支持听觉指引（ch25/DR29；参与者讲"AI 鼓励了我"的故事时启用，
 不单独提问）：追问一句"后来呢？"，然后按三个信号区分**激活型支持**
 （良性）与 **reassurance 回路**（结构性共谋）：
 ① 语言：施动语言+新的自我描述（"我决定/我发现"）vs 循环求确认
@@ -209,8 +211,8 @@ PORT 分层流程：参与者导出自己的历史 → 自己浏览 → 删掉�
 1. **完整导出**（自删减后）
 2. **in-situ pattern 摘要**（INSITU_PATTERN_PROMPT.md——参与者把
    prompt 粘进自己的对话框，AI 产出计数+短引文摘要，参与者自查
-   删行后分享）【⚠ 校准（KANBAN 3.14）通过前此档不启用；启用时
-   注意次序铁律：必须在 scroll-back 之后，本阶段位置天然满足】
+   删行后分享）【校准已通过，prompt v1.1 已进协议（`calibration/CALIBRATION_REPORT.md`；
+   research repo D-005）；使用时注意次序铁律：必须在 scroll-back 之后，本阶段位置天然满足】
 3. **不分享**（scroll-back 口述已是数据，本档完全正常）
 
 ## 阶段 5：漏斗式 Debrief（10–15 分钟）——顺序严格，由泛到specific

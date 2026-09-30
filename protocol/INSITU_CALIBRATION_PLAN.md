@@ -1,7 +1,9 @@
 # In-situ 自摘要仪器校准计划（KANBAN 3.14）
 
+> **Summary:** Plan (2026-08-07) for calibrating the in-situ self-summary prompt against a reference coding of 18 scripted pilot transcripts. Status: carried out; results and verdicts are in `calibration/CALIBRATION_REPORT.md`, and the prompt, now v1.1, is in the protocol (research repo D-005). The checklist in §3 was not updated after the run; the report records what was done. "KANBAN 3.14" is task 3.14 on the research repo's archived board (`archive/superseded/KANBAN.md`).
+
 > 2026-08-07 定稿。前置：`INSITU_PATTERN_PROMPT.md` v0.1（含新增 4d）。
-> 为什么这一步是承重墙：DR42（surf-docs `literature/deep-research/`）裁决
+> 为什么这一步是承重墙：DR42（research repo `literature/deep-research/DR42-sensitive-hai-data-collection.md`）裁决
 > in-situ 自摘要法**无发表先例、可主张为方法学贡献**，但同时指出最强
 > 审稿反对 = **未验证的转换层**——没有任何已发表研究验证过"AI 摘要
 > 自己参与的对话"的忠实度（LLM 编码 κ=.6–.79 只是第三方编码的相邻

@@ -10,13 +10,16 @@ participant's everyday AI, the study understates the phenomenon. This runs the
 same input through the same prompt on several models and marks the three
 collusion signals so the difference is measurable rather than impressionistic.
 
-Two backends:
-  bedrock  — Converse API (Anthropic models). Works today.
-  mantle   — Bedrock's OpenAI-compatible endpoint, Responses API.
+Five backends, chosen by model-ID prefix in backend_for():
+  bedrock  — default for IDs without a prefix below; Converse API (Anthropic models).
+  mantle   — `openai.*`: Bedrock's OpenAI-compatible endpoint, Responses API.
              As of 2026-08-04 every openai.* model returns
              "not available for this account" on the study account — model
              access has to be granted in the Bedrock console first (the
              GPT-5.6 tier may additionally require AWS Sales).
+  openai   — `gpt*`: api.openai.com with a direct key (.openai_key).
+  xjtlu    — `xjtlu:<slug>`: XJTLU's OpenAI-compatible gateway (.xjtlu_key).
+  gemini   — `gemini*`: Google AI Studio via google-genai (.gemini_key).
 
 Usage:
     python tools/model_compare.py                       # default model set, zh
@@ -25,9 +28,10 @@ Usage:
     python tools/model_compare.py --models us.anthropic.claude-sonnet-5,openai.gpt-5.6-terra
     python tools/model_compare.py --turns 3             # multi-turn, scripted follow-ups
 
-Output: one markdown file per run in model-comparison/ (gitignored — same
-treatment as pilot-transcripts is NOT applied here only because these runs are
-exploratory; commit any that inform a decision).
+Output: one markdown file per run in model-comparison/. That folder is tracked
+in git (only runtime locks and private_mapping.json are ignored; see .gitignore),
+so a new run appears as an untracked file; commit the runs that inform a decision.
+These runs are exploratory and are not the synthetic matrix SYN.
 """
 
 from __future__ import annotations  # keep annotations lazy: the session laptop's venv is 3.9
