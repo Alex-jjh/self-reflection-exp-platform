@@ -1,6 +1,6 @@
 # Session 执行手册（v0）— 主持人用
 
-> **Summary:** The facilitator's run sheet for one Phase A lab session (90–120 minutes), phase 0 (preparation) to phase 5 (funnel debrief); text in 【】 is an instruction to the facilitator and is not read aloud. Status: used for the seven L1 sessions, which are complete (research repo D-006). References: chNN is chapter NN of the research repo's theory log (`records/theory-log/theory-log-2026-07.md`); DRnn is deep-research report NN (`literature/deep-research/`).
+> **Summary:** The facilitator's run sheet for one Phase A lab session (90–120 minutes), phase 0 (preparation) to phase 5 (funnel debrief); text in 【】 is an instruction to the facilitator and is not read aloud. Status: used for the seven L1 sessions, which are complete (research repo D-006). References: chNN is chapter NN of the research repo's theory log (`records/theory-log/2026-07-theory-log.md`); DRnn is deep-research report NN (`literature/deep-research/`).
 
 > Phase A formative study。总时长 90–120 分钟。对应 INSTRUMENT_SPEC 五阶段
 > 与 SURF_PROPOSAL_V4 §4（两者均已归档于 research repo `archive/superseded/`）。所有方括号【】内是给主持人的指令，不读出。

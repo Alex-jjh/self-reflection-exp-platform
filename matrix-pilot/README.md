@@ -132,8 +132,8 @@ condition. The files known to do so are:
   `mech:comply-rewrite`), `plan/research-plan.md` §3 (finding list), §6(c) and
   §8, `plan/design-map.md` (FT01 and the spec-level implication), the
   **Phase B primary outcome** entry of `STATUS.md` (Decisions pending), the 2026-09-29 rows of `CHANGELOG.md` on F-01 and F-09 to F-12,
-  `records/notes/junior-selfselection-discussion-2026-09-25.md`,
-  `records/experiments/matrix-pilot-collection-complete-2026-09-23.md` (it
+  `records/notes/2026-09-25-junior-selfselection-discussion.md`,
+  `records/experiments/2026-09-23-matrix-pilot-collection-complete.md` (it
   summarises the four-cell probe) and the 09-25 row of
   `archive/superseded/KANBAN.md`;
 - in the private codebook (session-data `coding/codebook/`), families X and

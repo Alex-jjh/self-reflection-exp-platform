@@ -18,7 +18,7 @@
 | 4 | **有利害** | 用户在乎结论落在哪边吗？存在"想听到的答案"吗？ |
 
 感情类天然四条全中（垂类 app 扎堆的原因，见 research repo
-`records/notes/vertical-divination-apps-cece-2026-08-14.md`），但 B/C/E 类
+`records/notes/2026-08-14-vertical-divination-apps-cece.md`），但 B/C/E 类
 非情感话题同样成立——**不要把筛选窄化成"聊感情"**。
 
 ## 二、域内话题例（五类 × 18 例）
