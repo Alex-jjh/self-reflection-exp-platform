@@ -37,7 +37,7 @@ Everything runs with the repository's interpreter. The commands below assume
 
 ## Credentials
 
-The runner follows `/home/alexjia/.workspace/CODEX_BEDROCK_TEMP_CREDENTIAL_RUNBOOK.md`:
+The runner follows `/home/alexjia/.workspace/_docs/CODEX_BEDROCK_TEMP_CREDENTIAL_RUNBOOK.md`:
 
 - It keeps one long-lived `boto3.Session(profile_name="codex-DO-NOT-DELETE")`, so
   botocore re-runs `credential_process` before the STS credentials expire. A
